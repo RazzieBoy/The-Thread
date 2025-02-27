@@ -392,7 +392,9 @@
 -analyzer:"D:/Program Files/Unity2023.2f0/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"D:/Program Files/Unity2023.2f0/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/Scripts/Grappling.cs"
+"Assets/Scripts/MoveCam.cs"
 "Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/UserMovement.cs"
 -langversion:9.0
 
 /deterministic

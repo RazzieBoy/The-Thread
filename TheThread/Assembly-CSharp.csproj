@@ -61,8 +61,10 @@
     <Analyzer Include="D:\Program Files\Unity2023.2f0\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\UserMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Grappling.cs" />
+    <Compile Include="Assets\Scripts\MoveCam.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
