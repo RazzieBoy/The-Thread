@@ -2,96 +2,154 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grappling : MonoBehaviour{
-    private LineRenderer lr;
-    private Vector3 grapplePoint;
+public class Grappling : MonoBehaviour
+{
+    private LineRenderer lr1;
+    private LineRenderer lr2;
+    private Vector3 grapplePoint1;
+    private Vector3 grapplePoint2;
     public LayerMask whatIsGrappleable;
-    public Transform gunTip, cam, player;
+    public Transform gunTip1, gunTip2, cam, player;
     private float maxDistance = 100f;
     private SpringJoint joint;
 
+    private Vector3 currentGrapplePosition1;
+    private Vector3 currentGrapplePosition2;
+    private bool isGrappling1 = false;
+    private bool isGrappling2 = false;
+
     void Awake()
     {
-        lr = GetComponent<LineRenderer>();
+        lr1 = gunTip1.GetComponent<LineRenderer>();
+        lr2 = gunTip2.GetComponent<LineRenderer>();
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            StartGrapple();
+            StartGrapple(1);
         }
-        else if (Input.GetMouseButtonUp(0))
+        else if (Input.GetKeyUp(KeyCode.Q))
         {
-            StopGrapple();
+            StopGrapple(1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            StartGrapple(2);
+        }
+        else if (Input.GetKeyUp(KeyCode.E))
+        {
+            StopGrapple(2);
         }
     }
 
-    //Called after Update
     void LateUpdate()
     {
         DrawRope();
     }
 
-    /// <summary>
-    /// Call whenever we want to start a grapple
-    /// </summary>
-    void StartGrapple()
+    void StartGrapple(int hook)
     {
         RaycastHit hit;
         if (Physics.Raycast(cam.position, cam.forward, out hit, maxDistance, whatIsGrappleable))
         {
-            grapplePoint = hit.point;
-            joint = player.gameObject.AddComponent<SpringJoint>();
-            joint.autoConfigureConnectedAnchor = false;
-            joint.connectedAnchor = grapplePoint;
+            // If no joint exists, create one
+            if (joint == null)
+            {
+                joint = player.gameObject.AddComponent<SpringJoint>();
+                joint.autoConfigureConnectedAnchor = false;
+                joint.spring = 4.5f;
+                joint.damper = 7f;
+                joint.massScale = 4.5f;
+            }
 
-            float distanceFromPoint = Vector3.Distance(player.position, grapplePoint);
+            if (hook == 1)
+            {
+                grapplePoint1 = hit.point;
+                isGrappling1 = true;
+                currentGrapplePosition1 = gunTip1.position;
+                lr1.positionCount = 2;
+            }
+            else if (hook == 2)
+            {
+                grapplePoint2 = hit.point;
+                isGrappling2 = true;
+                currentGrapplePosition2 = gunTip2.position;
+                lr2.positionCount = 2;
+            }
 
-            //The distance grapple will try to keep from grapple point. 
-            joint.maxDistance = distanceFromPoint * 0.8f;
-            joint.minDistance = distanceFromPoint * 0.25f;
-
-            //Adjust these values to fit your game.
-            joint.spring = 4.5f;
-            joint.damper = 7f;
-            joint.massScale = 4.5f;
-
-            lr.positionCount = 2;
-            currentGrapplePosition = gunTip.position;
+            UpdateJoint();
         }
     }
 
-
-    /// <summary>
-    /// Call whenever we want to stop a grapple
-    /// </summary>
-    void StopGrapple()
+    void StopGrapple(int hook)
     {
-        lr.positionCount = 0;
-        Destroy(joint);
+        if (hook == 1)
+        {
+            isGrappling1 = false;
+            lr1.positionCount = 0;
+        }
+        else if (hook == 2)
+        {
+            isGrappling2 = false;
+            lr2.positionCount = 0;
+        }
+
+        // If neither grapple is active, remove the joint
+        if (!isGrappling1 && !isGrappling2)
+        {
+            Destroy(joint);
+        }
+        else
+        {
+            UpdateJoint();
+        }
     }
 
-    private Vector3 currentGrapplePosition;
+    void UpdateJoint()
+    {
+        if (joint == null) return;
+
+        if (isGrappling1 && isGrappling2)
+        {
+            // Pull towards the midpoint of both grapple points
+            joint.connectedAnchor = (grapplePoint1 + grapplePoint2) / 2f;
+        }
+        else if (isGrappling1)
+        {
+            joint.connectedAnchor = grapplePoint1;
+        }
+        else if (isGrappling2)
+        {
+            joint.connectedAnchor = grapplePoint2;
+        }
+
+        float distanceFromPoint = Vector3.Distance(player.position, joint.connectedAnchor);
+        joint.maxDistance = distanceFromPoint * 0.8f;
+        joint.minDistance = distanceFromPoint * 0.25f;
+    }
 
     void DrawRope()
     {
-        //If not grappling, don't draw rope
-        if (!joint) return;
+        if (isGrappling1)
+        {
+            currentGrapplePosition1 = Vector3.Lerp(currentGrapplePosition1, grapplePoint1, Time.deltaTime * 8f);
+            lr1.SetPosition(0, gunTip1.position);
+            lr1.SetPosition(1, currentGrapplePosition1);
+        }
 
-        currentGrapplePosition = Vector3.Lerp(currentGrapplePosition, grapplePoint, Time.deltaTime * 8f);
-
-        lr.SetPosition(0, gunTip.position);
-        lr.SetPosition(1, currentGrapplePosition);
+        if (isGrappling2)
+        {
+            currentGrapplePosition2 = Vector3.Lerp(currentGrapplePosition2, grapplePoint2, Time.deltaTime * 8f);
+            lr2.SetPosition(0, gunTip2.position);
+            lr2.SetPosition(1, currentGrapplePosition2);
+        }
     }
 
     public bool IsGrappling()
     {
         return joint != null;
-    }
-
-    public Vector3 GetGrapplePoint()
-    {
-        return grapplePoint;
     }
 }
