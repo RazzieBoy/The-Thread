@@ -394,6 +394,9 @@
 "Assets/Scripts/Grappling.cs"
 "Assets/Scripts/MoveCam.cs"
 "Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/Testing/MoveCameraScript.cs"
+"Assets/Scripts/Testing/MovementPlayer.cs"
+"Assets/Scripts/Testing/PlayerCam.cs"
 "Assets/Scripts/UserMovement.cs"
 -langversion:9.0
 
