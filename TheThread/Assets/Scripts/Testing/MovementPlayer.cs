@@ -163,9 +163,6 @@ public class MovementPlayer : MonoBehaviour
             //    rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
             //}
         }
-
-
-
     }
 
     private void Jump()
