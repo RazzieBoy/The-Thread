@@ -2573,7 +2573,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.2108958, w: 0.97750854}
   m_LocalPosition: {x: 63.268078, y: 47.86299, z: -201.44795}
-  m_LocalScale: {x: 26.853575, y: 1, z: 8.9304495}
+  m_LocalScale: {x: 166.07326, y: 1, z: 8.9304495}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2008121404}
@@ -3730,11 +3730,11 @@ Transform:
   m_GameObject: {fileID: 1062997498}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.62, z: 0}
+  m_LocalPosition: {x: 0, y: 0.61999893, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1550309077}
+  m_Father: {fileID: 1924868308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1071038211
 GameObject:
@@ -4787,13 +4787,12 @@ Transform:
   m_GameObject: {fileID: 1550309076}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 86.98, y: 35.42, z: 5.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1924868308}
   - {fileID: 510539875}
-  - {fileID: 1062997499}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1550309078
@@ -4836,7 +4835,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 7
-  groundDrag: 5
+  slideSpeed: 30
+  speedIncreaseMultiplier: 1.5
+  slopeIncreaseMultiplier: 2.5
+  groundDrag: 4
   jumpForce: 12
   jumpCooldown: 0.25
   airMulitplier: 0.4
@@ -4850,8 +4852,10 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  grounded: 1
   maxSlopeAngle: 40
   orientation: {fileID: 510539875}
+  sliding: 0
   state: 0
 --- !u!114 &1550309080
 MonoBehaviour:
@@ -4867,7 +4871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orientation: {fileID: 510539875}
   playerObj: {fileID: 1924868308}
-  maxSlideTime: 0.75
+  maxSlideTime: 900000
   slideForce: 200
   slideYScale: 0.5
   slideKey: 306
@@ -5857,7 +5861,6 @@ GameObject:
   - component: {fileID: 1924868312}
   - component: {fileID: 1924868311}
   - component: {fileID: 1924868310}
-  - component: {fileID: 1924868309}
   m_Layer: 0
   m_Name: PlayerObject
   m_TagString: Untagged
@@ -5877,34 +5880,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1062997499}
   m_Father: {fileID: 1550309077}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1924868309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924868307}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63f0eee292d712142b9734c0b17b59f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCam: {fileID: 963194228}
-  orientation: {fileID: 510539875}
-  moveSpeed: 2000
-  maxSpeed: 9000
-  grounded: 0
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 64
-  counterMovement: 0.175
-  maxSlopeAngle: 35
-  slideForce: 400
-  slideCounterMovement: 0.2
-  jumpForce: 550
 --- !u!136 &1924868310
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5912,7 +5891,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924868307}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 1c83003c1205b10458b3e5aa52337e49, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -6342,7 +6321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2008121404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: test Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
