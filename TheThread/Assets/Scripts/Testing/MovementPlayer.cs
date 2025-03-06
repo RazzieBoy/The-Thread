@@ -20,7 +20,7 @@ public class MovementPlayer : MonoBehaviour
 
     public KeyCode jumpKey = KeyCode.Space;
     public KeyCode crouchKey = KeyCode.LeftControl;
-    
+
     public float playerHeight;
     public LayerMask whatIsGround;
     bool grounded;
@@ -43,7 +43,7 @@ public class MovementPlayer : MonoBehaviour
         walking,
         crouching,
         air
-        
+
     }
 
     // Start is called before the first frame update
@@ -129,16 +129,16 @@ public class MovementPlayer : MonoBehaviour
         {
             rb.AddForce(GetSlopeMoveDirection() * moveSpeed * 20f, ForceMode.Force);
 
-            if (rb.velocity.y > 0) 
+            if (rb.velocity.y > 0)
             {
                 rb.AddForce(Vector3.down * 80f, ForceMode.Force);
             }
         }
 
-        if(grounded)
+        if (grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
 
-        else if(!grounded)
+        else if (!grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMulitplier, ForceMode.Force);
 
         rb.useGravity = !OnSlope();
@@ -153,15 +153,15 @@ public class MovementPlayer : MonoBehaviour
                 rb.velocity = rb.velocity.normalized * moveSpeed;
             }
         }
-        else 
+        else
         {
             Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
-            //if(flatVel.magnitude > moveSpeed)
-            //{
-            //    Vector3 limitedVel = flatVel.normalized * moveSpeed;
-            //    rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
-            //}
+            if (flatVel.magnitude > moveSpeed)
+            {
+                Vector3 limitedVel = flatVel.normalized * moveSpeed;
+                rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+            }
         }
     }
 

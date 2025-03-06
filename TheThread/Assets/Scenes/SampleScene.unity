@@ -4770,6 +4770,7 @@ GameObject:
   - component: {fileID: 1550309077}
   - component: {fileID: 1550309078}
   - component: {fileID: 1550309079}
+  - component: {fileID: 1550309080}
   m_Layer: 0
   m_Name: PlayerTest
   m_TagString: Untagged
@@ -4844,7 +4845,7 @@ MonoBehaviour:
   crouchYScale: 0.5
   startYScale: 0
   jumpKey: 32
-  crouchKey: 306
+  crouchKey: 99
   playerHeight: 2
   whatIsGround:
     serializedVersion: 2
@@ -4852,6 +4853,24 @@ MonoBehaviour:
   maxSlopeAngle: 40
   orientation: {fileID: 510539875}
   state: 0
+--- !u!114 &1550309080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550309076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f91712fb3362c5645bc31861280456d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orientation: {fileID: 510539875}
+  playerObj: {fileID: 1924868308}
+  maxSlideTime: 0.75
+  slideForce: 200
+  slideYScale: 0.5
+  slideKey: 306
 --- !u!1 &1568663909
 GameObject:
   m_ObjectHideFlags: 3
