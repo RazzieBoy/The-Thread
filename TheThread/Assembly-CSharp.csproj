@@ -61,13 +61,17 @@
     <Analyzer Include="D:\Program Files\Unity2023.2f0\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\New Movement\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\Testing\MoveCameraScript.cs" />
     <Compile Include="Assets\Scripts\Testing\Sliding.cs" />
+    <Compile Include="Assets\Scripts\New Movement\MoveCamScript.cs" />
     <Compile Include="Assets\Scripts\UserMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Grappling.cs" />
     <Compile Include="Assets\Scripts\Testing\PlayerCam.cs" />
+    <Compile Include="Assets\Scripts\New Movement\SlidingScript.cs" />
     <Compile Include="Assets\Scripts\Testing\MovementPlayer.cs" />
+    <Compile Include="Assets\Scripts\New Movement\PlayerMovementScript.cs" />
     <Compile Include="Assets\Scripts\MoveCam.cs" />
   </ItemGroup>
   <ItemGroup>
