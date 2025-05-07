@@ -109,21 +109,17 @@ public class Grappling : MonoBehaviour
         }
     }
 
-    void UpdateJoint()
-    {
+    void UpdateJoint(){
         if (joint == null) return;
 
-        if (isGrappling1 && isGrappling2)
-        {
+        if (isGrappling1 && isGrappling2){
             // Pull towards the midpoint of both grapple points
             joint.connectedAnchor = (grapplePoint1 + grapplePoint2) / 2f;
         }
-        else if (isGrappling1)
-        {
+        else if (isGrappling1){
             joint.connectedAnchor = grapplePoint1;
         }
-        else if (isGrappling2)
-        {
+        else if (isGrappling2){
             joint.connectedAnchor = grapplePoint2;
         }
 
@@ -132,25 +128,22 @@ public class Grappling : MonoBehaviour
         joint.minDistance = distanceFromPoint * 0.25f;
     }
 
-    void DrawRope()
-    {
-        if (isGrappling1)
-        {
+    void DrawRope(){
+        if (isGrappling1){
             currentGrapplePosition1 = Vector3.Lerp(currentGrapplePosition1, grapplePoint1, Time.deltaTime * 8f);
             lr1.SetPosition(0, gunTip1.position);
             lr1.SetPosition(1, currentGrapplePosition1);
         }
 
-        if (isGrappling2)
-        {
+        if (isGrappling2){
             currentGrapplePosition2 = Vector3.Lerp(currentGrapplePosition2, grapplePoint2, Time.deltaTime * 8f);
             lr2.SetPosition(0, gunTip2.position);
             lr2.SetPosition(1, currentGrapplePosition2);
         }
     }
 
-    public bool IsGrappling()
-    {
+    public bool IsGrappling(){
         return joint != null;
     }
+
 }
