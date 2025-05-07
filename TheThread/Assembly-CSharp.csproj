@@ -69,7 +69,9 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Grappling.cs" />
     <Compile Include="Assets\Scripts\Testing\PlayerCam.cs" />
+    <Compile Include="Assets\Scripts\New Movement\Swinging.cs" />
     <Compile Include="Assets\Scripts\New Movement\SlidingScript.cs" />
+    <Compile Include="Assets\Scripts\New Movement\DaniSwing.cs" />
     <Compile Include="Assets\Scripts\Testing\MovementPlayer.cs" />
     <Compile Include="Assets\Scripts\New Movement\PlayerMovementScript.cs" />
     <Compile Include="Assets\Scripts\MoveCam.cs" />

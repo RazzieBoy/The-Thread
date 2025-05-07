@@ -8,6 +8,7 @@ public class PlayerMovementScript : MonoBehaviour{
     public float walkingSpeed;
     public float runningSpeed;
     public float slidingSpeed;
+    public float swingingSpeed;
     private float wantedMoveSpeed;
     private float lastWantedMoveSpeed;
     public float speedMulitplier;
@@ -42,12 +43,15 @@ public class PlayerMovementScript : MonoBehaviour{
     Vector3 moveDir;
     Rigidbody rb;
 
+    public bool isSwinging;
+
     public MoveState state;
     public enum MoveState{
         walking,
         running,
         ducking,
         sliding,
+        swinging,
         air
     }
 
@@ -74,7 +78,12 @@ public class PlayerMovementScript : MonoBehaviour{
     }
 
     void FixedUpdate(){
-        PlayerMoving();
+        if (isSwinging){
+            SwingingMovement(); // Apply input force while swinging
+        }
+        else{
+            PlayerMoving();
+        }
     }
 
     private void PlayerInput(){
@@ -124,6 +133,11 @@ public class PlayerMovementScript : MonoBehaviour{
             wantedMoveSpeed = duckSpeed;
         }
 
+        else if (isSwinging){
+            state = MoveState.swinging;
+            movementSpeed = swingingSpeed;
+        }
+
         else{
             state = MoveState.air;
         }
@@ -162,6 +176,11 @@ public class PlayerMovementScript : MonoBehaviour{
     }
 
     private void PlayerMoving(){
+
+        if (isSwinging) { 
+            return;
+        }
+
         moveDir = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         if (OnSlope() && !leavingSlope){
@@ -180,6 +199,12 @@ public class PlayerMovementScript : MonoBehaviour{
         }
 
         rb.useGravity = !OnSlope();
+    }
+
+    private void SwingingMovement(){
+        Vector3 swingInputDir = orientation.forward * verticalInput + orientation.right * horizontalInput;
+        rb.AddForce(swingInputDir.normalized * swingingSpeed, ForceMode.Acceleration);
+
     }
 
     private void SpeedManager(){
