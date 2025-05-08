@@ -10,8 +10,9 @@ public class Grappling : MonoBehaviour
     private Vector3 grapplePoint2;
     public LayerMask whatIsGrappleable;
     public Transform gunTip1, gunTip2, cam, player;
-    private float maxDistance = 100f;
+    private float maxDistance = 75f;
     private SpringJoint joint;
+    public float reeling = 2f;
 
     private Vector3 currentGrapplePosition1;
     private Vector3 currentGrapplePosition2;
@@ -43,6 +44,13 @@ public class Grappling : MonoBehaviour
         {
             StopGrapple(2);
         }
+
+        if (joint != null) {
+            float distanceToTarget = Vector3.Distance(player.position, joint.connectedAnchor);
+            joint.maxDistance = Mathf.MoveTowards(joint.maxDistance, distanceToTarget * 0.25f, reeling * Time.deltaTime);
+            joint.minDistance = Mathf.MoveTowards(joint.minDistance, 0f, reeling * Time.deltaTime);
+        }
+
     }
 
     void LateUpdate()
