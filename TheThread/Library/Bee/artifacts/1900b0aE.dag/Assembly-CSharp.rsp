@@ -391,6 +391,7 @@
 -analyzer:"D:/Program Files/Unity2023.2f0/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"D:/Program Files/Unity2023.2f0/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"D:/Program Files/Unity2023.2f0/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
+"Assets/DisplaySpeed.cs"
 "Assets/Scripts/Grappling.cs"
 "Assets/Scripts/MoveCam.cs"
 "Assets/Scripts/PlayerMovement.cs"

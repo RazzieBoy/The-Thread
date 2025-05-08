@@ -61,6 +61,7 @@
     <Analyzer Include="D:\Program Files\Unity2023.2f0\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DisplaySpeed.cs" />
     <Compile Include="Assets\Scripts\Testing\MoveCameraScript.cs" />
     <Compile Include="Assets\Scripts\Testing\Sliding.cs" />
     <Compile Include="Assets\Scripts\UserMovement.cs" />

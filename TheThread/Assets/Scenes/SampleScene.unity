@@ -3039,7 +3039,7 @@ GameObject:
   - component: {fileID: 982499318}
   - component: {fileID: 982499317}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: SpeedText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3130,7 +3130,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 12.312927, w: 0}
+  m_margin: {x: 0, y: 0, z: -378.4248, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4237,6 +4237,7 @@ GameObject:
   - component: {fileID: 1550309078}
   - component: {fileID: 1550309079}
   - component: {fileID: 1550309080}
+  - component: {fileID: 1550309081}
   m_Layer: 0
   m_Name: PlayerTest
   m_TagString: Untagged
@@ -4300,6 +4301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c91447321647c43ab1ff0ec4c2e59c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 0
   walkSpeed: 7
   groundDrag: 4
   jumpForce: 12
@@ -4330,18 +4332,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f91712fb3362c5645bc31861280456d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orientation: {fileID: 510539875}
-  playerObj: {fileID: 1924868308}
-  rb: {fileID: 0}
-  pm: {fileID: 0}
-  maxSlideTime: 10
-  slideForce: 200
-  slideTimer: 0
-  slideYScale: 0.5
-  startYScale: 0
-  slideKey: 306
-  horizontalInput: 0
-  verticalInput: 0
+--- !u!114 &1550309081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550309076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce80a0db5266fd3488eff468e7529a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedText: {fileID: 982499317}
 --- !u!1 &1568663909
 GameObject:
   m_ObjectHideFlags: 3

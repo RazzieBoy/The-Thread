@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MovementPlayer : MonoBehaviour{
-    private float moveSpeed;
+    public float moveSpeed;
     public float walkSpeed;
 
     public float groundDrag;
