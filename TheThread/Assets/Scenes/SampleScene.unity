@@ -4303,7 +4303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0
   walkSpeed: 7
-  slideSpeed: 15
+  slideSpeed: 10
   groundDrag: 4
   jumpForce: 12
   jumpCooldown: 0.25
@@ -4312,9 +4312,7 @@ MonoBehaviour:
   crouchSpeed: 3.5
   crouchYScale: 0.5
   startYScale: 0
-  slideForce: 5
-  maxSlideTime: 50
-  slideYScale: 1
+  slideYScale: 0
   sliding: 0
   jumpKey: 32
   crouchKey: 99
@@ -5824,7 +5822,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.37652117, w: 0.92640805}
   m_LocalPosition: {x: 63.268078, y: 47.86299, z: -211.09}
-  m_LocalScale: {x: 26.853575, y: 1, z: 8.9304495}
+  m_LocalScale: {x: 143.6908, y: 1, z: 8.9304495}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2008121404}

@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Testing\\MovementPlayer.cs",
               "ToolTip": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\Testing\\MovementPlayer.cs",
               "RelativeToolTip": "Assets\\Scripts\\Testing\\MovementPlayer.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAuwPQAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAcwFgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T23:11:16.154Z",
               "EditorCaption": ""

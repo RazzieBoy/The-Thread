@@ -24,9 +24,9 @@ public class MovementPlayer : MonoBehaviour{
     public float startYScale;
 
     [Header("SlidingStats")]
-    public float slideForce;
-    public float maxSlideTime;
-    private float slideTimer;
+    //public float slideForce;
+    //public float maxSlideTime;
+    //private float slideTimer;
     public float slideYScale;
     public bool sliding;
 
@@ -79,13 +79,6 @@ public class MovementPlayer : MonoBehaviour{
         SpeedControl();
         StateHandler();
 
-        if (Input.GetKey(slideKey) && (horizontalInput != 0 || verticalInput != 0)){
-            StartSlide();
-        }
-        else{
-            StopSlide();
-        }
-
         if (grounded)
             rb.drag = groundDrag;
         else
@@ -93,12 +86,8 @@ public class MovementPlayer : MonoBehaviour{
     }
 
     private void FixedUpdate(){
-        if (sliding){
-            SlidingMovement();
-        }
-        else{
-            MovePlayer();
-        }
+        MovePlayer();
+ 
     }
 
     private void MyInput(){
@@ -117,6 +106,10 @@ public class MovementPlayer : MonoBehaviour{
             transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
             rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
         }
+        if (Input.GetKeyDown(slideKey))
+        {
+            transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
+        }
         if (Input.GetKeyUp(crouchKey)){
             transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
         }
@@ -124,11 +117,7 @@ public class MovementPlayer : MonoBehaviour{
 
     private void StateHandler(){
 
-        if (sliding){
-            state = MovementState.sliding;
-            moveSpeed = slideSpeed;
-        }
-        else if (Input.GetKey(crouchKey)){
+        if (Input.GetKey(crouchKey)){
             state = MovementState.crouching;
             moveSpeed = crouchSpeed;
         }
@@ -169,12 +158,6 @@ public class MovementPlayer : MonoBehaviour{
         }
         else{
             Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-
-            //if(flatVel.magnitude > moveSpeed)
-            //{
-            //    Vector3 limitedVel = flatVel.normalized * moveSpeed;
-            //    rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
-            //}
         }
     }
 
@@ -196,80 +179,7 @@ public class MovementPlayer : MonoBehaviour{
         return false;
     }
 
-    private void StartSlide(){
-        if (!grounded) return;
-
-        sliding = true;
-        transform.localScale = new Vector3(transform.localScale.x, slideYScale, transform.localScale.z);
-
-        if (grounded) {
-            rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
-        }
-        
-        slideTimer = maxSlideTime;
-
-        Vector3 inputDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-        rb.AddForce(inputDirection.normalized * slideForce, ForceMode.Impulse);
-    }
-
-    private void StopSlide(){
-        sliding  = false;
-        transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
-    }
-
     private Vector3 GetSlopeMoveDirection(){
         return Vector3.ProjectOnPlane(moveDirection, slopeHit.normal).normalized;
     }
-
-    private void SlidingMovement(){
-        slideTimer = Time.deltaTime;
-
-        Vector3 inputDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-
-        if (inputDirection.magnitude > 0.1f){
-            rb.AddForce(inputDirection.normalized * slideForce, ForceMode.Force);
-        }
-        else{
-            Vector3 flatvel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-            Vector3 decel = -flatvel.normalized * slideForce * 0.5f;
-            rb.AddForce(decel, ForceMode.Force);
-        }
-
-        Vector3 flatVelocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-        if (flatVelocity.magnitude < 2f || slideTimer <= 0f){
-            StopSlide();
-        }
-
-        if (flatVelocity.magnitude > slideSpeed){
-            Vector3 limitedVel = flatVelocity.normalized * slideSpeed;
-            rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
-        }
-    }
-
-//    private void SlidingMovement(){
-//        slideTimer -= Time.deltaTime;
-//        Vector3 inputDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-//        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-
-//        // sliding normal
-//        if (!OnSlope() || rb.velocity.y > -0.1f){
-
-//            rb.AddForce(inputDirection.normalized * slideForce, ForceMode.Force);
-//        }
-
-//        // sliding down a slope
-//        else{
-//            rb.AddForce(GetSlopeMoveDirection() * slideForce, ForceMode.Force);
-//        }
-
-//        if (slideTimer <= 0 || flatVel.magnitude < 2f){
-//            StopSlide();
-//        }
-
-        
-//        if (flatVel.magnitude > slideSpeed){
-//            Vector3 limitedVel = flatVel.normalized * slideSpeed;
-//            rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);   
-//        }
-//    }
 }
