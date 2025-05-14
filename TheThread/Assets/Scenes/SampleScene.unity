@@ -4304,6 +4304,7 @@ MonoBehaviour:
   moveSpeed: 0
   walkSpeed: 7
   slideSpeed: 10
+  slideDrag: 0.3
   groundDrag: 4
   jumpForce: 12
   jumpCooldown: 0.25

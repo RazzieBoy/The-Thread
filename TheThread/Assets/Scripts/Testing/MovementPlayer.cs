@@ -9,6 +9,7 @@ public class MovementPlayer : MonoBehaviour{
     public float moveSpeed;
     public float walkSpeed;
     public float slideSpeed;
+    public float slideDrag;
 
     public float groundDrag;
 
@@ -78,11 +79,21 @@ public class MovementPlayer : MonoBehaviour{
         MyInput();
         SpeedControl();
         StateHandler();
-
-        if (grounded)
+        
+        if (state == MovementState.walking){
             rb.drag = groundDrag;
+        }
+        else if (state == MovementState.crouching){
+            rb.drag = groundDrag;
+            Debug.Log(rb.drag);
+        }
+        else if (state == MovementState.sliding){
+            rb.drag = slideDrag;
+            Debug.Log(rb.drag);
+        }
         else
             rb.drag = 0;
+            Debug.Log(rb.drag);
     }
 
     private void FixedUpdate(){
@@ -104,20 +115,24 @@ public class MovementPlayer : MonoBehaviour{
 
         if (Input.GetKeyDown(crouchKey)){
             transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
-            rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+            rb.AddForce(moveDirection.normalized * 5f, ForceMode.Impulse);
         }
         if (Input.GetKeyDown(slideKey))
         {
             transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
         }
-        if (Input.GetKeyUp(crouchKey)){
+        if (Input.GetKeyUp(crouchKey) || Input.GetKeyUp(slideKey)){
             transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
         }
     }
 
     private void StateHandler(){
 
-        if (Input.GetKey(crouchKey)){
+        if (Input.GetKey(slideKey))
+        {
+            state = MovementState.sliding;
+        }
+        else if (Input.GetKey(crouchKey)){
             state = MovementState.crouching;
             moveSpeed = crouchSpeed;
         }
