@@ -146,6 +146,8 @@ public class MovementPlayer : MonoBehaviour{
     }
 
     private void MovePlayer(){
+        if (Input.GetKey(slideKey) && grounded) { return; }
+
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         if (OnSlope()){
@@ -174,6 +176,8 @@ public class MovementPlayer : MonoBehaviour{
         else{
             Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
         }
+
+
     }
 
     private void Jump(){
