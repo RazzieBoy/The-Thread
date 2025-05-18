@@ -38,6 +38,7 @@ public class MovementPlayer : MonoBehaviour{
     [Header("PlayerStats")]
     public float playerHeight;
     public LayerMask whatIsGround;
+    public LayerMask whatIsSkybox;
     bool grounded;
 
     [Header("SlopInfo")]
@@ -85,15 +86,12 @@ public class MovementPlayer : MonoBehaviour{
         }
         else if (state == MovementState.crouching){
             rb.drag = groundDrag;
-            Debug.Log(rb.drag);
         }
         else if (state == MovementState.sliding){
             rb.drag = slideDrag;
-            Debug.Log(rb.drag);
         }
         else
             rb.drag = 0;
-            Debug.Log(rb.drag);
     }
 
     private void FixedUpdate(){
@@ -175,6 +173,11 @@ public class MovementPlayer : MonoBehaviour{
         }
         else{
             Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+            //if (flatVel.magnitude > moveSpeed)
+            //{
+            //    Vector3 limitedVel = flatVel.normalized * moveSpeed;
+            //    rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+            //}
         }
 
 
