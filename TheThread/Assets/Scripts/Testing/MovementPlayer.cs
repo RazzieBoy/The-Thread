@@ -122,6 +122,8 @@ public class MovementPlayer : MonoBehaviour{
         if (Input.GetKeyUp(crouchKey) || Input.GetKeyUp(slideKey)){
             transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
         }
+
+        
     }
 
     private void StateHandler(){
