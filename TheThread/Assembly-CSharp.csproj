@@ -64,10 +64,12 @@
     <Compile Include="Assets\DisplaySpeed.cs" />
     <Compile Include="Assets\Scripts\Testing\MoveCameraScript.cs" />
     <Compile Include="Assets\Scripts\Testing\Sliding.cs" />
+    <Compile Include="Assets\Scripts\GameModeSelecter.cs" />
     <Compile Include="Assets\Scripts\UserMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Grappling.cs" />
     <Compile Include="Assets\Scripts\Testing\PlayerCam.cs" />
+    <Compile Include="Assets\Scripts\MainMenuScript.cs" />
     <Compile Include="Assets\Scripts\Testing\MovementPlayer.cs" />
     <Compile Include="Assets\Scripts\MoveCam.cs" />
   </ItemGroup>
