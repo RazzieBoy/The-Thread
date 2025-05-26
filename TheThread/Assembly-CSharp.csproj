@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Testing\Sliding.cs" />
     <Compile Include="Assets\Scripts\GameModeSelecter.cs" />
     <Compile Include="Assets\Scripts\UserMovement.cs" />
+    <Compile Include="Assets\Scripts\SettingsScript.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Grappling.cs" />
     <Compile Include="Assets\Scripts\Testing\PlayerCam.cs" />

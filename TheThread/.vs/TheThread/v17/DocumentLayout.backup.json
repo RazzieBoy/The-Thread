@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|d:\\users\\270235677\\onedrive - up education\\302project\\the-thread\\thethread\\assets\\scripts\\gamemodeselecter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\assets\\scripts\\gamemodeselecter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemodeselecter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|d:\\users\\270235677\\onedrive - up education\\302project\\the-thread\\thethread\\assets\\scripts\\testing\\movementplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|d:\\users\\270235677\\onedrive - up education\\302project\\the-thread\\thethread\\assets\\scripts\\mainmenuscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mainmenuscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\assets\\scripts\\testing\\movementplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\testing\\movementplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -30,8 +34,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainMenuScript.cs",
+              "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\MainMenuScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenuScript.cs",
+              "ToolTip": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\MainMenuScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MainMenuScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T23:18:23.089Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -40,14 +57,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameModeSelecter.cs",
               "ToolTip": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\GameModeSelecter.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameModeSelecter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T21:14:10.038Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Sliding.cs",
               "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\Testing\\Sliding.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Testing\\Sliding.cs",
@@ -59,7 +76,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "DisplaySpeed.cs",
               "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\DisplaySpeed.cs",
               "RelativeDocumentMoniker": "Assets\\DisplaySpeed.cs",
@@ -71,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MovementPlayer.cs",
               "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\Testing\\MovementPlayer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Testing\\MovementPlayer.cs",
@@ -79,12 +96,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Testing\\MovementPlayer.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAAAwEkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T23:11:16.154Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-07T23:11:16.154Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Grappling.cs",
               "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\Grappling.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Grappling.cs",
