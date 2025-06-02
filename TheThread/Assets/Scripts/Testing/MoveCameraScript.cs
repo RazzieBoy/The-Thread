@@ -8,7 +8,7 @@ public class MoveCameraScript : MonoBehaviour{
     // Update is called once per frame
 
     private void Start(){
-        //cameraPosition = FindFirstObjectByType<GameObject>
+        //cameraPosition = 
     }
 
     void Update(){
