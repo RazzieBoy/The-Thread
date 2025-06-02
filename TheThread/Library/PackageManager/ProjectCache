@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638840630781342082
-    m_Hash: 2376865147
+      ticks: 638844960217834861
+    m_Hash: 3577974255
   m_LockFileStatus:
     m_FilePath: D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638840630781618716
-    m_Hash: 2591476924
+      ticks: 638844960218120740
+    m_Hash: 368847898
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -662,6 +662,165 @@ m_ResolvedPackages:
     in a namespace\n- Fixed an issue where some controls like `QuaternionControl`
     could not be included in a Precompiled Layout because the generated code could
     not access a setter on child control properties."}'
+  assetStore:
+    productId: 
+- packageId: com.unity.netcode.gameobjects@1.13.0
+  testable: 0
+  isDirectDependency: 1
+  version: 1.13.0
+  source: 1
+  resolvedPath: D:\Users\270235677\OneDrive - UP Education\302Project\The-Thread\TheThread\Library\PackageCache\com.unity.netcode.gameobjects@1.13.0
+  assetPath: Packages/com.unity.netcode.gameobjects
+  name: com.unity.netcode.gameobjects
+  displayName: Netcode for GameObjects
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: Netcode for GameObjects is a high-level netcode SDK that provides
+    networking capabilities to GameObject/MonoBehaviour workflows within Unity and
+    sits on top of underlying transport layer.
+  errors: []
+  versions:
+    all:
+    - 1.0.0-pre.2
+    - 1.0.0-pre.3
+    - 1.0.0-pre.4
+    - 1.0.0-pre.5
+    - 1.0.0-pre.6
+    - 1.0.0-pre.7
+    - 1.0.0-pre.8
+    - 1.0.0-pre.9
+    - 1.0.0-pre.10
+    - 1.0.0
+    - 1.0.1
+    - 1.0.2
+    - 1.1.0
+    - 1.2.0
+    - 1.3.1
+    - 1.4.0
+    - 1.5.1
+    - 1.5.2
+    - 1.6.0
+    - 1.7.0
+    - 1.7.1
+    - 1.8.0
+    - 1.8.1
+    - 1.9.1
+    - 1.10.0
+    - 1.11.0
+    - 1.12.0
+    - 1.12.1
+    - 1.12.2
+    - 1.13.0
+    - 2.0.0-exp.2
+    - 2.0.0-exp.4
+    - 2.0.0-exp.5
+    - 2.0.0-pre.1
+    - 2.0.0-pre.2
+    - 2.0.0-pre.3
+    - 2.0.0-pre.4
+    - 2.0.0
+    - 2.1.1
+    - 2.2.0
+    - 2.3.0
+    - 2.3.1
+    - 2.3.2
+    compatible:
+    - 1.8.1
+    - 1.9.1
+    - 1.10.0
+    - 1.11.0
+    - 1.12.0
+    - 1.12.1
+    - 1.12.2
+    - 1.13.0
+    recommended: 1.8.1
+    deprecated: []
+  dependencies:
+  - name: com.unity.transport
+    version: 1.4.0
+  - name: com.unity.nuget.mono-cecil
+    version: 1.10.1
+  resolvedDependencies:
+  - name: com.unity.transport
+    version: 1.4.0
+  - name: com.unity.burst
+    version: 1.8.13
+  - name: com.unity.mathematics
+    version: 1.2.6
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.collections
+    version: 1.2.4
+  - name: com.unity.test-framework
+    version: 1.3.9
+  - name: com.unity.ext.nunit
+    version: 2.0.5
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.nuget.mono-cecil
+    version: 1.11.4
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638816291523370000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.netcode.gameobjects@1.13/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.netcode.gameobjects.git
+    revision: f53fd6407d8829ade55605a1696ab247d6189f9d
+    path: 
+  unityLifecycle:
+    version: 1.8.1
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"### Added\n\n- Added `NetworkManager.OnPreShutdown`
+    which is called before the NetworkManager cleans up and shuts down. (#3358)\n-
+    Added `FastBufferReader(ArraySegment<byte> buffer, Allocator copyAllocator)`
+    constructor that uses the `ArraySegment.Offset` as the `FastBufferReader` offset
+    and the `ArraySegment.Count` as the `FastBufferReader` length. (#3320)\n- Added
+    `FastBufferReader(ArraySegment<byte> buffer, Allocator copyAllocator, int length
+    = -1)` constructor that uses the `ArraySegment.Offset` as the `FastBufferReader`
+    offset. (#3320)\n\n### Fixed\n\n- Fixed memory leaks when domain reload is disabled.
+    (#3428)\n- Fixed issues with the `NetworkBehaviour` and `NetworkVariable` length
+    safety checks. (#3415)\n- Fixed issue where during a `NetworkObject`''s spawn
+    if you instantiated, spawned, and parented another network prefab under the currently
+    spawning `NetworkObject` the parenting message would not properly defer until
+    the parent `NetworkObject` was spawned. (#3403)\n- Fixed issue where in-scene
+    placed `NetworkObjects` could fail to synchronize its transform properly (especially
+    without a `NetworkTransform`) if their parenting changes from the default when
+    the scene is loaded and if the same scene remains loaded between network sessions
+    while the parenting is completely different from the original hierarchy. (#3388)\n-
+    Fixed an issue in `UnityTransport` where the transport would accept sends on
+    invalid connections, leading to a useless memory allocation and confusing error
+    message. (#3383)\n- Fixed issue where `NetworkAnimator` would log an error if
+    there was no destination transition information. (#3384)\n- Fixed initial `NetworkTransform`
+    spawn, ensure it uses world space. (#3361)\n- Fixed issue where `AnticipatedNetworkVariable`
+    previous value returned by `AnticipatedNetworkVariable.OnAuthoritativeValueChanged`
+    is updated correctly on the non-authoritative side. (#3322)\n\n### Changed\n\n-
+    Changed the scene loading event serialization order for in-scene placed `NetworkObject`s
+    to be based on their parent-child hierarchy. (#3388)"}'
   assetStore:
     productId: 
 - packageId: com.unity.timeline@1.8.6
@@ -3296,6 +3455,252 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
+- packageId: com.unity.transport@1.4.0
+  testable: 0
+  isDirectDependency: 0
+  version: 1.4.0
+  source: 1
+  resolvedPath: D:\Users\270235677\OneDrive - UP Education\302Project\The-Thread\TheThread\Library\PackageCache\com.unity.transport@1.4.0
+  assetPath: Packages/com.unity.transport
+  name: com.unity.transport
+  displayName: Unity Transport
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: Unity network transport layer - the low-level interface for sending
+    UDP data
+  errors: []
+  versions:
+    all:
+    - 0.2.0-preview.4
+    - 0.2.1-preview.1
+    - 0.2.2-preview.2
+    - 0.2.3-preview.0
+    - 0.2.4-preview.0
+    - 0.3.0-preview.6
+    - 0.3.1-preview.4
+    - 0.4.0-preview.3
+    - 0.4.1-preview.1
+    - 0.5.0-preview.5
+    - 0.6.0-preview.7
+    - 0.8.0-preview.8
+    - 1.0.0-pre.2
+    - 1.0.0-pre.3
+    - 1.0.0-pre.4
+    - 1.0.0-pre.5
+    - 1.0.0-pre.6
+    - 1.0.0-pre.7
+    - 1.0.0-pre.8
+    - 1.0.0-pre.9
+    - 1.0.0-pre.10
+    - 1.0.0-pre.12
+    - 1.0.0-pre.13
+    - 1.0.0-pre.14
+    - 1.0.0-pre.15
+    - 1.0.0-pre.16
+    - 1.0.0
+    - 1.1.0
+    - 1.2.0
+    - 1.3.0
+    - 1.3.1
+    - 1.3.2
+    - 1.3.3
+    - 1.3.4
+    - 1.4.0
+    - 1.4.1
+    - 1.5.0
+    - 2.0.0-exp.6
+    - 2.0.0-exp.7
+    - 2.0.0-exp.8
+    - 2.0.0-pre.2
+    - 2.0.0-pre.3
+    - 2.0.0-pre.5
+    - 2.0.0-pre.6
+    - 2.0.0-pre.7
+    - 2.0.0-pre.8
+    - 2.0.1
+    - 2.0.2
+    - 2.1.0
+    - 2.2.1
+    - 2.3.0
+    - 2.4.0
+    - 2.5.0
+    - 2.5.1
+    compatible:
+    - 1.4.0
+    - 1.4.1
+    - 1.5.0
+    - 2.0.0-exp.6
+    - 2.0.0-exp.7
+    - 2.0.0-exp.8
+    - 2.0.0-pre.2
+    - 2.0.0-pre.3
+    - 2.0.0-pre.5
+    - 2.0.0-pre.6
+    - 2.0.0-pre.7
+    - 2.0.0-pre.8
+    - 2.0.1
+    - 2.0.2
+    - 2.1.0
+    - 2.2.1
+    - 2.3.0
+    - 2.4.0
+    - 2.5.0
+    - 2.5.1
+    recommended: 1.4.1
+    deprecated: []
+  dependencies:
+  - name: com.unity.burst
+    version: 1.6.6
+  - name: com.unity.collections
+    version: 1.2.4
+  - name: com.unity.mathematics
+    version: 1.2.6
+  resolvedDependencies:
+  - name: com.unity.burst
+    version: 1.8.13
+  - name: com.unity.mathematics
+    version: 1.2.6
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.collections
+    version: 1.2.4
+  - name: com.unity.test-framework
+    version: 1.3.9
+  - name: com.unity.ext.nunit
+    version: 2.0.5
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638235444400000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.transport@1.4/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.transport.git
+    revision: 4a6bba09bd32ed2fa840f331651875d68e73cadc
+    path: 
+  unityLifecycle:
+    version: 1.4.0
+    nextVersion: 2.0.0-pre.7
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"### New features\n* Added a new `GetUnsafeReadOnlyPtr`
+    method to `DataStreamReader`. This is meant as an escape hatch for use cases
+    that require passing stream readers outside of a job (this not possible with
+    `DataStreamReader` directly since the safety system will not allow it). As the
+    name implies, this throws away many safety guarantees and is thus not recommended
+    to use unless absolutely required.\n\n### Changes\n* `NetworkDriver.GetRelayConnectionStatus`
+    will now return the new enum value `RelayConnectionStatus.NotUsingRelay` when
+    called on a `NetworkDriver` that has not been configured to use Unity Relay.
+    The previous behavior was to throw an exception.\n* It is now possible to configure
+    the maximum message size that the transport will send through a new `maxMessageSize`
+    parameter in `NetworkSettings.WithNetworkConfigParameters`. This is useful for
+    environments where network equipment mishandles larger packets (like some mobile
+    networks or VPNs). The value excludes IP and UDP headers, but includes headers
+    added by the transport itself (e.g. reliability headers). The default value is
+    1400. Note that it is recommended that both client and server be configured to
+    use the same value."}'
+  assetStore:
+    productId: 
+- packageId: com.unity.nuget.mono-cecil@1.11.4
+  testable: 0
+  isDirectDependency: 0
+  version: 1.11.4
+  source: 1
+  resolvedPath: D:\Users\270235677\OneDrive - UP Education\302Project\The-Thread\TheThread\Library\PackageCache\com.unity.nuget.mono-cecil@1.11.4
+  assetPath: Packages/com.unity.nuget.mono-cecil
+  name: com.unity.nuget.mono-cecil
+  displayName: Mono Cecil
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: library
+  description: 'The mono cecil library from https://www.nuget.org/packages/Mono.Cecil/
+
+
+    This
+    package is intended for internal Unity use only. Most Unity users will be better
+    suite using the existing community tooling.
+
+    To avoid assembly clashes, please
+    use this package if you intend to use Mono.Cecil.'
+  errors: []
+  versions:
+    all:
+    - 0.1.6-preview.2
+    - 1.0.0-preview.1
+    - 1.10.0-preview.1
+    - 1.10.1-preview.1
+    - 1.10.1
+    - 1.10.2
+    - 1.11.4
+    - 1.11.5
+    compatible:
+    - 1.11.4
+    - 1.11.5
+    recommended: 1.11.5
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637852971930000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.mono-cecil.git
+    revision: d0133ce672d724694b56bfd20672acf6f8737fec
+    path: 
+  unityLifecycle:
+    version: 1.11.4
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: 
+  assetStore:
+    productId: 
 - packageId: com.unity.ide.visualstudio@2.0.22
   testable: 0
   isDirectDependency: 0
@@ -3930,6 +4335,502 @@ m_ResolvedPackages:
     for assemblies whose name starts with ''system'' (case [COV-38](https://issuetracker.unity3d.com/issues/code-coverage-fails-to-generate-a-report-when-the-assembly-name-begins-with-the-word-system)).\n-
     Fixed results xml file not been correctly stored under the EditMode folder if
     it is written after a domain reload (case [COV-36](https://issuetracker.unity3d.com/issues/coverage-results-xml-file-is-not-categorized-as-editmode-if-it-is-written-after-domain-reload))."}'
+  assetStore:
+    productId: 
+- packageId: com.unity.burst@1.8.13
+  testable: 0
+  isDirectDependency: 0
+  version: 1.8.13
+  source: 1
+  resolvedPath: D:\Users\270235677\OneDrive - UP Education\302Project\The-Thread\TheThread\Library\PackageCache\com.unity.burst@1.8.13
+  assetPath: Packages/com.unity.burst
+  name: com.unity.burst
+  displayName: Burst
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: Burst is a compiler that translates from IL/.NET bytecode to highly
+    optimized native code using LLVM.
+  errors: []
+  versions:
+    all:
+    - 0.2.4-preview.5
+    - 0.2.4-preview.7
+    - 0.2.4-preview.11
+    - 0.2.4-preview.12
+    - 0.2.4-preview.13
+    - 0.2.4-preview.14
+    - 0.2.4-preview.15
+    - 0.2.4-preview.16
+    - 0.2.4-preview.17
+    - 0.2.4-preview.18
+    - 0.2.4-preview.19
+    - 0.2.4-preview.20
+    - 0.2.4-preview.21
+    - 0.2.4-preview.22
+    - 0.2.4-preview.23
+    - 0.2.4-preview.24
+    - 0.2.4-preview.25
+    - 0.2.4-preview.30
+    - 0.2.4-preview.31
+    - 0.2.4-preview.33
+    - 0.2.4-preview.34
+    - 0.2.4-preview.37
+    - 0.2.4-preview.41
+    - 0.2.4-preview.45
+    - 0.2.4-preview.48
+    - 0.2.4-preview.50
+    - 1.1.0-preview.2
+    - 1.1.0-preview.3
+    - 1.1.0-preview.4
+    - 1.1.1
+    - 1.1.2
+    - 1.1.3-preview.3
+    - 1.2.0-preview.1
+    - 1.2.0-preview.5
+    - 1.2.0-preview.6
+    - 1.2.0-preview.8
+    - 1.2.0-preview.9
+    - 1.2.0-preview.10
+    - 1.2.0-preview.11
+    - 1.2.0-preview.12
+    - 1.2.0
+    - 1.2.1
+    - 1.2.2
+    - 1.2.3
+    - 1.3.0-preview.1
+    - 1.3.0-preview.2
+    - 1.3.0-preview.3
+    - 1.3.0-preview.4
+    - 1.3.0-preview.5
+    - 1.3.0-preview.6
+    - 1.3.0-preview.7
+    - 1.3.0-preview.8
+    - 1.3.0-preview.9
+    - 1.3.0-preview.10
+    - 1.3.0-preview.11
+    - 1.3.0-preview.12
+    - 1.3.0-preview.13
+    - 1.3.0
+    - 1.3.1
+    - 1.3.2
+    - 1.3.3
+    - 1.3.4
+    - 1.3.5
+    - 1.3.6
+    - 1.3.7
+    - 1.3.8
+    - 1.3.9
+    - 1.4.0-pre.1
+    - 1.4.0-preview.1
+    - 1.4.0-preview.2
+    - 1.4.0-preview.3
+    - 1.4.0-preview.4
+    - 1.4.0-preview.5
+    - 1.4.1-pre.1
+    - 1.4.1-pre.2
+    - 1.4.1
+    - 1.4.2
+    - 1.4.3
+    - 1.4.4-preview.1
+    - 1.4.4-preview.2
+    - 1.4.4
+    - 1.4.5
+    - 1.4.6
+    - 1.4.7
+    - 1.4.8
+    - 1.4.9
+    - 1.4.11
+    - 1.5.0-pre.3
+    - 1.5.0-pre.4
+    - 1.5.0-pre.5
+    - 1.5.0
+    - 1.5.1
+    - 1.5.2
+    - 1.5.3
+    - 1.5.4
+    - 1.5.5
+    - 1.5.6-preview.1
+    - 1.5.6
+    - 1.6.0-pre.2
+    - 1.6.0-pre.3
+    - 1.6.0-pre.4
+    - 1.6.0
+    - 1.6.1
+    - 1.6.2
+    - 1.6.3
+    - 1.6.4
+    - 1.6.5
+    - 1.6.6
+    - 1.7.0-pre.1
+    - 1.7.0
+    - 1.7.1
+    - 1.7.2
+    - 1.7.3
+    - 1.7.4
+    - 1.8.0-pre.1
+    - 1.8.0-pre.2
+    - 1.8.0
+    - 1.8.1
+    - 1.8.2
+    - 1.8.3
+    - 1.8.4
+    - 1.8.7
+    - 1.8.8
+    - 1.8.9
+    - 1.8.10
+    - 1.8.11
+    - 1.8.12
+    - 1.8.13
+    - 1.8.14
+    - 1.8.15
+    - 1.8.16
+    - 1.8.17
+    - 1.8.18
+    - 1.8.19
+    - 1.8.20
+    - 1.8.21
+    compatible:
+    - 1.8.13
+    - 1.8.14
+    - 1.8.15
+    - 1.8.16
+    - 1.8.17
+    - 1.8.18
+    - 1.8.19
+    - 1.8.20
+    - 1.8.21
+    recommended: 1.8.21
+    deprecated: []
+  dependencies:
+  - name: com.unity.mathematics
+    version: 1.2.1
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.mathematics
+    version: 1.2.6
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638459163600000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: git@github.cds.internal.unity3d.com:unity/burst
+    revision: 018c84715a0efcfda7f76841a1b0b0366e55f407
+    path: 
+  unityLifecycle:
+    version: 1.8.13
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: '{"changelog":"### Added\n- Added clearer diagnostic error for certain
+    bad usages of IsSupportedXXX intrinsics.\n- Added support for Burst with the
+    visionOS Simulator SDK.\n- Added support for Windows Arm64.\n\n### Fixed\n- Fixed
+    InvalidCompilerException  when usage of IsSupportedXXX intrinsic results in no
+    branches being generated.\n- Fixed information in documentation regarding scheduling
+    generic jobs through generic methods.\n- Fixed a crash caused by arithmetic or
+    bitwise negation on native integers followed by a cast to a pointer.\n- Fixed
+    that the burst debug information folder would sometimes be saved in project root
+    folder.\n- Fixed `System.ArgumentNullException` exception in ILPostProcessing
+    when encountering a library using `mscorlib`\n- Fixed an issue where if two modules
+    were referencing the same external method (dllImport) an internal compiler error
+    could occur - \"Burst internal compiler error: Burst.Compiler.IL.CompilerException:
+    Error while verifying module: DISubprogram attached to more than one function\"\n-
+    Fixed \"Failed to find entry-points: ... An item with the same key has already
+    been added\" error that could occur in the presence of precompiled (usually obfuscated)
+    assemblies that contained methods overloaded only by return type\n\n### Removed\n\n###
+    Changed\n\n### Known Issues"}'
+  assetStore:
+    productId: 
+- packageId: com.unity.collections@1.2.4
+  testable: 0
+  isDirectDependency: 0
+  version: 1.2.4
+  source: 1
+  resolvedPath: D:\Users\270235677\OneDrive - UP Education\302Project\The-Thread\TheThread\Library\PackageCache\com.unity.collections@1.2.4
+  assetPath: Packages/com.unity.collections
+  name: com.unity.collections
+  displayName: Collections
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: A C# collections library providing data structures that can be used
+    in jobs, and optimized by Burst compiler.
+  errors: []
+  versions:
+    all:
+    - 0.0.9-preview.1
+    - 0.0.9-preview.2
+    - 0.0.9-preview.3
+    - 0.0.9-preview.4
+    - 0.0.9-preview.5
+    - 0.0.9-preview.6
+    - 0.0.9-preview.7
+    - 0.0.9-preview.8
+    - 0.0.9-preview.9
+    - 0.0.9-preview.10
+    - 0.0.9-preview.11
+    - 0.0.9-preview.12
+    - 0.0.9-preview.13
+    - 0.0.9-preview.14
+    - 0.0.9-preview.15
+    - 0.0.9-preview.16
+    - 0.0.9-preview.17
+    - 0.0.9-preview.18
+    - 0.0.9-preview.19
+    - 0.0.9-preview.20
+    - 0.1.0-preview
+    - 0.1.1-preview
+    - 0.2.0-preview.13
+    - 0.3.0-preview.0
+    - 0.4.0-preview.6
+    - 0.5.0-preview.9
+    - 0.5.1-preview.11
+    - 0.5.2-preview.8
+    - 0.6.0-preview.9
+    - 0.7.0-preview.2
+    - 0.7.1-preview.3
+    - 0.8.0-preview.5
+    - 0.9.0-preview.5
+    - 0.9.0-preview.6
+    - 0.11.0-preview.17
+    - 0.12.0-preview.13
+    - 0.14.0-preview.16
+    - 0.15.0-preview.21
+    - 0.17.0-preview.18
+    - 1.0.0-pre.3
+    - 1.0.0-pre.5
+    - 1.0.0-pre.6
+    - 1.1.0
+    - 1.2.3-pre.1
+    - 1.2.3
+    - 1.2.4
+    - 1.3.1
+    - 1.4.0
+    - 1.5.1
+    - 1.5.2
+    - 2.1.0-exp.4
+    - 2.1.0-pre.2
+    - 2.1.0-pre.6
+    - 2.1.0-pre.11
+    - 2.1.0-pre.18
+    - 2.1.1
+    - 2.1.4
+    - 2.2.0
+    - 2.2.1
+    - 2.3.0-exp.1
+    - 2.3.0-pre.3
+    - 2.4.0-exp.2
+    - 2.4.0-pre.2
+    - 2.4.0-pre.5
+    - 2.4.0
+    - 2.4.1
+    - 2.4.2
+    - 2.4.3
+    - 2.5.0-exp.1
+    - 2.5.0-pre.2
+    - 2.5.1
+    - 2.5.2
+    - 2.5.3
+    - 2.5.7
+    - 2.6.0-exp.2
+    compatible:
+    - 1.2.4
+    - 1.3.1
+    - 1.4.0
+    - 1.5.1
+    - 1.5.2
+    - 2.1.0-exp.4
+    - 2.1.0-pre.2
+    - 2.1.0-pre.6
+    - 2.1.0-pre.11
+    - 2.1.0-pre.18
+    - 2.1.1
+    - 2.1.4
+    - 2.2.0
+    - 2.2.1
+    - 2.3.0-exp.1
+    - 2.3.0-pre.3
+    - 2.4.0-exp.2
+    - 2.4.0-pre.2
+    - 2.4.0-pre.5
+    - 2.4.0
+    - 2.4.1
+    - 2.4.2
+    - 2.4.3
+    - 2.5.0-exp.1
+    - 2.5.0-pre.2
+    - 2.5.1
+    - 2.5.2
+    - 2.5.3
+    - 2.5.7
+    - 2.6.0-exp.2
+    recommended: 1.2.4
+    deprecated: []
+  dependencies:
+  - name: com.unity.burst
+    version: 1.6.6
+  - name: com.unity.test-framework
+    version: 1.1.31
+  resolvedDependencies:
+  - name: com.unity.burst
+    version: 1.8.13
+  - name: com.unity.mathematics
+    version: 1.2.6
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.test-framework
+    version: 1.3.9
+  - name: com.unity.ext.nunit
+    version: 2.0.5
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  keywords:
+  - dots
+  - collections
+  - unity
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637908244640000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/dots.git
+    revision: 32d153034bea0703098263469b88c73619422782
+    path: 
+  unityLifecycle:
+    version: 1.2.4
+    nextVersion: 2.1.0-pre.6
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: 
+  assetStore:
+    productId: 
+- packageId: com.unity.mathematics@1.2.6
+  testable: 0
+  isDirectDependency: 0
+  version: 1.2.6
+  source: 1
+  resolvedPath: D:\Users\270235677\OneDrive - UP Education\302Project\The-Thread\TheThread\Library\PackageCache\com.unity.mathematics@1.2.6
+  assetPath: Packages/com.unity.mathematics
+  name: com.unity.mathematics
+  displayName: Mathematics
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: asset
+  description: Unity's C# SIMD math library providing vector types and math functions
+    with a shader like syntax.
+  errors: []
+  versions:
+    all:
+    - 0.0.12-preview.2
+    - 0.0.12-preview.5
+    - 0.0.12-preview.8
+    - 0.0.12-preview.10
+    - 0.0.12-preview.11
+    - 0.0.12-preview.13
+    - 0.0.12-preview.17
+    - 0.0.12-preview.19
+    - 0.0.12-preview.20
+    - 1.0.0-preview.1
+    - 1.0.1
+    - 1.1.0-preview.1
+    - 1.1.0
+    - 1.2.1
+    - 1.2.4
+    - 1.2.5
+    - 1.2.6
+    - 1.3.1
+    - 1.3.2
+    compatible:
+    - 1.2.6
+    - 1.3.1
+    - 1.3.2
+    recommended: 1.2.6
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - unity
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637841876140000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/Unity.Mathematics.git
+    revision: f110c8c230d253654afed153569030a587cc7557
+    path: 
+  unityLifecycle:
+    version: 1.2.6
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: 
   assetStore:
     productId: 
 - packageId: com.unity.settings-manager@2.0.1

@@ -7,7 +7,12 @@ using UnityEngine.UI;
 public class DisplaySpeed : MonoBehaviour{
 
     //public Text speedText;
-    public TMP_Text speedText;
+    public TextMeshProUGUI speedText;
+    public GameObject prefabText;
+
+    private void Start(){
+        speedText = FindFirstObjectByType<TextMeshProUGUI>();
+    }
 
     // Update is called once per frame
     void Update(){
