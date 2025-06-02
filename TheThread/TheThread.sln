@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{157158C1-9B70-7173-7AAE-849BA2447A0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.InputSystem.RebindingUI", "Unity.InputSystem.RebindingUI.csproj", "{28D4CA1E-B6F8-1B8D-84BC-76BBBD898430}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,10 +13,6 @@ Global
 		{157158C1-9B70-7173-7AAE-849BA2447A0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{157158C1-9B70-7173-7AAE-849BA2447A0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{157158C1-9B70-7173-7AAE-849BA2447A0D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{28D4CA1E-B6F8-1B8D-84BC-76BBBD898430}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{28D4CA1E-B6F8-1B8D-84BC-76BBBD898430}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{28D4CA1E-B6F8-1B8D-84BC-76BBBD898430}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{28D4CA1E-B6F8-1B8D-84BC-76BBBD898430}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
