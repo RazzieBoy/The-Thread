@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Unity.Netcode;
+using System.Globalization;
 
-public class MovementPlayer : MonoBehaviour{
+public class MovementPlayer : NetworkBehaviour{
     [Header("References")]
     [Header("Speeds")]
     public float moveSpeed;
@@ -25,9 +27,6 @@ public class MovementPlayer : MonoBehaviour{
     public float startYScale;
 
     [Header("SlidingStats")]
-    //public float slideForce;
-    //public float maxSlideTime;
-    //private float slideTimer;
     public float slideYScale;
     public bool sliding;
 
@@ -45,7 +44,10 @@ public class MovementPlayer : MonoBehaviour{
     public float maxSlopeAngle;
     private RaycastHit slopeHit;
 
-    public Transform orientation;
+    [SerializeField] public Transform orientation;
+    public GameObject cameraPrefab;
+    private GameObject camInstance;
+    [SerializeField]  private Transform cameraPos;
 
     float horizontalInput;
     float verticalInput;
@@ -62,19 +64,52 @@ public class MovementPlayer : MonoBehaviour{
         air
 
     }
+    public override void OnNetworkSpawn()
+    {
+        base.OnNetworkSpawn();
 
-    // Start is called before the first frame update
-    void Start(){
+        if (IsOwner)
+        {
+            // Instantiate the camera prefab locally for the owner
+            camInstance = Instantiate(cameraPrefab);
+
+            // Assuming your camera prefab has a script PlayerCam with Setup method
+            PlayerCam camScript = camInstance.GetComponent<PlayerCam>();
+            MoveCameraScript moveScript = camInstance.GetComponent<MoveCameraScript>();
+
+            if (camScript != null && moveScript != null)
+            {
+                camScript.SetupOrientation(orientation);
+                moveScript.SetupCameraPosition(cameraPos);
+            }
+            else
+            {
+                Debug.LogError("Camera prefab missing PlayerCam or MoveCameraScript component");
+            }
+
+            // Optional: Make the camera a child of the player for neat hierarchy
+            camInstance.transform.SetParent(transform);
+        }
+    }
+
+    private void Awake()
+    {
+        if (orientation == null)
+            orientation = transform.Find("Orientation");
+
+        if (cameraPos == null)
+            cameraPos = transform.Find("CameraPos");
+
         rb = GetComponent<Rigidbody>();
-        rb.freezeRotation = true;
-
-        canJump = true;
-
-        startYScale = transform.localScale.y;
+        if (rb == null)
+            Debug.LogError("Rigidbody component missing on player!");
     }
 
     // Update is called once per frame
     void Update(){
+        Debug.Log("IsOwner: " + IsOwner);
+        if (!IsOwner) return;
+
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 1f, whatIsGround);
 
         MyInput();
@@ -95,6 +130,7 @@ public class MovementPlayer : MonoBehaviour{
     }
 
     private void FixedUpdate(){
+        if (!IsOwner) return;
         MovePlayer();
  
     }

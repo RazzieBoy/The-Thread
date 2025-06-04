@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCam : MonoBehaviour{
-    public float sensX;
-    public float sensY;
+    public float sensX = 200f;
+    public float sensY = 200f;
 
     public Transform orientation;
 
     float xRotation;
     float yRotation;
+
+    public void SetupOrientation(Transform orientationTransform)
+    {
+        orientation = orientationTransform;
+    }
 
     private void Start(){
         Cursor.lockState = CursorLockMode.Locked;
@@ -17,6 +22,8 @@ public class PlayerCam : MonoBehaviour{
     }
 
     private void Update() {
+        if (orientation == null) return;
+
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
 

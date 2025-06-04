@@ -5,13 +5,15 @@ using UnityEngine;
 public class MoveCameraScript : MonoBehaviour{
     public Transform cameraPosition;
 
-    // Update is called once per frame
-
-    private void Start(){
-        //cameraPosition = 
+    public void SetupCameraPosition(Transform cameraPositionTransform)
+    {
+        cameraPosition = cameraPositionTransform;
     }
 
-    void Update(){
-        transform.position = cameraPosition.position;
+    void LateUpdate(){
+        if (cameraPosition != null) {
+            transform.position = cameraPosition.position;
+        }
+        
     }
 }

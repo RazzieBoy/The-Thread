@@ -151,6 +151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3493765550233013160}
   - component: {fileID: 1505901159790106103}
+  - component: {fileID: -494040608205156998}
   - component: {fileID: 200331996801027224}
   - component: {fileID: 7418540186834145082}
   m_Layer: 0
@@ -204,6 +205,27 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!114 &-494040608205156998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5796782062295678868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 2368217534
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!114 &200331996801027224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +264,8 @@ MonoBehaviour:
     m_Bits: 0
   maxSlopeAngle: 40
   orientation: {fileID: 5812929678019052686}
+  cameraPrefab: {fileID: 4205494327242972314, guid: 42f8c7023ded28d459864258d7b003ff, type: 3}
+  cameraPos: {fileID: 569626491394989560}
   state: 0
 --- !u!114 &7418540186834145082
 MonoBehaviour:
@@ -256,6 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedText: {fileID: 0}
+  prefabText: {fileID: 0}
 --- !u!1 &8074979448194337846
 GameObject:
   m_ObjectHideFlags: 0

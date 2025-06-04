@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638844960217834861
-    m_Hash: 3577974255
+      ticks: 638846726717505185
+    m_Hash: 1188188214
   m_LockFileStatus:
     m_FilePath: D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638844960218120740
-    m_Hash: 368847898
+      ticks: 638846726717585196
+    m_Hash: 2222099367
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -664,12 +664,12 @@ m_ResolvedPackages:
     not access a setter on child control properties."}'
   assetStore:
     productId: 
-- packageId: com.unity.netcode.gameobjects@1.13.0
+- packageId: com.unity.netcode.gameobjects@1.8.1
   testable: 0
   isDirectDependency: 1
-  version: 1.13.0
+  version: 1.8.1
   source: 1
-  resolvedPath: D:\Users\270235677\OneDrive - UP Education\302Project\The-Thread\TheThread\Library\PackageCache\com.unity.netcode.gameobjects@1.13.0
+  resolvedPath: D:\Users\270235677\OneDrive - UP Education\302Project\The-Thread\TheThread\Library\PackageCache\com.unity.netcode.gameobjects@1.8.1
   assetPath: Packages/com.unity.netcode.gameobjects
   name: com.unity.netcode.gameobjects
   displayName: Netcode for GameObjects
@@ -678,7 +678,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: assets
   description: Netcode for GameObjects is a high-level netcode SDK that provides
     networking capabilities to GameObject/MonoBehaviour workflows within Unity and
     sits on top of underlying transport layer.
@@ -776,13 +776,13 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638816291523370000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.netcode.gameobjects@1.13/manual/index.html
+  datePublishedTicks: 638435038500000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.netcode.gameobjects@1.8/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.com/Unity-Technologies/com.unity.netcode.gameobjects.git
-    revision: f53fd6407d8829ade55605a1696ab247d6189f9d
+    revision: eb213838233cbee2030891203bcb72d2354a5a7d
     path: 
   unityLifecycle:
     version: 1.8.1
@@ -795,32 +795,8 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Added\n\n- Added `NetworkManager.OnPreShutdown`
-    which is called before the NetworkManager cleans up and shuts down. (#3358)\n-
-    Added `FastBufferReader(ArraySegment<byte> buffer, Allocator copyAllocator)`
-    constructor that uses the `ArraySegment.Offset` as the `FastBufferReader` offset
-    and the `ArraySegment.Count` as the `FastBufferReader` length. (#3320)\n- Added
-    `FastBufferReader(ArraySegment<byte> buffer, Allocator copyAllocator, int length
-    = -1)` constructor that uses the `ArraySegment.Offset` as the `FastBufferReader`
-    offset. (#3320)\n\n### Fixed\n\n- Fixed memory leaks when domain reload is disabled.
-    (#3428)\n- Fixed issues with the `NetworkBehaviour` and `NetworkVariable` length
-    safety checks. (#3415)\n- Fixed issue where during a `NetworkObject`''s spawn
-    if you instantiated, spawned, and parented another network prefab under the currently
-    spawning `NetworkObject` the parenting message would not properly defer until
-    the parent `NetworkObject` was spawned. (#3403)\n- Fixed issue where in-scene
-    placed `NetworkObjects` could fail to synchronize its transform properly (especially
-    without a `NetworkTransform`) if their parenting changes from the default when
-    the scene is loaded and if the same scene remains loaded between network sessions
-    while the parenting is completely different from the original hierarchy. (#3388)\n-
-    Fixed an issue in `UnityTransport` where the transport would accept sends on
-    invalid connections, leading to a useless memory allocation and confusing error
-    message. (#3383)\n- Fixed issue where `NetworkAnimator` would log an error if
-    there was no destination transition information. (#3384)\n- Fixed initial `NetworkTransform`
-    spawn, ensure it uses world space. (#3361)\n- Fixed issue where `AnticipatedNetworkVariable`
-    previous value returned by `AnticipatedNetworkVariable.OnAuthoritativeValueChanged`
-    is updated correctly on the non-authoritative side. (#3322)\n\n### Changed\n\n-
-    Changed the scene loading event serialization order for in-scene placed `NetworkObject`s
-    to be based on their parent-child hierarchy. (#3388)"}'
+  upmReserved: '{"changelog":"### Fixed\n\n- Fixed a compile error when compiling
+    for IL2CPP targets when using the new `[Rpc]` attribute. (#2824)"}'
   assetStore:
     productId: 
 - packageId: com.unity.timeline@1.8.6
