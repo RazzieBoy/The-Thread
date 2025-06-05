@@ -1,12 +1,10 @@
 <linker>
-	<assembly fullname="Cinemachine">
-		<type fullname="Cinemachine.AxisState" preserve="nothing" serialized="true"/>
-		<type fullname="Cinemachine.AxisState/Recentering" preserve="nothing" serialized="true"/>
-		<type fullname="Cinemachine.CinemachineBrain/VcamActivatedEvent" preserve="nothing" serialized="true"/>
-		<type fullname="Cinemachine.CinemachineFreeLook/Orbit" preserve="nothing" serialized="true"/>
-		<type fullname="Cinemachine.CinemachineOrbitalTransposer/Heading" preserve="nothing" serialized="true"/>
-		<type fullname="Cinemachine.CinemachineVirtualCameraBase/TransitionParams" preserve="nothing" serialized="true"/>
-		<type fullname="Cinemachine.LensSettings" preserve="nothing" serialized="true"/>
+	<assembly fullname="Unity.Netcode.Runtime">
+		<type fullname="Unity.Netcode.NetworkConfig" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Netcode.NetworkPrefab" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Netcode.NetworkPrefabs" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Netcode.Transports.UTP.UnityTransport/ConnectionAddressData" preserve="nothing" serialized="true"/>
+		<type fullname="Unity.Netcode.Transports.UTP.UnityTransport/SimulatorParameters" preserve="nothing" serialized="true"/>
 	</assembly>
 	<assembly fullname="Unity.TextMeshPro">
 		<type fullname="TMPro.FaceInfo_Legacy" preserve="nothing" serialized="true"/>
@@ -15,6 +13,11 @@
 		<type fullname="TMPro.TMP_Character" preserve="nothing" serialized="true"/>
 		<type fullname="TMPro.TMP_FontFeatureTable" preserve="nothing" serialized="true"/>
 		<type fullname="TMPro.TMP_FontWeightPair" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_InputField/OnChangeEvent" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_InputField/SelectionEvent" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_InputField/SubmitEvent" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_InputField/TextSelectionEvent" preserve="nothing" serialized="true"/>
+		<type fullname="TMPro.TMP_InputField/TouchScreenKeyboardEvent" preserve="nothing" serialized="true"/>
 		<type fullname="TMPro.TMP_Sprite" preserve="nothing" serialized="true"/>
 		<type fullname="TMPro.TMP_SpriteCharacter" preserve="nothing" serialized="true"/>
 		<type fullname="TMPro.TMP_SpriteGlyph" preserve="nothing" serialized="true"/>
@@ -22,7 +25,9 @@
 		<type fullname="TMPro.VertexGradient" preserve="nothing" serialized="true"/>
 	</assembly>
 	<assembly fullname="UnityEngine.CoreModule">
+		<type fullname="UnityEngine.Events.ArgumentCache" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.Events.PersistentCallGroup" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.Events.PersistentListenerMode" preserve="nothing" serialized="true"/>
 	</assembly>
 	<assembly fullname="UnityEngine.TextCoreFontEngineModule">
 		<type fullname="UnityEngine.TextCore.FaceInfo" preserve="nothing" serialized="true"/>
@@ -34,6 +39,11 @@
 		<type fullname="UnityEngine.TextCore.LowLevel.GlyphValueRecord" preserve="nothing" serialized="true"/>
 	</assembly>
 	<assembly fullname="UnityEngine.UI">
+		<type fullname="UnityEngine.UI.AnimationTriggers" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.Button/ButtonClickedEvent" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.ColorBlock" preserve="nothing" serialized="true"/>
 		<type fullname="UnityEngine.UI.MaskableGraphic/CullStateChangedEvent" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.Navigation" preserve="nothing" serialized="true"/>
+		<type fullname="UnityEngine.UI.SpriteState" preserve="nothing" serialized="true"/>
 	</assembly>
 </linker>

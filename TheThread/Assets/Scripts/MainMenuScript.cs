@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -42,9 +43,22 @@ public class MainMenuScript : MonoBehaviour
 
     public void LoadSceneByName()
     {
-        SceneManager.LoadScene("Scenes/MainMenu");
+        bool success = NetworkManager.Singleton.StartHost();
+        Debug.Log($"StartHost success: {success}");
+        if (success)
+        {
+            // Load your actual game scene, e.g. "GameScene"
+            SceneManager.LoadScene("SampleScene");
+        }
+        else
+        {
+            Debug.LogError("Failed to start host.");
+        }
     }
-
+    public void JoinGame()
+    {
+        NetworkManager.Singleton.StartClient();
+    }
     public void LoadNextInBuild()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

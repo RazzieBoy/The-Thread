@@ -72,23 +72,11 @@ public class MovementPlayer : NetworkBehaviour{
         {
             // Instantiate the camera prefab locally for the owner
             camInstance = Instantiate(cameraPrefab);
+            camInstance.transform.SetParent(transform);
 
             // Assuming your camera prefab has a script PlayerCam with Setup method
             PlayerCam camScript = camInstance.GetComponent<PlayerCam>();
             MoveCameraScript moveScript = camInstance.GetComponent<MoveCameraScript>();
-
-            if (camScript != null && moveScript != null)
-            {
-                camScript.SetupOrientation(orientation);
-                moveScript.SetupCameraPosition(cameraPos);
-            }
-            else
-            {
-                Debug.LogError("Camera prefab missing PlayerCam or MoveCameraScript component");
-            }
-
-            // Optional: Make the camera a child of the player for neat hierarchy
-            camInstance.transform.SetParent(transform);
         }
     }
 

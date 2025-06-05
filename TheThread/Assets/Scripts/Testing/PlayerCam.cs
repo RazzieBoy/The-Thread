@@ -19,6 +19,21 @@ public class PlayerCam : MonoBehaviour{
     private void Start(){
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        if (orientation == null)
+        {
+            Transform root = transform.root;
+            Transform foundOrientation = root.Find("Orientation");
+
+            if (foundOrientation != null)
+            {
+                orientation = foundOrientation;
+            }
+            else
+            {
+                Debug.LogWarning("Orientation not found in root of: " + root.name);
+            }
+        }
     }
 
     private void Update() {

@@ -1,23 +1,34 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="ConstantNetworkManager" preserve="nothing"/>
+		<type fullname="CustomNetworkManagerScript" preserve="nothing"/>
 		<type fullname="DisplaySpeed" preserve="nothing"/>
+		<type fullname="GameStart" preserve="nothing"/>
 		<type fullname="Grappling" preserve="nothing"/>
+		<type fullname="KeyRebindUI" preserve="nothing"/>
+		<type fullname="MainMenuScript" preserve="nothing"/>
 		<type fullname="MoveCameraScript" preserve="nothing"/>
 		<type fullname="MovementPlayer" preserve="nothing"/>
 		<type fullname="PlayerCam" preserve="nothing"/>
-		<type fullname="PlayerMovement" preserve="nothing"/>
 	</assembly>
-	<assembly fullname="Cinemachine">
-		<type fullname="Cinemachine.CinemachineCollider" preserve="nothing"/>
-		<type fullname="Cinemachine.CinemachineComposer" preserve="nothing"/>
-		<type fullname="Cinemachine.CinemachineFreeLook" preserve="nothing"/>
-		<type fullname="Cinemachine.CinemachineOrbitalTransposer" preserve="nothing"/>
-		<type fullname="Cinemachine.CinemachinePipeline" preserve="nothing"/>
-		<type fullname="Cinemachine.CinemachineVirtualCamera" preserve="nothing"/>
+	<assembly fullname="Unity.InputSystem">
+		<type fullname="UnityEngine.InputSystem.InputSettings" preserve="nothing"/>
+		<type fullname="UnityEngine.InputSystem.InputSystemObject" preserve="nothing"/>
+		<type fullname="UnityEngine.InputSystem.RemoteInputPlayerConnection" preserve="nothing"/>
+	</assembly>
+	<assembly fullname="Unity.Netcode.Components">
+		<type fullname="Unity.Netcode.Components.NetworkTransform" preserve="nothing"/>
+	</assembly>
+	<assembly fullname="Unity.Netcode.Runtime">
+		<type fullname="Unity.Netcode.NetworkManager" preserve="nothing"/>
+		<type fullname="Unity.Netcode.NetworkObject" preserve="nothing"/>
+		<type fullname="Unity.Netcode.NetworkPrefabsList" preserve="nothing"/>
+		<type fullname="Unity.Netcode.Transports.UTP.UnityTransport" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.TextMeshPro">
 		<type fullname="TMPro.TextMeshProUGUI" preserve="nothing"/>
 		<type fullname="TMPro.TMP_FontAsset" preserve="nothing"/>
+		<type fullname="TMPro.TMP_InputField" preserve="nothing"/>
 		<type fullname="TMPro.TMP_Settings" preserve="nothing"/>
 		<type fullname="TMPro.TMP_SpriteAsset" preserve="nothing"/>
 		<type fullname="TMPro.TMP_StyleSheet" preserve="nothing"/>
@@ -41,7 +52,6 @@
 		<type fullname="UnityEngine.Canvas" preserve="nothing"/>
 		<type fullname="UnityEngine.CanvasRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.CapsuleCollider" preserve="nothing"/>
-		<type fullname="UnityEngine.CharacterController" preserve="nothing"/>
 		<type fullname="UnityEngine.Collider" preserve="nothing"/>
 		<type fullname="UnityEngine.Component" preserve="nothing"/>
 		<type fullname="UnityEngine.Cubemap" preserve="nothing"/>
@@ -74,8 +84,11 @@
 	<assembly fullname="UnityEngine.UI">
 		<type fullname="UnityEngine.EventSystems.EventSystem" preserve="nothing"/>
 		<type fullname="UnityEngine.EventSystems.StandaloneInputModule" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.Button" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.CanvasScaler" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.GraphicRaycaster" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Image" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.LayoutElement" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.RectMask2D" preserve="nothing"/>
 	</assembly>
 </linker>

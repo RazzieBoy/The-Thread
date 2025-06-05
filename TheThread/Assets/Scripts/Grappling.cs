@@ -9,7 +9,8 @@ public class Grappling : MonoBehaviour
     private Vector3 grapplePoint1;
     private Vector3 grapplePoint2;
     public LayerMask whatIsGrappleable;
-    public Transform gunTip1, gunTip2, cam, player;
+    public Transform gunTip1, gunTip2, cam;
+    public Transform player;
     private float maxDistance = 75f;
     private SpringJoint joint;
     public float reeling = 2f;
@@ -23,6 +24,23 @@ public class Grappling : MonoBehaviour
     {
         lr1 = gunTip1.GetComponent<LineRenderer>();
         lr2 = gunTip2.GetComponent<LineRenderer>();
+
+        //Transform topParent = transform;
+        //while (topParent.parent != null)
+        //{
+        //    Debug.Log("Climbing from: " + topParent.name + " to " + topParent.parent.name);
+        //    topParent = topParent.parent;
+        //}
+
+        //player = topParent;
+
+        //Debug.Log("Top parent assigned: " + player.name);
+    }
+
+    public void Start()
+    {
+        player = transform.root;
+        Debug.Log("Top-level parent (player) is: " + player.name);
     }
 
     void Update()

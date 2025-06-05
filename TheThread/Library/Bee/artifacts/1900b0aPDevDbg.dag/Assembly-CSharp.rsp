@@ -113,6 +113,7 @@
 -define:ENABLE_TERRAIN
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
+-define:ENABLE_INPUT_SYSTEM
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER
@@ -313,9 +314,18 @@
 -r:"D:/Program Files/Unity2023.2f0/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.VRModule.dll"
 -r:"D:/Program Files/Unity2023.2f0/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.WindModule.dll"
 -r:"D:/Program Files/Unity2023.2f0/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll"
+-r:"Library/PackageCache/com.unity.collections@1.2.4/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll"
 -r:"Library/PackageCache/com.unity.ext.nunit@2.0.5/net40/unity-custom/nunit.framework.dll"
 -r:"Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Cinemachine.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.Burst.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.Collections.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.InputSystem.ForUI.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.InputSystem.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.Mathematics.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.Netcode.Components.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.Netcode.Runtime.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.Networking.Transport.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.TextMeshPro.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.Timeline.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aPDevDbg.dag/Unity.VisualScripting.Core.ref.dll"
@@ -326,9 +336,18 @@
 -analyzer:"D:/Program Files/Unity2023.2f0/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"D:/Program Files/Unity2023.2f0/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/DisplaySpeed.cs"
+"Assets/Scripts/ConstantNetworkManager.cs"
+"Assets/Scripts/CustomNetworkManagerScript.cs"
+"Assets/Scripts/GameModeSelecter.cs"
+"Assets/Scripts/GameStart.cs"
 "Assets/Scripts/Grappling.cs"
+"Assets/Scripts/KeybindManager.cs"
+"Assets/Scripts/KeyRebindUI.cs"
+"Assets/Scripts/MainMenuScript.cs"
 "Assets/Scripts/MoveCam.cs"
+"Assets/Scripts/NetworkManagerStartup.cs"
 "Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/SettingsScript.cs"
 "Assets/Scripts/Testing/MoveCameraScript.cs"
 "Assets/Scripts/Testing/MovementPlayer.cs"
 "Assets/Scripts/Testing/PlayerCam.cs"

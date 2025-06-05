@@ -408,6 +408,8 @@
 -analyzer:"D:/Program Files/Unity2023.2f0/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"D:/Program Files/Unity2023.2f0/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/DisplaySpeed.cs"
+"Assets/Scripts/ConstantNetworkManager.cs"
+"Assets/Scripts/CustomNetworkManagerScript.cs"
 "Assets/Scripts/GameModeSelecter.cs"
 "Assets/Scripts/GameStart.cs"
 "Assets/Scripts/Grappling.cs"
