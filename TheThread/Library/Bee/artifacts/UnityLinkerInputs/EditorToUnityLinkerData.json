@@ -229,6 +229,13 @@
         {
             "managedAssemblyName": "Unity.Netcode.Components.dll",
             "nativeClass": "",
+            "fullManagedTypeName": "Unity.Netcode.Components.NetworkRigidbody",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.Netcode.Components.dll",
+            "nativeClass": "",
             "fullManagedTypeName": "Unity.Netcode.Components.NetworkTransform",
             "moduleName": "",
             "usedInScenes": []

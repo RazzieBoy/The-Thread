@@ -16,6 +16,7 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.InputSystemObject
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
     Unity.Netcode.Components.dll:
+    - Unity.Netcode.Components.NetworkRigidbody
     - Unity.Netcode.Components.NetworkTransform
     Unity.Netcode.Editor.dll:
     - Unity.Netcode.Editor.Configuration.NetcodeForGameObjectsProjectSettings
@@ -167,61 +168,63 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 27240}
+      Script: {instanceID: 27244}
     - Class: 114
-      Script: {instanceID: 27546}
+      Script: {instanceID: 27550}
     - Class: 114
-      Script: {instanceID: 27670}
+      Script: {instanceID: 27674}
     - Class: 114
-      Script: {instanceID: 27788}
+      Script: {instanceID: 27792}
     - Class: 114
-      Script: {instanceID: 28220}
+      Script: {instanceID: 28224}
     - Class: 114
-      Script: {instanceID: 28388}
+      Script: {instanceID: 28392}
     - Class: 114
-      Script: {instanceID: 28718}
+      Script: {instanceID: 28722}
     - Class: 114
-      Script: {instanceID: 28808}
+      Script: {instanceID: 28812}
     - Class: 114
-      Script: {instanceID: 29044}
+      Script: {instanceID: 29048}
     - Class: 114
-      Script: {instanceID: 29664}
+      Script: {instanceID: 29668}
     - Class: 114
-      Script: {instanceID: 29890}
+      Script: {instanceID: 29894}
     - Class: 114
-      Script: {instanceID: 29948}
+      Script: {instanceID: 29952}
     - Class: 114
-      Script: {instanceID: 30252}
+      Script: {instanceID: 30256}
     - Class: 114
-      Script: {instanceID: 30752}
+      Script: {instanceID: 30756}
     - Class: 114
-      Script: {instanceID: 30760}
+      Script: {instanceID: 30764}
     - Class: 114
-      Script: {instanceID: 30890}
+      Script: {instanceID: 30894}
     - Class: 114
-      Script: {instanceID: 30952}
+      Script: {instanceID: 30956}
     - Class: 114
-      Script: {instanceID: 31698}
+      Script: {instanceID: 31702}
     - Class: 114
-      Script: {instanceID: 32432}
+      Script: {instanceID: 32436}
     - Class: 114
-      Script: {instanceID: 33026}
+      Script: {instanceID: 33030}
     - Class: 114
-      Script: {instanceID: 33344}
+      Script: {instanceID: 33328}
     - Class: 114
-      Script: {instanceID: 33720}
+      Script: {instanceID: 33348}
     - Class: 114
-      Script: {instanceID: 33772}
+      Script: {instanceID: 33724}
     - Class: 114
-      Script: {instanceID: 34002}
+      Script: {instanceID: 33776}
     - Class: 114
-      Script: {instanceID: 34358}
+      Script: {instanceID: 34006}
     - Class: 114
-      Script: {instanceID: 34442}
+      Script: {instanceID: 34334}
     - Class: 114
-      Script: {instanceID: 45122}
+      Script: {instanceID: 34364}
     - Class: 114
-      Script: {instanceID: 129658}
+      Script: {instanceID: 34448}
+    - Class: 114
+      Script: {instanceID: 35162}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -278,41 +281,43 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 27240}
+      Script: {instanceID: 27244}
     - Class: 114
-      Script: {instanceID: 27546}
+      Script: {instanceID: 27550}
     - Class: 114
-      Script: {instanceID: 27670}
+      Script: {instanceID: 27674}
     - Class: 114
-      Script: {instanceID: 27788}
+      Script: {instanceID: 27792}
     - Class: 114
-      Script: {instanceID: 28388}
+      Script: {instanceID: 28392}
     - Class: 114
-      Script: {instanceID: 29044}
+      Script: {instanceID: 29048}
     - Class: 114
-      Script: {instanceID: 29664}
+      Script: {instanceID: 29668}
     - Class: 114
-      Script: {instanceID: 29948}
+      Script: {instanceID: 29952}
     - Class: 114
-      Script: {instanceID: 30752}
+      Script: {instanceID: 30756}
     - Class: 114
-      Script: {instanceID: 30760}
+      Script: {instanceID: 30764}
     - Class: 114
-      Script: {instanceID: 30890}
+      Script: {instanceID: 30894}
     - Class: 114
-      Script: {instanceID: 30940}
+      Script: {instanceID: 30944}
     - Class: 114
-      Script: {instanceID: 30952}
+      Script: {instanceID: 30956}
     - Class: 114
-      Script: {instanceID: 31698}
+      Script: {instanceID: 31702}
     - Class: 114
-      Script: {instanceID: 33344}
+      Script: {instanceID: 33328}
     - Class: 114
-      Script: {instanceID: 33720}
+      Script: {instanceID: 33348}
     - Class: 114
-      Script: {instanceID: 34002}
+      Script: {instanceID: 33724}
     - Class: 114
-      Script: {instanceID: 34442}
+      Script: {instanceID: 34006}
+    - Class: 114
+      Script: {instanceID: 34448}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1554,6 +1559,12 @@ ScriptsOnlyBuild:
     className: InputStateWindow
   - hash:
       serializedVersion: 2
+      Hash: 440cd144cd67bbe0748ae6f9223a6d59
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CustomNetworkManagerScript
+  - hash:
+      serializedVersion: 2
       Hash: 7053e305cdc1eb560f4c3be49d3b5136
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
@@ -1644,6 +1655,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
+      Hash: e7ab9db2090e08a656d5b0fb640bceea
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ConstantNetworkManager
+  - hash:
+      serializedVersion: 2
       Hash: 9a174471d4db2c0c6d3ac47d2f818db1
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1732,20 +1749,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: e7ab9db2090e08a656d5b0fb640bceea
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ConstantNetworkManager
-  - hash:
-      serializedVersion: 2
-      Hash: 440cd144cd67bbe0748ae6f9223a6d59
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CustomNetworkManagerScript
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: E:/Threads/TheThread.exe
+  playerPath: D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread.exe

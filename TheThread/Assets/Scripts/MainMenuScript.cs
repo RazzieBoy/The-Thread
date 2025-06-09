@@ -57,7 +57,15 @@ public class MainMenuScript : MonoBehaviour
     }
     public void JoinGame()
     {
-        NetworkManager.Singleton.StartClient();
+        bool success = NetworkManager.Singleton.StartClient();
+        if (!success)
+        {
+            Debug.LogError("Failed to start client. Check network configuration or server status.");
+        }
+        else {
+            NetworkManager.Singleton.StartClient();
+        }
+
     }
     public void LoadNextInBuild()
     {

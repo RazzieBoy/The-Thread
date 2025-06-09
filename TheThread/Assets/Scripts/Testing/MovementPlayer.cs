@@ -12,7 +12,6 @@ public class MovementPlayer : NetworkBehaviour{
     public float walkSpeed;
     public float slideSpeed;
     public float slideDrag;
-
     public float groundDrag;
 
     [Header("JumpStats")]
@@ -30,6 +29,7 @@ public class MovementPlayer : NetworkBehaviour{
     public float slideYScale;
     public bool sliding;
 
+    [Header("KeyBinds")]
     public KeyCode jumpKey = KeyCode.Space;
     public KeyCode crouchKey = KeyCode.C;
     public KeyCode slideKey = KeyCode.LeftControl;
@@ -40,7 +40,7 @@ public class MovementPlayer : NetworkBehaviour{
     public LayerMask whatIsSkybox;
     bool grounded;
 
-    [Header("SlopInfo")]
+    [Header("SlopeInfo")]
     public float maxSlopeAngle;
     private RaycastHit slopeHit;
 
@@ -51,9 +51,7 @@ public class MovementPlayer : NetworkBehaviour{
 
     float horizontalInput;
     float verticalInput;
-
     Vector3 moveDirection;
-
     Rigidbody rb;
 
     public MovementState state;
@@ -64,12 +62,19 @@ public class MovementPlayer : NetworkBehaviour{
         air
 
     }
+
+    private NetworkVariable<Vector3> networkPositon = new NetworkVariable<Vector3>(Vector3.zero, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
+        rb = GetComponent<Rigidbody>();
+        rb.isKinematic = !IsOwner;
+        Debug.Log($"[OnNetworkSpawn] gameObject: {gameObject.name}, IsOwner: {IsOwner}, IsClient: {IsClient}, IsServer: {IsServer}, LocalClientId: {NetworkManager.Singleton.LocalClientId}, OwnerClientId: {OwnerClientId}, NetworkObjectId: {NetworkObjectId}");
 
         if (IsOwner)
         {
+            Debug.Log($"Instantiating camera for owner (ClientId: {NetworkManager.Singleton.LocalClientId})");
             // Instantiate the camera prefab locally for the owner
             camInstance = Instantiate(cameraPrefab);
             camInstance.transform.SetParent(transform);
@@ -91,47 +96,61 @@ public class MovementPlayer : NetworkBehaviour{
         rb = GetComponent<Rigidbody>();
         if (rb == null)
             Debug.LogError("Rigidbody component missing on player!");
+        rb.interpolation = RigidbodyInterpolation.Interpolate;
     }
 
     // Update is called once per frame
     void Update(){
-        Debug.Log("IsOwner: " + IsOwner);
-        if (!IsOwner) return;
+        //Debug.Log($"Player {gameObject.name} IsOwner: {IsOwner}, ClientId: {OwnerClientId}");
+        if (IsOwner) { 
+            grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 1f, whatIsGround);
 
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 1f, whatIsGround);
+            MyInput();
+            SpeedControl();
+            StateHandler();
 
-        MyInput();
-        SpeedControl();
-        StateHandler();
-        
-        if (state == MovementState.walking){
-            rb.drag = groundDrag;
+            if (state == MovementState.walking)
+            {
+                rb.drag = groundDrag;
+            }
+            else if (state == MovementState.crouching)
+            {
+                rb.drag = groundDrag;
+            }
+            else if (state == MovementState.sliding)
+            {
+                rb.drag = slideDrag;
+            }
+            else
+                rb.drag = 0;
         }
-        else if (state == MovementState.crouching){
-            rb.drag = groundDrag;
+
+        if (!IsOwner)
+        {
+            if (rb != null && !rb.isKinematic)
+            {
+                Debug.LogWarning($"[Non-owner has non-kinematic RB!] {gameObject.name}, ClientId: {NetworkManager.Singleton.LocalClientId}");
+            }
+            return;
         }
-        else if (state == MovementState.sliding){
-            rb.drag = slideDrag;
-        }
-        else
-            rb.drag = 0;
     }
 
     private void FixedUpdate(){
-        if (!IsOwner) return;
-        MovePlayer();
+        if (IsOwner)
+        {
+            MovePlayer();
+        }
  
     }
 
     private void MyInput(){
+        Debug.Log($"Processing input for {gameObject.name}, Horizontal: {Input.GetAxisRaw("Horizontal")}, Vertical: {Input.GetAxisRaw("Vertical")}");
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
         if (Input.GetKey(jumpKey) && canJump && grounded){
             canJump = false;
-
             Jump();
-
             Invoke(nameof(JumpReset), jumpCooldown);
         }
 
@@ -205,13 +224,10 @@ public class MovementPlayer : NetworkBehaviour{
             //    rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
             //}
         }
-
-
     }
 
     private void Jump(){
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
 

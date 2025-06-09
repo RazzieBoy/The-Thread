@@ -17,6 +17,7 @@
 		<type fullname="UnityEngine.InputSystem.RemoteInputPlayerConnection" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.Netcode.Components">
+		<type fullname="Unity.Netcode.Components.NetworkRigidbody" preserve="nothing"/>
 		<type fullname="Unity.Netcode.Components.NetworkTransform" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.Netcode.Runtime">
