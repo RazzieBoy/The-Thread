@@ -341,6 +341,7 @@
 "Assets/Scripts/GameModeSelecter.cs"
 "Assets/Scripts/GameStart.cs"
 "Assets/Scripts/Grappling.cs"
+"Assets/Scripts/HideGoggles.cs"
 "Assets/Scripts/KeybindManager.cs"
 "Assets/Scripts/KeyRebindUI.cs"
 "Assets/Scripts/MainMenuScript.cs"

@@ -5,6 +5,7 @@
 		<type fullname="DisplaySpeed" preserve="nothing"/>
 		<type fullname="GameStart" preserve="nothing"/>
 		<type fullname="Grappling" preserve="nothing"/>
+		<type fullname="HideGoggles" preserve="nothing"/>
 		<type fullname="KeyRebindUI" preserve="nothing"/>
 		<type fullname="MainMenuScript" preserve="nothing"/>
 		<type fullname="MoveCameraScript" preserve="nothing"/>
@@ -15,10 +16,6 @@
 		<type fullname="UnityEngine.InputSystem.InputSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.InputSystem.InputSystemObject" preserve="nothing"/>
 		<type fullname="UnityEngine.InputSystem.RemoteInputPlayerConnection" preserve="nothing"/>
-	</assembly>
-	<assembly fullname="Unity.Netcode.Components">
-		<type fullname="Unity.Netcode.Components.NetworkRigidbody" preserve="nothing"/>
-		<type fullname="Unity.Netcode.Components.NetworkTransform" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.Netcode.Runtime">
 		<type fullname="Unity.Netcode.NetworkManager" preserve="nothing"/>

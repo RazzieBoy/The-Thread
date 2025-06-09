@@ -5,7 +5,7 @@ using UnityEngine;
 using Unity.Netcode;
 using System.Globalization;
 
-public class MovementPlayer : NetworkBehaviour{
+public class MovementPlayer : NetworkBehaviour {
     [Header("References")]
     [Header("Speeds")]
     public float moveSpeed;
@@ -47,7 +47,7 @@ public class MovementPlayer : NetworkBehaviour{
     [SerializeField] public Transform orientation;
     public GameObject cameraPrefab;
     private GameObject camInstance;
-    [SerializeField]  private Transform cameraPos;
+    [SerializeField] private Transform cameraPos;
 
     float horizontalInput;
     float verticalInput;
@@ -55,7 +55,7 @@ public class MovementPlayer : NetworkBehaviour{
     Rigidbody rb;
 
     public MovementState state;
-    public enum MovementState{
+    public enum MovementState {
         walking,
         crouching,
         sliding,
@@ -63,25 +63,29 @@ public class MovementPlayer : NetworkBehaviour{
 
     }
 
-    private NetworkVariable<Vector3> networkPositon = new NetworkVariable<Vector3>(Vector3.zero, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+    private NetworkVariable<Vector3> networkPosition = new NetworkVariable<Vector3>(Vector3.zero, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
 
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = !IsOwner;
-        Debug.Log($"[OnNetworkSpawn] gameObject: {gameObject.name}, IsOwner: {IsOwner}, IsClient: {IsClient}, IsServer: {IsServer}, LocalClientId: {NetworkManager.Singleton.LocalClientId}, OwnerClientId: {OwnerClientId}, NetworkObjectId: {NetworkObjectId}");
+        //Debug.Log($"[OnNetworkSpawn] gameObject: {gameObject.name}, IsOwner: {IsOwner}, IsClient: {IsClient}, IsServer: {IsServer}, LocalClientId: {NetworkManager.Singleton.LocalClientId}, OwnerClientId: {OwnerClientId}, NetworkObjectId: {NetworkObjectId}");
 
         if (IsOwner)
         {
-            Debug.Log($"Instantiating camera for owner (ClientId: {NetworkManager.Singleton.LocalClientId})");
+           // Debug.Log($"Instantiating camera for owner (ClientId: {NetworkManager.Singleton.LocalClientId})");
             // Instantiate the camera prefab locally for the owner
             camInstance = Instantiate(cameraPrefab);
             camInstance.transform.SetParent(transform);
-
             // Assuming your camera prefab has a script PlayerCam with Setup method
             PlayerCam camScript = camInstance.GetComponent<PlayerCam>();
             MoveCameraScript moveScript = camInstance.GetComponent<MoveCameraScript>();
+        }
+        // Sync initial position
+        if (IsServer)
+        {
+            networkPosition.Value = transform.position;
         }
     }
 
@@ -95,14 +99,14 @@ public class MovementPlayer : NetworkBehaviour{
 
         rb = GetComponent<Rigidbody>();
         if (rb == null)
-            Debug.LogError("Rigidbody component missing on player!");
+           // Debug.LogError("Rigidbody component missing on player!");
         rb.interpolation = RigidbodyInterpolation.Interpolate;
     }
 
     // Update is called once per frame
-    void Update(){
+    void Update() {
         //Debug.Log($"Player {gameObject.name} IsOwner: {IsOwner}, ClientId: {OwnerClientId}");
-        if (IsOwner) { 
+        if (IsOwner) {
             grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 1f, whatIsGround);
 
             MyInput();
@@ -123,38 +127,45 @@ public class MovementPlayer : NetworkBehaviour{
             }
             else
                 rb.drag = 0;
+
+            if (IsClient && transform.hasChanged) {
+                UpdatePositionServerRpc(transform.position);
+                transform.hasChanged = false;
+            }
+        }
+        else {
+            transform.position = Vector3.Lerp(transform.position, networkPosition.Value, Time.deltaTime * 10f);
         }
 
         if (!IsOwner)
         {
             if (rb != null && !rb.isKinematic)
             {
-                Debug.LogWarning($"[Non-owner has non-kinematic RB!] {gameObject.name}, ClientId: {NetworkManager.Singleton.LocalClientId}");
+               // Debug.LogWarning($"[Non-owner has non-kinematic RB!] {gameObject.name}, ClientId: {NetworkManager.Singleton.LocalClientId}");
             }
             return;
         }
     }
 
-    private void FixedUpdate(){
+    private void FixedUpdate() {
         if (IsOwner)
         {
             MovePlayer();
         }
- 
     }
 
-    private void MyInput(){
-        Debug.Log($"Processing input for {gameObject.name}, Horizontal: {Input.GetAxisRaw("Horizontal")}, Vertical: {Input.GetAxisRaw("Vertical")}");
+    private void MyInput() {
+       // Debug.Log($"Processing input for {gameObject.name}, Horizontal: {Input.GetAxisRaw("Horizontal")}, Vertical: {Input.GetAxisRaw("Vertical")}");
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKey(jumpKey) && canJump && grounded){
+        if (Input.GetKey(jumpKey) && canJump && grounded) {
             canJump = false;
             Jump();
             Invoke(nameof(JumpReset), jumpCooldown);
         }
 
-        if (Input.GetKeyDown(crouchKey)){
+        if (Input.GetKeyDown(crouchKey)) {
             transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
             rb.AddForce(moveDirection.normalized * 5f, ForceMode.Impulse);
         }
@@ -162,41 +173,41 @@ public class MovementPlayer : NetworkBehaviour{
         {
             transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
         }
-        if (Input.GetKeyUp(crouchKey) || Input.GetKeyUp(slideKey)){
+        if (Input.GetKeyUp(crouchKey) || Input.GetKeyUp(slideKey)) {
             transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
         }
 
-        
+
     }
 
-    private void StateHandler(){
+    private void StateHandler() {
 
         if (Input.GetKey(slideKey))
         {
             state = MovementState.sliding;
         }
-        else if (Input.GetKey(crouchKey)){
+        else if (Input.GetKey(crouchKey)) {
             state = MovementState.crouching;
             moveSpeed = crouchSpeed;
         }
-        else if (grounded){
+        else if (grounded) {
             state = MovementState.walking;
             moveSpeed = walkSpeed;
         }
-        else{
+        else {
             state = MovementState.air;
         }
     }
 
-    private void MovePlayer(){
+    private void MovePlayer() {
         if (Input.GetKey(slideKey) && grounded) { return; }
 
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        if (OnSlope()){
+        if (OnSlope()) {
             rb.AddForce(GetSlopeMoveDirection() * moveSpeed * 20f, ForceMode.Force);
 
-            if (rb.velocity.y > 0){
+            if (rb.velocity.y > 0) {
                 rb.AddForce(Vector3.down * 80f, ForceMode.Force);
             }
         }
@@ -210,13 +221,13 @@ public class MovementPlayer : NetworkBehaviour{
         rb.useGravity = !OnSlope();
     }
 
-    private void SpeedControl(){
-        if (OnSlope()){
-            if (rb.velocity.magnitude > moveSpeed){
+    private void SpeedControl() {
+        if (OnSlope()) {
+            if (rb.velocity.magnitude > moveSpeed) {
                 rb.velocity = rb.velocity.normalized * moveSpeed;
             }
         }
-        else{
+        else {
             Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
             //if (flatVel.magnitude > moveSpeed)
             //{
@@ -226,24 +237,29 @@ public class MovementPlayer : NetworkBehaviour{
         }
     }
 
-    private void Jump(){
+    private void Jump() {
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
 
-    private void JumpReset(){
+    private void JumpReset() {
         canJump = true;
     }
 
-    private bool OnSlope(){
-        if (Physics.Raycast(transform.position, Vector3.down, out slopeHit, playerHeight * 0.5f + 1f)){
+    private bool OnSlope() {
+        if (Physics.Raycast(transform.position, Vector3.down, out slopeHit, playerHeight * 0.5f + 1f)) {
             float angle = Vector3.Angle(Vector3.up, slopeHit.normal);
             return angle < maxSlopeAngle && angle != 0;
         }
         return false;
     }
 
-    private Vector3 GetSlopeMoveDirection(){
+    private Vector3 GetSlopeMoveDirection() {
         return Vector3.ProjectOnPlane(moveDirection, slopeHit.normal).normalized;
+    }
+
+    [ServerRpc]
+    private void UpdatePositionServerRpc(Vector3 newPosition) { 
+        networkPosition.Value = newPosition;
     }
 }

@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - DisplaySpeed
     - GameStart
     - Grappling
+    - HideGoggles
     - KeyRebindUI
     - MainMenuScript
     - MoveCameraScript
@@ -15,9 +16,6 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
-    Unity.Netcode.Components.dll:
-    - Unity.Netcode.Components.NetworkRigidbody
-    - Unity.Netcode.Components.NetworkTransform
     Unity.Netcode.Editor.dll:
     - Unity.Netcode.Editor.Configuration.NetcodeForGameObjectsProjectSettings
     Unity.Netcode.Runtime.dll:
@@ -202,13 +200,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 30956}
     - Class: 114
-      Script: {instanceID: 31702}
-    - Class: 114
       Script: {instanceID: 32436}
     - Class: 114
       Script: {instanceID: 33030}
-    - Class: 114
-      Script: {instanceID: 33328}
     - Class: 114
       Script: {instanceID: 33348}
     - Class: 114
@@ -225,6 +219,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 34448}
     - Class: 114
       Script: {instanceID: 35162}
+    - Class: 114
+      Script: {instanceID: 51212}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -307,10 +303,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 30956}
     - Class: 114
-      Script: {instanceID: 31702}
-    - Class: 114
-      Script: {instanceID: 33328}
-    - Class: 114
       Script: {instanceID: 33348}
     - Class: 114
       Script: {instanceID: 33724}
@@ -318,6 +310,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 34006}
     - Class: 114
       Script: {instanceID: 34448}
+    - Class: 114
+      Script: {instanceID: 51212}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1749,6 +1743,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: c211ebdac506a9cdd16361b53dbcd109
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: HideGoggles
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
