@@ -64,25 +64,48 @@ public class MovementPlayer : NetworkBehaviour {
     }
 
     private NetworkVariable<Vector3> networkPosition = new NetworkVariable<Vector3>(Vector3.zero, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+    private NetworkVariable<Quaternion> goggleRotation = new NetworkVariable<Quaternion>(Quaternion.identity, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
     public override void OnNetworkSpawn()
     {
         base.OnNetworkSpawn();
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = !IsOwner;
-        //Debug.Log($"[OnNetworkSpawn] gameObject: {gameObject.name}, IsOwner: {IsOwner}, IsClient: {IsClient}, IsServer: {IsServer}, LocalClientId: {NetworkManager.Singleton.LocalClientId}, OwnerClientId: {OwnerClientId}, NetworkObjectId: {NetworkObjectId}");
+        rb.freezeRotation = true;
 
         if (IsOwner)
         {
-           // Debug.Log($"Instantiating camera for owner (ClientId: {NetworkManager.Singleton.LocalClientId})");
-            // Instantiate the camera prefab locally for the owner
+            // Disable Cube MeshRenderer locally
+            Transform GoggleTransform = transform.Find("Goggle"); // Adjust path if needed
+            if (GoggleTransform != null)
+            {
+                MeshRenderer GoggleRenderer = GoggleTransform.GetComponent<MeshRenderer>();
+                if (GoggleRenderer != null)
+                {
+                    GoggleRenderer.enabled = false;
+                    Debug.Log("Disabled Cube MeshRenderer for local player");
+                }
+                else
+                {
+                    Debug.LogWarning("MeshRenderer not found on Cube");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Could not find Cube");
+            }
+
+            // Instantiate camera for owner
             camInstance = Instantiate(cameraPrefab);
             camInstance.transform.SetParent(transform);
-            // Assuming your camera prefab has a script PlayerCam with Setup method
             PlayerCam camScript = camInstance.GetComponent<PlayerCam>();
             MoveCameraScript moveScript = camInstance.GetComponent<MoveCameraScript>();
+            if (camScript != null)
+            {
+                camScript.SetupOrientation(orientation);
+            }
         }
-        // Sync initial position
+
         if (IsServer)
         {
             networkPosition.Value = transform.position;
@@ -132,9 +155,25 @@ public class MovementPlayer : NetworkBehaviour {
                 UpdatePositionServerRpc(transform.position);
                 transform.hasChanged = false;
             }
+
+            Transform cameraTransform = camInstance != null ? camInstance.transform.Find("Main Camera") : null;
+            if (cameraTransform != null)
+            {
+                goggleRotation.Value = cameraTransform.rotation;
+                Transform goggleTransform = transform.Find("Goggle");
+                if (goggleTransform != null) 
+                {
+                    goggleTransform.rotation = goggleRotation.Value;
+                }
+            }
         }
         else {
             transform.position = Vector3.Lerp(transform.position, networkPosition.Value, Time.deltaTime * 10f);
+            Transform goggleTransform = transform.Find("Goggle");
+            if(goggleTransform != null)
+            {
+                goggleTransform.rotation = goggleRotation.Value;
+            }
         }
 
         if (!IsOwner)

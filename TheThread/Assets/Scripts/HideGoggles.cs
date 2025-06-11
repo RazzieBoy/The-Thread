@@ -8,45 +8,22 @@ public class HideGoggles : NetworkBehaviour
 {
     private MeshRenderer cubeRenderer;
 
-    private void Start()
+    void Awake()
     {
         cubeRenderer = GetComponent<MeshRenderer>();
-        if (IsOwner)
+        if (cubeRenderer == null)
         {
-            
+            Debug.LogError("MeshRenderer not found on " + gameObject.name + ". This should not happen based on Inspector.");
         }
-        
     }
-    //public override void OnNetworkSpawn()
-    //{
-    //    cubeRenderer = GetComponent<MeshRenderer>();
-    //    if (cubeRenderer == null)
-    //    {
-    //        Debug.LogError("MeshRenderer not found on Cube!");
-    //        return;
-    //    }
-    //    Trigger the visibility update
-    //    RequestVisibilityUpdateServerRpc();
-    //}
 
-    //[ClientRpc]
-    //private void UpdateVisibilityClientRpc(bool isVisible)
-    //{
-    //    if (cubeRenderer != null)
-    //    {
-    //        cubeRenderer.enabled = isVisible;
-    //    }
-    //}
-
-    //public override void OnNetworkDespawn()
-    //{
-    //    cubeRenderer = null;
-    //}
-
-    //[ServerRpc(RequireOwnership = false)]
-    //private void RequestVisibilityUpdateServerRpc()
-    //{
-    //    Server doesn't need to check IsLocalPlayer; it will broadcast to all clients
-    //    UpdateVisibilityClientRpc(IsLocalPlayer ? false : true); // Hide for local player, show for others
-    //}
+    public override void OnNetworkSpawn()
+    {
+        if (cubeRenderer != null)
+        {
+            // Hide for the local player's own cube
+            cubeRenderer.enabled = !IsOwner;
+            Debug.Log($"Cube on {gameObject.name} - IsOwner: {IsOwner}, Enabled: {cubeRenderer.enabled}");
+        }
+    }
 }

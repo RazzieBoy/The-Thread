@@ -11,8 +11,7 @@ public class PlayerCam : MonoBehaviour{
     float xRotation;
     float yRotation;
 
-    public void SetupOrientation(Transform orientationTransform)
-    {
+    public void SetupOrientation(Transform orientationTransform){
         orientation = orientationTransform;
     }
 

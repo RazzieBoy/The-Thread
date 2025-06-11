@@ -6,7 +6,6 @@ ScriptsOnlyBuild:
     - DisplaySpeed
     - GameStart
     - Grappling
-    - HideGoggles
     - KeyRebindUI
     - MainMenuScript
     - MoveCameraScript
@@ -166,61 +165,59 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 27244}
+      Script: {instanceID: 27706}
     - Class: 114
-      Script: {instanceID: 27550}
+      Script: {instanceID: 28026}
     - Class: 114
-      Script: {instanceID: 27674}
+      Script: {instanceID: 28152}
     - Class: 114
-      Script: {instanceID: 27792}
-    - Class: 114
-      Script: {instanceID: 28224}
-    - Class: 114
-      Script: {instanceID: 28392}
+      Script: {instanceID: 28272}
     - Class: 114
       Script: {instanceID: 28722}
     - Class: 114
-      Script: {instanceID: 28812}
+      Script: {instanceID: 28904}
     - Class: 114
-      Script: {instanceID: 29048}
+      Script: {instanceID: 29264}
     - Class: 114
-      Script: {instanceID: 29668}
+      Script: {instanceID: 29356}
     - Class: 114
-      Script: {instanceID: 29894}
+      Script: {instanceID: 29610}
     - Class: 114
-      Script: {instanceID: 29952}
+      Script: {instanceID: 30264}
     - Class: 114
-      Script: {instanceID: 30256}
+      Script: {instanceID: 30500}
     - Class: 114
-      Script: {instanceID: 30756}
+      Script: {instanceID: 30560}
     - Class: 114
-      Script: {instanceID: 30764}
+      Script: {instanceID: 30880}
     - Class: 114
-      Script: {instanceID: 30894}
+      Script: {instanceID: 31398}
     - Class: 114
-      Script: {instanceID: 30956}
+      Script: {instanceID: 31408}
     - Class: 114
-      Script: {instanceID: 32436}
+      Script: {instanceID: 31544}
     - Class: 114
-      Script: {instanceID: 33030}
+      Script: {instanceID: 31612}
     - Class: 114
-      Script: {instanceID: 33348}
+      Script: {instanceID: 33166}
     - Class: 114
-      Script: {instanceID: 33724}
+      Script: {instanceID: 33794}
     - Class: 114
-      Script: {instanceID: 33776}
+      Script: {instanceID: 34130}
     - Class: 114
-      Script: {instanceID: 34006}
+      Script: {instanceID: 34532}
     - Class: 114
-      Script: {instanceID: 34334}
+      Script: {instanceID: 34586}
     - Class: 114
-      Script: {instanceID: 34364}
+      Script: {instanceID: 34828}
     - Class: 114
-      Script: {instanceID: 34448}
+      Script: {instanceID: 35166}
     - Class: 114
-      Script: {instanceID: 35162}
+      Script: {instanceID: 35192}
     - Class: 114
-      Script: {instanceID: 51212}
+      Script: {instanceID: 35278}
+    - Class: 114
+      Script: {instanceID: 36024}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -277,41 +274,39 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 27244}
+      Script: {instanceID: 27706}
     - Class: 114
-      Script: {instanceID: 27550}
+      Script: {instanceID: 28026}
     - Class: 114
-      Script: {instanceID: 27674}
+      Script: {instanceID: 28152}
     - Class: 114
-      Script: {instanceID: 27792}
+      Script: {instanceID: 28272}
     - Class: 114
-      Script: {instanceID: 28392}
+      Script: {instanceID: 28904}
     - Class: 114
-      Script: {instanceID: 29048}
+      Script: {instanceID: 29610}
     - Class: 114
-      Script: {instanceID: 29668}
+      Script: {instanceID: 30264}
     - Class: 114
-      Script: {instanceID: 29952}
+      Script: {instanceID: 30560}
     - Class: 114
-      Script: {instanceID: 30756}
+      Script: {instanceID: 31398}
     - Class: 114
-      Script: {instanceID: 30764}
+      Script: {instanceID: 31408}
     - Class: 114
-      Script: {instanceID: 30894}
+      Script: {instanceID: 31544}
     - Class: 114
-      Script: {instanceID: 30944}
+      Script: {instanceID: 31596}
     - Class: 114
-      Script: {instanceID: 30956}
+      Script: {instanceID: 31612}
     - Class: 114
-      Script: {instanceID: 33348}
+      Script: {instanceID: 34130}
     - Class: 114
-      Script: {instanceID: 33724}
+      Script: {instanceID: 34532}
     - Class: 114
-      Script: {instanceID: 34006}
+      Script: {instanceID: 34828}
     - Class: 114
-      Script: {instanceID: 34448}
-    - Class: 114
-      Script: {instanceID: 51212}
+      Script: {instanceID: 35278}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -665,6 +660,12 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
+      Hash: 2bdc2158e5cc1b9cb13efc3b2970b905
+    assemblyName: Autodesk.Fbx.BuildTestAssets
+    namespaceName: Autodesk.Fbx.BuildTests
+    className: ExportEmptyFbx
+  - hash:
+      serializedVersion: 2
       Hash: ee34255e3e86289bde9bad5e07b84cbc
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -729,6 +730,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: HorizontalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: c211ebdac506a9cdd16361b53dbcd109
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: HideGoggles
   - hash:
       serializedVersion: 2
       Hash: ff76cf6cf52b4db7b95af6ffadca9288
@@ -1553,16 +1560,16 @@ ScriptsOnlyBuild:
     className: InputStateWindow
   - hash:
       serializedVersion: 2
-      Hash: 440cd144cd67bbe0748ae6f9223a6d59
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CustomNetworkManagerScript
-  - hash:
-      serializedVersion: 2
       Hash: 7053e305cdc1eb560f4c3be49d3b5136
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
     className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 440cd144cd67bbe0748ae6f9223a6d59
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CustomNetworkManagerScript
   - hash:
       serializedVersion: 2
       Hash: e5f9868e485ac5248f96a3be584a5e4a
@@ -1611,6 +1618,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: AudioPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: b2e8fc44f9fe7b5163b8dda3f3bd45d6
+    assemblyName: Unity.Formats.Fbx.Runtime
+    namespaceName: UnityEngine.Formats.Fbx.Exporter
+    className: FbxPrefab
   - hash:
       serializedVersion: 2
       Hash: 43ebd945b04bced376c791411cf5a289
@@ -1743,12 +1756,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: c211ebdac506a9cdd16361b53dbcd109
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: HideGoggles
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

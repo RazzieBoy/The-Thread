@@ -263,7 +263,13 @@
         253,
         254,
         255,
-        256
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262
       ],
       "DebugActionIndex": 0
     },
@@ -506,7 +512,7 @@
       "DisplayName": "Writing boot.config_tyr4.info",
       "ActionType": "WriteFile",
       "PayloadOffset": 83,
-      "PayloadLength": 48332,
+      "PayloadLength": 48748,
       "PayloadDebugContentSnippet": "{\"System.Object\":null,\"Bee.Tun",
       "Inputs": [],
       "InputFlags": [],
@@ -613,9 +619,12 @@
         "D:/Program Files/Unity2023.2f0/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll",
         "D:/Program Files/Unity2023.2f0/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll",
         "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll",
+        "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Autodesk.Fbx.BuildTestAssets.dll",
+        "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Autodesk.Fbx.dll",
         "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Cinemachine.dll",
         "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Unity.Burst.dll",
         "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Unity.Collections.dll",
+        "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Unity.Formats.Fbx.Runtime.dll",
         "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.dll",
         "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.ForUI.dll",
         "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Unity.Mathematics.dll",
@@ -1346,6 +1355,9 @@
         0,
         0,
         0,
+        0,
+        0,
+        0,
         2,
         2,
         2,
@@ -1420,8 +1432,8 @@
       "Annotation": "WriteResponseFile Library/Bee/artifacts/rsp/8440180679208997000.rsp",
       "DisplayName": "Writing 8440180679208997000.rsp",
       "ActionType": "WriteFile",
-      "PayloadOffset": 48504,
-      "PayloadLength": 72649,
+      "PayloadOffset": 48920,
+      "PayloadLength": 73628,
       "PayloadDebugContentSnippet": "--allowed-assembly=\"D:/Program",
       "Inputs": [],
       "InputFlags": [],
@@ -1514,9 +1526,12 @@
         "D:/Program Files/Unity2023.2f0/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll",
         "D:/Program Files/Unity2023.2f0/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll",
         "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll",
+        "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Autodesk.Fbx.BuildTestAssets.dll",
+        "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Autodesk.Fbx.dll",
         "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Cinemachine.dll",
         "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Unity.Burst.dll",
         "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Unity.Collections.dll",
+        "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Unity.Formats.Fbx.Runtime.dll",
         "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.dll",
         "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.ForUI.dll",
         "D:/Users/270235677/OneDrive - UP Education/302Project/The-Thread/TheThread/Library/Bee/PlayerScriptAssemblies/Unity.Mathematics.dll",
@@ -2766,6 +2781,9 @@
         0,
         0,
         0,
+        0,
+        0,
+        0,
         8
       ],
       "Outputs": [
@@ -2831,6 +2849,48 @@
       "DebugActionIndex": 19
     },
     {
+      "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Autodesk.Fbx.BuildTestAssets.dll",
+      "DisplayName": "Copying Autodesk.Fbx.BuildTestAssets.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Autodesk.Fbx.BuildTestAssets.dll"
+      ],
+      "InputFlags": [
+        0
+      ],
+      "Outputs": [
+        "D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Autodesk.Fbx.BuildTestAssets.dll"
+      ],
+      "OutputFlags": [
+        2
+      ],
+      "ToBuildDependencies": [
+        18
+      ],
+      "DebugActionIndex": 20
+    },
+    {
+      "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Autodesk.Fbx.dll",
+      "DisplayName": "Copying Autodesk.Fbx.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Autodesk.Fbx.dll"
+      ],
+      "InputFlags": [
+        0
+      ],
+      "Outputs": [
+        "D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Autodesk.Fbx.dll"
+      ],
+      "OutputFlags": [
+        2
+      ],
+      "ToBuildDependencies": [
+        18
+      ],
+      "DebugActionIndex": 21
+    },
+    {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Cinemachine.dll",
       "DisplayName": "Copying Cinemachine.dll",
       "ActionType": "CopyFiles",
@@ -2849,7 +2909,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 20
+      "DebugActionIndex": 22
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Mono.Security.dll",
@@ -2870,7 +2930,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 21
+      "DebugActionIndex": 23
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/mscorlib.dll",
@@ -2891,7 +2951,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 22
+      "DebugActionIndex": 24
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/netstandard.dll",
@@ -2912,7 +2972,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 23
+      "DebugActionIndex": 25
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.ComponentModel.Composition.dll",
@@ -2933,7 +2993,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 24
+      "DebugActionIndex": 26
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.Configuration.dll",
@@ -2954,7 +3014,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 25
+      "DebugActionIndex": 27
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.Core.dll",
@@ -2975,7 +3035,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 26
+      "DebugActionIndex": 28
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.Data.DataSetExtensions.dll",
@@ -2996,7 +3056,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 27
+      "DebugActionIndex": 29
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.Data.dll",
@@ -3017,7 +3077,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 28
+      "DebugActionIndex": 30
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.dll",
@@ -3038,7 +3098,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 29
+      "DebugActionIndex": 31
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.Drawing.dll",
@@ -3059,7 +3119,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 30
+      "DebugActionIndex": 32
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.EnterpriseServices.dll",
@@ -3080,7 +3140,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 31
+      "DebugActionIndex": 33
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.IO.Compression.dll",
@@ -3101,7 +3161,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 32
+      "DebugActionIndex": 34
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.IO.Compression.FileSystem.dll",
@@ -3122,7 +3182,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 33
+      "DebugActionIndex": 35
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.Net.Http.dll",
@@ -3143,7 +3203,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 34
+      "DebugActionIndex": 36
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.Numerics.dll",
@@ -3164,7 +3224,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 35
+      "DebugActionIndex": 37
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.Runtime.dll",
@@ -3185,7 +3245,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 36
+      "DebugActionIndex": 38
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.Runtime.Serialization.dll",
@@ -3206,7 +3266,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 37
+      "DebugActionIndex": 39
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.Security.dll",
@@ -3227,7 +3287,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 38
+      "DebugActionIndex": 40
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.ServiceModel.Internals.dll",
@@ -3248,7 +3308,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 39
+      "DebugActionIndex": 41
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.Transactions.dll",
@@ -3269,7 +3329,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 40
+      "DebugActionIndex": 42
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.Xml.dll",
@@ -3290,7 +3350,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 41
+      "DebugActionIndex": 43
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/System.Xml.Linq.dll",
@@ -3311,7 +3371,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 42
+      "DebugActionIndex": 44
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Burst.dll",
@@ -3332,7 +3392,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 43
+      "DebugActionIndex": 45
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Burst.Unsafe.dll",
@@ -3353,7 +3413,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 44
+      "DebugActionIndex": 46
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Collections.dll",
@@ -3374,7 +3434,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 45
+      "DebugActionIndex": 47
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Collections.LowLevel.ILSupport.dll",
@@ -3395,7 +3455,28 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 46
+      "DebugActionIndex": 48
+    },
+    {
+      "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Formats.Fbx.Runtime.dll",
+      "DisplayName": "Copying Unity.Formats.Fbx.Runtime.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Unity.Formats.Fbx.Runtime.dll"
+      ],
+      "InputFlags": [
+        0
+      ],
+      "Outputs": [
+        "D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Formats.Fbx.Runtime.dll"
+      ],
+      "OutputFlags": [
+        2
+      ],
+      "ToBuildDependencies": [
+        18
+      ],
+      "DebugActionIndex": 49
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.InputSystem.dll",
@@ -3416,7 +3497,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 47
+      "DebugActionIndex": 50
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.InputSystem.ForUI.dll",
@@ -3437,7 +3518,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 48
+      "DebugActionIndex": 51
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Mathematics.dll",
@@ -3458,7 +3539,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 49
+      "DebugActionIndex": 52
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Netcode.Components.dll",
@@ -3479,7 +3560,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 50
+      "DebugActionIndex": 53
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Netcode.Runtime.dll",
@@ -3500,7 +3581,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 51
+      "DebugActionIndex": 54
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Networking.Transport.dll",
@@ -3521,7 +3602,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 52
+      "DebugActionIndex": 55
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.TextMeshPro.dll",
@@ -3542,7 +3623,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 53
+      "DebugActionIndex": 56
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Timeline.dll",
@@ -3563,7 +3644,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 54
+      "DebugActionIndex": 57
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll",
@@ -3584,7 +3665,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 55
+      "DebugActionIndex": 58
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.VisualScripting.Core.dll",
@@ -3605,7 +3686,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 56
+      "DebugActionIndex": 59
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.VisualScripting.Flow.dll",
@@ -3626,7 +3707,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 57
+      "DebugActionIndex": 60
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.VisualScripting.State.dll",
@@ -3647,7 +3728,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 58
+      "DebugActionIndex": 61
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.AccessibilityModule.dll",
@@ -3668,7 +3749,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 59
+      "DebugActionIndex": 62
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.AIModule.dll",
@@ -3689,7 +3770,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 60
+      "DebugActionIndex": 63
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.AndroidJNIModule.dll",
@@ -3710,7 +3791,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 61
+      "DebugActionIndex": 64
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.AnimationModule.dll",
@@ -3731,7 +3812,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 62
+      "DebugActionIndex": 65
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.ARModule.dll",
@@ -3752,7 +3833,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 63
+      "DebugActionIndex": 66
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.AssetBundleModule.dll",
@@ -3773,7 +3854,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 64
+      "DebugActionIndex": 67
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.AudioModule.dll",
@@ -3794,7 +3875,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 65
+      "DebugActionIndex": 68
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.ClothModule.dll",
@@ -3815,7 +3896,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 66
+      "DebugActionIndex": 69
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.ClusterInputModule.dll",
@@ -3836,7 +3917,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 67
+      "DebugActionIndex": 70
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.ClusterRendererModule.dll",
@@ -3857,7 +3938,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 68
+      "DebugActionIndex": 71
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.CommandStateObserverModule.dll",
@@ -3878,7 +3959,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 69
+      "DebugActionIndex": 72
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.ContentLoadModule.dll",
@@ -3899,7 +3980,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 70
+      "DebugActionIndex": 73
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.CoreModule.dll",
@@ -3920,7 +4001,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 71
+      "DebugActionIndex": 74
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.CrashReportingModule.dll",
@@ -3941,7 +4022,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 72
+      "DebugActionIndex": 75
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.DirectorModule.dll",
@@ -3962,7 +4043,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 73
+      "DebugActionIndex": 76
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.dll",
@@ -3983,7 +4064,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 74
+      "DebugActionIndex": 77
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.DSPGraphModule.dll",
@@ -4004,7 +4085,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 75
+      "DebugActionIndex": 78
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.GameCenterModule.dll",
@@ -4025,7 +4106,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 76
+      "DebugActionIndex": 79
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.GIModule.dll",
@@ -4046,7 +4127,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 77
+      "DebugActionIndex": 80
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.GraphToolsFoundationModule.dll",
@@ -4067,7 +4148,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 78
+      "DebugActionIndex": 81
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.GridModule.dll",
@@ -4088,7 +4169,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 79
+      "DebugActionIndex": 82
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.HierarchyCoreModule.dll",
@@ -4109,7 +4190,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 80
+      "DebugActionIndex": 83
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.HotReloadModule.dll",
@@ -4130,7 +4211,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 81
+      "DebugActionIndex": 84
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.ImageConversionModule.dll",
@@ -4151,7 +4232,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 82
+      "DebugActionIndex": 85
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.IMGUIModule.dll",
@@ -4172,7 +4253,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 83
+      "DebugActionIndex": 86
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.InputForUIModule.dll",
@@ -4193,7 +4274,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 84
+      "DebugActionIndex": 87
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.InputLegacyModule.dll",
@@ -4214,7 +4295,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 85
+      "DebugActionIndex": 88
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.InputModule.dll",
@@ -4235,7 +4316,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 86
+      "DebugActionIndex": 89
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.JSONSerializeModule.dll",
@@ -4256,7 +4337,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 87
+      "DebugActionIndex": 90
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.LocalizationModule.dll",
@@ -4277,7 +4358,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 88
+      "DebugActionIndex": 91
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.MarshallingModule.dll",
@@ -4298,7 +4379,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 89
+      "DebugActionIndex": 92
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.MultiplayerModule.dll",
@@ -4319,7 +4400,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 90
+      "DebugActionIndex": 93
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.NVIDIAModule.dll",
@@ -4340,7 +4421,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 91
+      "DebugActionIndex": 94
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.ParticleSystemModule.dll",
@@ -4361,7 +4442,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 92
+      "DebugActionIndex": 95
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.PerformanceReportingModule.dll",
@@ -4382,7 +4463,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 93
+      "DebugActionIndex": 96
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.Physics2DModule.dll",
@@ -4403,7 +4484,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 94
+      "DebugActionIndex": 97
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.PhysicsModule.dll",
@@ -4424,7 +4505,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 95
+      "DebugActionIndex": 98
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.ProfilerModule.dll",
@@ -4445,7 +4526,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 96
+      "DebugActionIndex": 99
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.PropertiesModule.dll",
@@ -4466,7 +4547,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 97
+      "DebugActionIndex": 100
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll",
@@ -4487,7 +4568,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 98
+      "DebugActionIndex": 101
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.ScreenCaptureModule.dll",
@@ -4508,7 +4589,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 99
+      "DebugActionIndex": 102
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.SharedInternalsModule.dll",
@@ -4529,7 +4610,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 100
+      "DebugActionIndex": 103
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.SpriteMaskModule.dll",
@@ -4550,7 +4631,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 101
+      "DebugActionIndex": 104
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.SpriteShapeModule.dll",
@@ -4571,7 +4652,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 102
+      "DebugActionIndex": 105
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.StreamingModule.dll",
@@ -4592,7 +4673,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 103
+      "DebugActionIndex": 106
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.SubstanceModule.dll",
@@ -4613,7 +4694,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 104
+      "DebugActionIndex": 107
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.SubsystemsModule.dll",
@@ -4634,7 +4715,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 105
+      "DebugActionIndex": 108
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.TerrainModule.dll",
@@ -4655,7 +4736,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 106
+      "DebugActionIndex": 109
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.TerrainPhysicsModule.dll",
@@ -4676,7 +4757,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 107
+      "DebugActionIndex": 110
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll",
@@ -4697,7 +4778,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 108
+      "DebugActionIndex": 111
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll",
@@ -4718,7 +4799,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 109
+      "DebugActionIndex": 112
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.TextRenderingModule.dll",
@@ -4739,7 +4820,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 110
+      "DebugActionIndex": 113
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.TilemapModule.dll",
@@ -4760,7 +4841,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 111
+      "DebugActionIndex": 114
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.TLSModule.dll",
@@ -4781,7 +4862,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 112
+      "DebugActionIndex": 115
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UI.dll",
@@ -4802,7 +4883,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 113
+      "DebugActionIndex": 116
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UIElementsModule.dll",
@@ -4823,7 +4904,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 114
+      "DebugActionIndex": 117
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UIModule.dll",
@@ -4844,7 +4925,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 115
+      "DebugActionIndex": 118
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UmbraModule.dll",
@@ -4865,7 +4946,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 116
+      "DebugActionIndex": 119
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll",
@@ -4886,7 +4967,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 117
+      "DebugActionIndex": 120
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityAnalyticsModule.dll",
@@ -4907,7 +4988,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 118
+      "DebugActionIndex": 121
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityConnectModule.dll",
@@ -4928,7 +5009,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 119
+      "DebugActionIndex": 122
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityCurlModule.dll",
@@ -4949,7 +5030,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 120
+      "DebugActionIndex": 123
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityTestProtocolModule.dll",
@@ -4970,7 +5051,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 121
+      "DebugActionIndex": 124
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll",
@@ -4991,7 +5072,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 122
+      "DebugActionIndex": 125
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll",
@@ -5012,7 +5093,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 123
+      "DebugActionIndex": 126
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityWebRequestModule.dll",
@@ -5033,7 +5114,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 124
+      "DebugActionIndex": 127
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll",
@@ -5054,7 +5135,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 125
+      "DebugActionIndex": 128
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll",
@@ -5075,7 +5156,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 126
+      "DebugActionIndex": 129
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.VehiclesModule.dll",
@@ -5096,7 +5177,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 127
+      "DebugActionIndex": 130
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.VFXModule.dll",
@@ -5117,7 +5198,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 128
+      "DebugActionIndex": 131
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.VideoModule.dll",
@@ -5138,7 +5219,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 129
+      "DebugActionIndex": 132
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.VirtualTexturingModule.dll",
@@ -5159,7 +5240,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 130
+      "DebugActionIndex": 133
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.VRModule.dll",
@@ -5180,7 +5261,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 131
+      "DebugActionIndex": 134
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.WindModule.dll",
@@ -5201,7 +5282,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 132
+      "DebugActionIndex": 135
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.XRModule.dll",
@@ -5222,7 +5303,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 133
+      "DebugActionIndex": 136
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Assembly-CSharp.pdb",
@@ -5243,7 +5324,49 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 134
+      "DebugActionIndex": 137
+    },
+    {
+      "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Autodesk.Fbx.BuildTestAssets.pdb",
+      "DisplayName": "Copying Autodesk.Fbx.BuildTestAssets.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Autodesk.Fbx.BuildTestAssets.pdb"
+      ],
+      "InputFlags": [
+        0
+      ],
+      "Outputs": [
+        "D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Autodesk.Fbx.BuildTestAssets.pdb"
+      ],
+      "OutputFlags": [
+        2
+      ],
+      "ToBuildDependencies": [
+        18
+      ],
+      "DebugActionIndex": 138
+    },
+    {
+      "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Autodesk.Fbx.pdb",
+      "DisplayName": "Copying Autodesk.Fbx.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Autodesk.Fbx.pdb"
+      ],
+      "InputFlags": [
+        0
+      ],
+      "Outputs": [
+        "D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Autodesk.Fbx.pdb"
+      ],
+      "OutputFlags": [
+        2
+      ],
+      "ToBuildDependencies": [
+        18
+      ],
+      "DebugActionIndex": 139
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Cinemachine.pdb",
@@ -5264,7 +5387,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 135
+      "DebugActionIndex": 140
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Burst.pdb",
@@ -5285,7 +5408,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 136
+      "DebugActionIndex": 141
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Collections.pdb",
@@ -5306,7 +5429,28 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 137
+      "DebugActionIndex": 142
+    },
+    {
+      "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Formats.Fbx.Runtime.pdb",
+      "DisplayName": "Copying Unity.Formats.Fbx.Runtime.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Unity.Formats.Fbx.Runtime.pdb"
+      ],
+      "InputFlags": [
+        0
+      ],
+      "Outputs": [
+        "D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Formats.Fbx.Runtime.pdb"
+      ],
+      "OutputFlags": [
+        2
+      ],
+      "ToBuildDependencies": [
+        18
+      ],
+      "DebugActionIndex": 143
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.InputSystem.ForUI.pdb",
@@ -5327,7 +5471,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 138
+      "DebugActionIndex": 144
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.InputSystem.pdb",
@@ -5348,7 +5492,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 139
+      "DebugActionIndex": 145
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Mathematics.pdb",
@@ -5369,7 +5513,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 140
+      "DebugActionIndex": 146
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Netcode.Components.pdb",
@@ -5390,7 +5534,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 141
+      "DebugActionIndex": 147
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Netcode.Runtime.pdb",
@@ -5411,7 +5555,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 142
+      "DebugActionIndex": 148
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Networking.Transport.pdb",
@@ -5432,7 +5576,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 143
+      "DebugActionIndex": 149
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.TextMeshPro.pdb",
@@ -5453,7 +5597,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 144
+      "DebugActionIndex": 150
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.Timeline.pdb",
@@ -5474,7 +5618,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 145
+      "DebugActionIndex": 151
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.VisualScripting.Core.pdb",
@@ -5495,7 +5639,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 146
+      "DebugActionIndex": 152
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.VisualScripting.Flow.pdb",
@@ -5516,7 +5660,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 147
+      "DebugActionIndex": 153
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/Unity.VisualScripting.State.pdb",
@@ -5537,7 +5681,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 148
+      "DebugActionIndex": 154
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.AccessibilityModule.pdb",
@@ -5558,7 +5702,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 149
+      "DebugActionIndex": 155
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.AIModule.pdb",
@@ -5579,7 +5723,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 150
+      "DebugActionIndex": 156
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.AndroidJNIModule.pdb",
@@ -5600,7 +5744,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 151
+      "DebugActionIndex": 157
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.AnimationModule.pdb",
@@ -5621,7 +5765,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 152
+      "DebugActionIndex": 158
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.ARModule.pdb",
@@ -5642,7 +5786,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 153
+      "DebugActionIndex": 159
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.AssetBundleModule.pdb",
@@ -5663,7 +5807,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 154
+      "DebugActionIndex": 160
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.AudioModule.pdb",
@@ -5684,7 +5828,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 155
+      "DebugActionIndex": 161
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.ClothModule.pdb",
@@ -5705,7 +5849,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 156
+      "DebugActionIndex": 162
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.ClusterInputModule.pdb",
@@ -5726,7 +5870,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 157
+      "DebugActionIndex": 163
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.ClusterRendererModule.pdb",
@@ -5747,7 +5891,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 158
+      "DebugActionIndex": 164
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.CommandStateObserverModule.pdb",
@@ -5768,7 +5912,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 159
+      "DebugActionIndex": 165
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.ContentLoadModule.pdb",
@@ -5789,7 +5933,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 160
+      "DebugActionIndex": 166
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.CoreModule.pdb",
@@ -5810,7 +5954,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 161
+      "DebugActionIndex": 167
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.CrashReportingModule.pdb",
@@ -5831,7 +5975,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 162
+      "DebugActionIndex": 168
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.DirectorModule.pdb",
@@ -5852,7 +5996,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 163
+      "DebugActionIndex": 169
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.DSPGraphModule.pdb",
@@ -5873,7 +6017,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 164
+      "DebugActionIndex": 170
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.GameCenterModule.pdb",
@@ -5894,7 +6038,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 165
+      "DebugActionIndex": 171
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.GIModule.pdb",
@@ -5915,7 +6059,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 166
+      "DebugActionIndex": 172
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.GraphToolsFoundationModule.pdb",
@@ -5936,7 +6080,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 167
+      "DebugActionIndex": 173
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.GridModule.pdb",
@@ -5957,7 +6101,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 168
+      "DebugActionIndex": 174
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.HierarchyCoreModule.pdb",
@@ -5978,7 +6122,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 169
+      "DebugActionIndex": 175
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.HotReloadModule.pdb",
@@ -5999,7 +6143,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 170
+      "DebugActionIndex": 176
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.ImageConversionModule.pdb",
@@ -6020,7 +6164,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 171
+      "DebugActionIndex": 177
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.IMGUIModule.pdb",
@@ -6041,7 +6185,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 172
+      "DebugActionIndex": 178
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.InputForUIModule.pdb",
@@ -6062,7 +6206,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 173
+      "DebugActionIndex": 179
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.InputLegacyModule.pdb",
@@ -6083,7 +6227,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 174
+      "DebugActionIndex": 180
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.InputModule.pdb",
@@ -6104,7 +6248,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 175
+      "DebugActionIndex": 181
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.JSONSerializeModule.pdb",
@@ -6125,7 +6269,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 176
+      "DebugActionIndex": 182
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.LocalizationModule.pdb",
@@ -6146,7 +6290,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 177
+      "DebugActionIndex": 183
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.MarshallingModule.pdb",
@@ -6167,7 +6311,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 178
+      "DebugActionIndex": 184
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.MultiplayerModule.pdb",
@@ -6188,7 +6332,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 179
+      "DebugActionIndex": 185
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.NVIDIAModule.pdb",
@@ -6209,7 +6353,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 180
+      "DebugActionIndex": 186
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.ParticleSystemModule.pdb",
@@ -6230,7 +6374,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 181
+      "DebugActionIndex": 187
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.pdb",
@@ -6251,7 +6395,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 182
+      "DebugActionIndex": 188
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.PerformanceReportingModule.pdb",
@@ -6272,7 +6416,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 183
+      "DebugActionIndex": 189
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.Physics2DModule.pdb",
@@ -6293,7 +6437,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 184
+      "DebugActionIndex": 190
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.PhysicsModule.pdb",
@@ -6314,7 +6458,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 185
+      "DebugActionIndex": 191
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.ProfilerModule.pdb",
@@ -6335,7 +6479,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 186
+      "DebugActionIndex": 192
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.PropertiesModule.pdb",
@@ -6356,7 +6500,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 187
+      "DebugActionIndex": 193
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.pdb",
@@ -6377,7 +6521,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 188
+      "DebugActionIndex": 194
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.ScreenCaptureModule.pdb",
@@ -6398,7 +6542,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 189
+      "DebugActionIndex": 195
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.SharedInternalsModule.pdb",
@@ -6419,7 +6563,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 190
+      "DebugActionIndex": 196
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.SpriteMaskModule.pdb",
@@ -6440,7 +6584,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 191
+      "DebugActionIndex": 197
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.SpriteShapeModule.pdb",
@@ -6461,7 +6605,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 192
+      "DebugActionIndex": 198
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.StreamingModule.pdb",
@@ -6482,7 +6626,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 193
+      "DebugActionIndex": 199
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.SubstanceModule.pdb",
@@ -6503,7 +6647,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 194
+      "DebugActionIndex": 200
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.SubsystemsModule.pdb",
@@ -6524,7 +6668,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 195
+      "DebugActionIndex": 201
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.TerrainModule.pdb",
@@ -6545,7 +6689,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 196
+      "DebugActionIndex": 202
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.TerrainPhysicsModule.pdb",
@@ -6566,7 +6710,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 197
+      "DebugActionIndex": 203
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.TextCoreFontEngineModule.pdb",
@@ -6587,7 +6731,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 198
+      "DebugActionIndex": 204
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.TextCoreTextEngineModule.pdb",
@@ -6608,7 +6752,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 199
+      "DebugActionIndex": 205
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.TextRenderingModule.pdb",
@@ -6629,7 +6773,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 200
+      "DebugActionIndex": 206
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.TilemapModule.pdb",
@@ -6650,7 +6794,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 201
+      "DebugActionIndex": 207
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.TLSModule.pdb",
@@ -6671,7 +6815,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 202
+      "DebugActionIndex": 208
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UI.pdb",
@@ -6692,7 +6836,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 203
+      "DebugActionIndex": 209
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UIElementsModule.pdb",
@@ -6713,7 +6857,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 204
+      "DebugActionIndex": 210
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UIModule.pdb",
@@ -6734,7 +6878,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 205
+      "DebugActionIndex": 211
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UmbraModule.pdb",
@@ -6755,7 +6899,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 206
+      "DebugActionIndex": 212
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.pdb",
@@ -6776,7 +6920,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 207
+      "DebugActionIndex": 213
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityAnalyticsModule.pdb",
@@ -6797,7 +6941,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 208
+      "DebugActionIndex": 214
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityConnectModule.pdb",
@@ -6818,7 +6962,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 209
+      "DebugActionIndex": 215
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityCurlModule.pdb",
@@ -6839,7 +6983,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 210
+      "DebugActionIndex": 216
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityTestProtocolModule.pdb",
@@ -6860,7 +7004,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 211
+      "DebugActionIndex": 217
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.pdb",
@@ -6881,7 +7025,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 212
+      "DebugActionIndex": 218
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityWebRequestAudioModule.pdb",
@@ -6902,7 +7046,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 213
+      "DebugActionIndex": 219
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityWebRequestModule.pdb",
@@ -6923,7 +7067,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 214
+      "DebugActionIndex": 220
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityWebRequestTextureModule.pdb",
@@ -6944,7 +7088,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 215
+      "DebugActionIndex": 221
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.UnityWebRequestWWWModule.pdb",
@@ -6965,7 +7109,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 216
+      "DebugActionIndex": 222
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.VehiclesModule.pdb",
@@ -6986,7 +7130,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 217
+      "DebugActionIndex": 223
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.VFXModule.pdb",
@@ -7007,7 +7151,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 218
+      "DebugActionIndex": 224
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.VideoModule.pdb",
@@ -7028,7 +7172,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 219
+      "DebugActionIndex": 225
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.VirtualTexturingModule.pdb",
@@ -7049,7 +7193,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 220
+      "DebugActionIndex": 226
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.VRModule.pdb",
@@ -7070,7 +7214,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 221
+      "DebugActionIndex": 227
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.WindModule.pdb",
@@ -7091,7 +7235,7 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 222
+      "DebugActionIndex": 228
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Managed/UnityEngine.XRModule.pdb",
@@ -7112,18 +7256,20 @@
       "ToBuildDependencies": [
         18
       ],
-      "DebugActionIndex": 223
+      "DebugActionIndex": 229
     },
     {
       "Annotation": "GenerateNativePluginsForAssemblies Library/Bee/artifacts/WinPlayerBuildProgram/AsyncPluginsFromLinker",
       "DisplayName": "Running Burst Compiler",
       "ActionType": "RunRPCCommand",
-      "PayloadOffset": 121276,
-      "PayloadLength": 10899,
+      "PayloadOffset": 122671,
+      "PayloadLength": 11165,
       "PayloadDebugContentSnippet": "{\"PlayerBuildProgramLibrary.Da",
       "Action": "GenerateNativePluginsForAssemblies",
       "Inputs": [
         "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Assembly-CSharp.dll",
+        "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Autodesk.Fbx.BuildTestAssets.dll",
+        "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Autodesk.Fbx.dll",
         "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Cinemachine.dll",
         "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Mono.Security.dll",
         "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/mscorlib.dll",
@@ -7151,6 +7297,7 @@
         "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Unity.Burst.Unsafe.dll",
         "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Unity.Collections.dll",
         "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Unity.Collections.LowLevel.ILSupport.dll",
+        "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Unity.Formats.Fbx.Runtime.dll",
         "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Unity.InputSystem.dll",
         "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Unity.InputSystem.ForUI.dll",
         "Library/Bee/artifacts/WinPlayerBuildProgram/ManagedStripped/Unity.Mathematics.dll",
@@ -7360,6 +7507,9 @@
         0,
         0,
         0,
+        0,
+        0,
+        0,
         0
       ],
       "Outputs": [],
@@ -7399,7 +7549,7 @@
           "Recurse": 1
         }
       ],
-      "DebugActionIndex": 224
+      "DebugActionIndex": 230
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Plugins/x86_64/lib_burst_generated.dll",
@@ -7418,9 +7568,9 @@
         2
       ],
       "ToBuildDependencies": [
-        224
+        230
       ],
-      "DebugActionIndex": 225
+      "DebugActionIndex": 231
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Plugins/x86_64/lib_burst_generated.pdb",
@@ -7439,15 +7589,15 @@
         2
       ],
       "ToBuildDependencies": [
-        224
+        230
       ],
-      "DebugActionIndex": 226
+      "DebugActionIndex": 232
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info",
       "DisplayName": "Writing app.info",
       "ActionType": "WriteFile",
-      "PayloadOffset": 132264,
+      "PayloadOffset": 133925,
       "PayloadLength": 24,
       "PayloadDebugContentSnippet": "DefaultCompany\nTheThread",
       "Inputs": [],
@@ -7458,7 +7608,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 227
+      "DebugActionIndex": 233
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/app.info",
@@ -7477,9 +7627,9 @@
         2
       ],
       "ToBuildDependencies": [
-        227
+        233
       ],
-      "DebugActionIndex": 228
+      "DebugActionIndex": 234
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread_Data/Resources/unity default resources",
@@ -7497,7 +7647,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 229
+      "DebugActionIndex": 235
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread.exe",
@@ -7515,7 +7665,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 230
+      "DebugActionIndex": 236
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll",
@@ -7533,7 +7683,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 231
+      "DebugActionIndex": 237
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll",
@@ -7551,7 +7701,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 232
+      "DebugActionIndex": 238
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser",
@@ -7569,7 +7719,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 233
+      "DebugActionIndex": 239
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx",
@@ -7587,7 +7737,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 234
+      "DebugActionIndex": 240
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/etc/mono/2.0/machine.config",
@@ -7605,7 +7755,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 235
+      "DebugActionIndex": 241
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/etc/mono/2.0/settings.map",
@@ -7623,7 +7773,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 236
+      "DebugActionIndex": 242
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/etc/mono/2.0/web.config",
@@ -7641,7 +7791,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 237
+      "DebugActionIndex": 243
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser",
@@ -7659,7 +7809,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 238
+      "DebugActionIndex": 244
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx",
@@ -7677,7 +7827,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 239
+      "DebugActionIndex": 245
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/etc/mono/4.0/machine.config",
@@ -7695,7 +7845,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 240
+      "DebugActionIndex": 246
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/etc/mono/4.0/settings.map",
@@ -7713,7 +7863,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 241
+      "DebugActionIndex": 247
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/etc/mono/4.0/web.config",
@@ -7731,7 +7881,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 242
+      "DebugActionIndex": 248
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser",
@@ -7749,7 +7899,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 243
+      "DebugActionIndex": 249
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx",
@@ -7767,7 +7917,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 244
+      "DebugActionIndex": 250
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/etc/mono/4.5/machine.config",
@@ -7785,7 +7935,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 245
+      "DebugActionIndex": 251
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/etc/mono/4.5/settings.map",
@@ -7803,7 +7953,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 246
+      "DebugActionIndex": 252
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/etc/mono/4.5/web.config",
@@ -7821,7 +7971,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 247
+      "DebugActionIndex": 253
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/etc/mono/browscap.ini",
@@ -7839,7 +7989,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 248
+      "DebugActionIndex": 254
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/etc/mono/config",
@@ -7857,7 +8007,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 249
+      "DebugActionIndex": 255
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/MonoBleedingEdge/etc/mono/mconfig/config.xml",
@@ -7875,7 +8025,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 250
+      "DebugActionIndex": 256
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/UnityCrashHandler64.exe",
@@ -7893,7 +8043,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 251
+      "DebugActionIndex": 257
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/UnityPlayer.dll",
@@ -7911,7 +8061,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 252
+      "DebugActionIndex": 258
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/WinPixEventRuntime.dll",
@@ -7929,7 +8079,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 253
+      "DebugActionIndex": 259
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/D3D12/D3D12Core.dll",
@@ -7947,7 +8097,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 254
+      "DebugActionIndex": 260
     },
     {
       "Annotation": "CopyFiles D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/D3D12/d3d12SDKLayers.dll",
@@ -7965,7 +8115,7 @@
       "OutputFlags": [
         2
       ],
-      "DebugActionIndex": 255
+      "DebugActionIndex": 261
     },
     {
       "Annotation": "Player",
@@ -8194,14 +8344,14 @@
         221,
         222,
         223,
+        224,
         225,
         226,
+        227,
         228,
         229,
-        230,
         231,
         232,
-        233,
         234,
         235,
         236,
@@ -8223,9 +8373,15 @@
         252,
         253,
         254,
-        255
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261
       ],
-      "DebugActionIndex": 256
+      "DebugActionIndex": 262
     }
   ],
   "FileSignatures": [
@@ -8444,7 +8600,7 @@
   ],
         "NamedNodes": {
           "all_tundra_nodes": 0,
-          "Player": 256
+          "Player": 262
         }
 ,  "DefaultNodes": [
     0
