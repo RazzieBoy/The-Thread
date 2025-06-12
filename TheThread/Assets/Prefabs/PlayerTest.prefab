@@ -137,12 +137,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3798771715718617738}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.386, y: 0.554, z: 0}
-  m_LocalScale: {x: 0.8529598, y: 0.10293999, z: 0.66386956}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.38600037, y: 0.5539996, z: 0}
+  m_LocalScale: {x: 0.85296, y: 0.10293999, z: 0.6638694}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3493765550233013160}
+  m_Father: {fileID: 8404486439199545082}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &2901619361953587495
 MeshFilter:
@@ -281,7 +281,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6209030598169568183}
+  - {fileID: 8404486439199545082}
   - {fileID: 7641425582966161968}
   - {fileID: 5812929678019052686}
   m_Father: {fileID: 0}
@@ -374,6 +374,7 @@ MonoBehaviour:
   orientation: {fileID: 5812929678019052686}
   cameraPrefab: {fileID: 4205494327242972314, guid: 42f8c7023ded28d459864258d7b003ff, type: 3}
   cameraPos: {fileID: 569626491394989560}
+  goggleOffsetValue: {x: 0, y: 1, z: 0}
   state: 0
 --- !u!114 &7418540186834145082
 MonoBehaviour:
@@ -389,6 +390,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedText: {fileID: 0}
   prefabText: {fileID: 0}
+--- !u!1 &6546989495942869477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8404486439199545082}
+  m_Layer: 0
+  m_Name: GoogleOrbit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8404486439199545082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6546989495942869477}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6209030598169568183}
+  m_Father: {fileID: 3493765550233013160}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8074979448194337846
 GameObject:
   m_ObjectHideFlags: 0

@@ -48,6 +48,8 @@ public class MovementPlayer : NetworkBehaviour {
     public GameObject cameraPrefab;
     private GameObject camInstance;
     [SerializeField] private Transform cameraPos;
+    [SerializeField]
+    private Vector3 goggleOffsetValue = new Vector3(0.5f, 1, 0);
 
     float horizontalInput;
     float verticalInput;
@@ -65,33 +67,28 @@ public class MovementPlayer : NetworkBehaviour {
 
     private NetworkVariable<Vector3> networkPosition = new NetworkVariable<Vector3>(Vector3.zero, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     private NetworkVariable<Quaternion> goggleRotation = new NetworkVariable<Quaternion>(Quaternion.identity, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+    private NetworkVariable<Vector3> goggleOffset = new NetworkVariable<Vector3>(new Vector3(0.5f, 1, 0), NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
 
-    public override void OnNetworkSpawn()
-    {
+    public override void OnNetworkSpawn(){
         base.OnNetworkSpawn();
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = !IsOwner;
         rb.freezeRotation = true;
 
-        if (IsOwner)
-        {
+        if (IsOwner){
             // Disable Cube MeshRenderer locally
             Transform GoggleTransform = transform.Find("Goggle"); // Adjust path if needed
-            if (GoggleTransform != null)
-            {
+            if (GoggleTransform != null){
                 MeshRenderer GoggleRenderer = GoggleTransform.GetComponent<MeshRenderer>();
-                if (GoggleRenderer != null)
-                {
+                if (GoggleRenderer != null){
                     GoggleRenderer.enabled = false;
                     Debug.Log("Disabled Cube MeshRenderer for local player");
                 }
-                else
-                {
+                else{
                     Debug.LogWarning("MeshRenderer not found on Cube");
                 }
             }
-            else
-            {
+            else{
                 Debug.LogWarning("Could not find Cube");
             }
 
@@ -100,20 +97,18 @@ public class MovementPlayer : NetworkBehaviour {
             camInstance.transform.SetParent(transform);
             PlayerCam camScript = camInstance.GetComponent<PlayerCam>();
             MoveCameraScript moveScript = camInstance.GetComponent<MoveCameraScript>();
-            if (camScript != null)
-            {
+            if (camScript != null){
                 camScript.SetupOrientation(orientation);
             }
+            UpdateGoggleOffsetServerRpc(goggleOffsetValue);
         }
 
-        if (IsServer)
-        {
+        if (IsServer){
             networkPosition.Value = transform.position;
         }
     }
 
-    private void Awake()
-    {
+    private void Awake(){
         if (orientation == null)
             orientation = transform.Find("Orientation");
 
@@ -136,16 +131,13 @@ public class MovementPlayer : NetworkBehaviour {
             SpeedControl();
             StateHandler();
 
-            if (state == MovementState.walking)
-            {
+            if (state == MovementState.walking){
                 rb.drag = groundDrag;
             }
-            else if (state == MovementState.crouching)
-            {
+            else if (state == MovementState.crouching){
                 rb.drag = groundDrag;
             }
-            else if (state == MovementState.sliding)
-            {
+            else if (state == MovementState.sliding){
                 rb.drag = slideDrag;
             }
             else
@@ -157,29 +149,30 @@ public class MovementPlayer : NetworkBehaviour {
             }
 
             Transform cameraTransform = camInstance != null ? camInstance.transform.Find("Main Camera") : null;
-            if (cameraTransform != null)
-            {
-                goggleRotation.Value = cameraTransform.rotation;
+            if (cameraTransform != null){
+                float yaw = cameraTransform.eulerAngles.y;
+                goggleRotation.Value = Quaternion.Euler(0, yaw, 0);
+                if (IsOwner) {
+                    UpdateGoggleOffsetServerRpc(goggleOffsetValue);
+                }
                 Transform goggleTransform = transform.Find("Goggle");
-                if (goggleTransform != null) 
-                {
+                if (goggleTransform != null) {
                     goggleTransform.rotation = goggleRotation.Value;
+                    goggleTransform.position = transform.position + goggleOffset.Value;
                 }
             }
         }
-        else {
+        else{
             transform.position = Vector3.Lerp(transform.position, networkPosition.Value, Time.deltaTime * 10f);
             Transform goggleTransform = transform.Find("Goggle");
-            if(goggleTransform != null)
-            {
+            if(goggleTransform != null){
                 goggleTransform.rotation = goggleRotation.Value;
+                goggleTransform.position = transform.position + goggleOffset.Value;
             }
         }
 
-        if (!IsOwner)
-        {
-            if (rb != null && !rb.isKinematic)
-            {
+        if (!IsOwner){
+            if (rb != null && !rb.isKinematic){
                // Debug.LogWarning($"[Non-owner has non-kinematic RB!] {gameObject.name}, ClientId: {NetworkManager.Singleton.LocalClientId}");
             }
             return;
@@ -208,21 +201,17 @@ public class MovementPlayer : NetworkBehaviour {
             transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
             rb.AddForce(moveDirection.normalized * 5f, ForceMode.Impulse);
         }
-        if (Input.GetKeyDown(slideKey))
-        {
+        if (Input.GetKeyDown(slideKey)){
             transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
         }
         if (Input.GetKeyUp(crouchKey) || Input.GetKeyUp(slideKey)) {
             transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
         }
-
-
     }
 
     private void StateHandler() {
 
-        if (Input.GetKey(slideKey))
-        {
+        if (Input.GetKey(slideKey)){
             state = MovementState.sliding;
         }
         else if (Input.GetKey(crouchKey)) {
@@ -300,5 +289,10 @@ public class MovementPlayer : NetworkBehaviour {
     [ServerRpc]
     private void UpdatePositionServerRpc(Vector3 newPosition) { 
         networkPosition.Value = newPosition;
+    }
+
+    [ServerRpc]
+    private void UpdateGoggleOffsetServerRpc(Vector3 offset) {
+        goggleOffset.Value = offset;
     }
 }
