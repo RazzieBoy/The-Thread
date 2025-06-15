@@ -7,6 +7,7 @@ using System.Globalization;
 
 public class MovementPlayer : NetworkBehaviour {
     [Header("References")]
+    //Variables storing different speeds
     [Header("Speeds")]
     public float moveSpeed;
     public float walkSpeed;
@@ -14,79 +15,95 @@ public class MovementPlayer : NetworkBehaviour {
     public float slideDrag;
     public float groundDrag;
 
+    //Variables Storing values for the jump ability
     [Header("JumpStats")]
     public float jumpForce;
     public float jumpCooldown;
     public float airMulitplier;
     public bool canJump;
 
+    //Variables storing values for when the player crouches
     [Header("CrouchStats")]
     public float crouchSpeed;
     public float crouchYScale;
     public float startYScale;
 
+    //Variables storing values for when the player slides
     [Header("SlidingStats")]
     public float slideYScale;
     public bool sliding;
 
+    //Variables for keybinds that is assigned to different abilities
     [Header("KeyBinds")]
     public KeyCode jumpKey = KeyCode.Space;
     public KeyCode crouchKey = KeyCode.C;
     public KeyCode slideKey = KeyCode.LeftControl;
 
+    //Variables storing values for the player body
     [Header("PlayerStats")]
     public float playerHeight;
     public LayerMask whatIsGround;
     public LayerMask whatIsSkybox;
     bool grounded;
 
+    //Variables storing info for when a player is on a slope
     [Header("SlopeInfo")]
     public float maxSlopeAngle;
     private RaycastHit slopeHit;
 
+    //Variables that makes sure each player has a camera object
     [SerializeField] public Transform orientation;
+    [SerializeField] private Transform cameraPos;
     public GameObject cameraPrefab;
     private GameObject camInstance;
-    [SerializeField] private Transform cameraPos;
+    //Variable making sure that the players goggles is displayed properly
     [SerializeField]
-    private Vector3 goggleOffsetValue = new Vector3(0.5f, 1, 0);
+    private Vector3 goggleOffsetValue = new Vector3(0.25f, 0.8f, 0);
 
+    //Variables for player movement
     float horizontalInput;
     float verticalInput;
     Vector3 moveDirection;
     Rigidbody rb;
 
+    //Enum containing the different states the player can be in.
+    //Each state is assigned dynamiclly to the player depending on what they are doing
     public MovementState state;
     public enum MovementState {
         walking,
         crouching,
         sliding,
         air
-
     }
 
+    //Network Variables that ensure that important informatin such as the players location is properly displayed on each users machine.
+    //Also ensure that each player knows which dirrection the other ones are facing
     private NetworkVariable<Vector3> networkPosition = new NetworkVariable<Vector3>(Vector3.zero, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     private NetworkVariable<Quaternion> goggleRotation = new NetworkVariable<Quaternion>(Quaternion.identity, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
-    private NetworkVariable<Vector3> goggleOffset = new NetworkVariable<Vector3>(new Vector3(0.5f, 1, 0), NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+    private NetworkVariable<Vector3> goggleOffset = new NetworkVariable<Vector3>(new Vector3(0.25f, 0.8f, 0), NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
 
+    //Function that runs when an object with a "Network Object" component on it spawns
     public override void OnNetworkSpawn(){
         base.OnNetworkSpawn();
+        //Get's the players rigidbody, makes the rigidbody not kinematic and freezes the root of the players rotation
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = !IsOwner;
         rb.freezeRotation = true;
 
+        //Check if the object with the script on it is the owner of the assigned scripts instance
         if (IsOwner){
-            // Disable Cube MeshRenderer locally
-            Transform GoggleTransform = transform.Find("Goggle"); // Adjust path if needed
-            if (GoggleTransform != null){
-                MeshRenderer GoggleRenderer = GoggleTransform.GetComponent<MeshRenderer>();
-                if (GoggleRenderer != null){
-                    GoggleRenderer.enabled = false;
+            // Disable Cube MeshRenderer locally, stops it from blocking client sides camera
+            Transform goggleTransform = transform.Find("GoggleOrbit/Goggle");
+            if (goggleTransform != null){
+                MeshRenderer goggleRenderer = goggleTransform.GetComponent<MeshRenderer>();
+                if (goggleRenderer != null){
+                    goggleRenderer.enabled = false;
                     Debug.Log("Disabled Cube MeshRenderer for local player");
                 }
                 else{
                     Debug.LogWarning("MeshRenderer not found on Cube");
                 }
+                goggleTransform.localRotation = Quaternion.identity;    
             }
             else{
                 Debug.LogWarning("Could not find Cube");
@@ -109,15 +126,15 @@ public class MovementPlayer : NetworkBehaviour {
     }
 
     private void Awake(){
-        if (orientation == null)
+        if (orientation == null) {
             orientation = transform.Find("Orientation");
-
-        if (cameraPos == null)
+        }
+            
+        if (cameraPos == null) {
             cameraPos = transform.Find("CameraPos");
+        }
 
         rb = GetComponent<Rigidbody>();
-        if (rb == null)
-           // Debug.LogError("Rigidbody component missing on player!");
         rb.interpolation = RigidbodyInterpolation.Interpolate;
     }
 
@@ -151,23 +168,54 @@ public class MovementPlayer : NetworkBehaviour {
             Transform cameraTransform = camInstance != null ? camInstance.transform.Find("Main Camera") : null;
             if (cameraTransform != null){
                 float yaw = cameraTransform.eulerAngles.y;
-                goggleRotation.Value = Quaternion.Euler(0, yaw, 0);
+                float correctedYaw = (yaw - 90f) % 360f;
+                if (correctedYaw < 0) {
+                    correctedYaw += 360f;
+                }
+                goggleRotation.Value = Quaternion.Euler(0, correctedYaw, 0);
                 if (IsOwner) {
                     UpdateGoggleOffsetServerRpc(goggleOffsetValue);
                 }
-                Transform goggleTransform = transform.Find("Goggle");
-                if (goggleTransform != null) {
-                    goggleTransform.rotation = goggleRotation.Value;
-                    goggleTransform.position = transform.position + goggleOffset.Value;
+
+                Transform goggleOrbitTransform = transform.Find("GoggleOrbit");
+                if (goggleOrbitTransform != null) {
+                    Vector3 offset = goggleOffset.Value;
+                    float radius = new Vector2(offset.x, offset.z).magnitude;
+                    float angle = -correctedYaw * Mathf.Deg2Rad;
+                    Vector3 orbitPosition = new Vector3(
+                        transform.position.x + radius * Mathf.Cos(angle),
+                        transform.position.y + offset.y,
+                        transform.position.z + radius * Mathf.Sin(angle)
+                        );
+                    goggleOrbitTransform.position = orbitPosition;
+                    goggleOrbitTransform.rotation = goggleRotation.Value;
+
+                    Transform goggleTransform = goggleOrbitTransform.Find("Goggle");
+                    if (goggleTransform != null) {
+                        goggleTransform.position = orbitPosition;
+                    }
                 }
             }
         }
         else{
             transform.position = Vector3.Lerp(transform.position, networkPosition.Value, Time.deltaTime * 10f);
-            Transform goggleTransform = transform.Find("Goggle");
-            if(goggleTransform != null){
-                goggleTransform.rotation = goggleRotation.Value;
-                goggleTransform.position = transform.position + goggleOffset.Value;
+            Transform goggleOrbitTransform = transform.Find("GoggleOrbit");
+            if(goggleOrbitTransform != null){
+                Vector3 offset = goggleOffset.Value;
+                float radius = new Vector2(offset.x, offset.z).magnitude;
+                float angle = -goggleRotation.Value.eulerAngles.y * Mathf.Deg2Rad;
+                Vector3 orbitPosition = new Vector3(
+                    transform.position.x + radius * Mathf.Cos(angle),
+                    transform.position.y + offset.y,
+                    transform.position.z + radius * Mathf.Sin(angle)
+                );
+                goggleOrbitTransform.position = orbitPosition;
+                goggleOrbitTransform.rotation = goggleRotation.Value;
+
+                Transform goggleTransform = goggleOrbitTransform.Find("Goggle");
+                if (goggleTransform != null) {
+                    goggleTransform.position = orbitPosition;
+                }
             }
         }
 
@@ -240,11 +288,12 @@ public class MovementPlayer : NetworkBehaviour {
             }
         }
 
-        if (grounded)
+        if (grounded) {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-
-        else if (!grounded)
+        }
+        else if (!grounded) {
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMulitplier, ForceMode.Force);
+        }
 
         rb.useGravity = !OnSlope();
     }

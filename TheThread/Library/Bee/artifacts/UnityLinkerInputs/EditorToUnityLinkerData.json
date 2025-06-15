@@ -255,6 +255,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Unity.Services.Authentication.PlayerAccounts.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "Unity.Services.Authentication.PlayerAccounts.UnityPlayerAccountSettings",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "AudioManager",
             "fullManagedTypeName": "UnityEditor.AudioManager",
@@ -746,6 +753,13 @@
             "managedAssemblyName": "UnityEngine.UI.dll",
             "nativeClass": "",
             "fullManagedTypeName": "UnityEngine.UI.LayoutElement",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "UnityEngine.UI.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.UI.RawImage",
             "moduleName": "",
             "usedInScenes": []
         },

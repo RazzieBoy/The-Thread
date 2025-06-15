@@ -24,6 +24,8 @@ ScriptsOnlyBuild:
     - Unity.Netcode.Transports.UTP.UnityTransport
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.Services.Authentication.PlayerAccounts:
+    - Unity.Services.Authentication.PlayerAccounts.UnityPlayerAccountSettings
     Unity.TextMeshPro:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -49,6 +51,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.LayoutElement
+    - UnityEngine.UI.RawImage
     - UnityEngine.UI.RectMask2D
   serializedClasses:
     Unity.Netcode.Runtime:
@@ -96,6 +99,9 @@ ScriptsOnlyBuild:
   methodsToPreserve:
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuScript
+    methodName: JoinGameWithRelay
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuScript
     methodName: PlayButton
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuScript
@@ -103,6 +109,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: KeyRebindUI
     methodName: RebindSlide
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuScript
+    methodName: BackButton
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuScript
+    methodName: StartHostWithRelay
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuScript
     methodName: BackButton
@@ -124,9 +136,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: KeyRebindUI
     methodName: RebindJump
-  - assembly: Assembly-CSharp
-    fullTypeName: MainMenuScript
-    methodName: JoinGame
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuScript
     methodName: LoadNextInBuild
@@ -211,6 +220,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 34828}
     - Class: 114
+      Script: {instanceID: 34990}
+    - Class: 114
       Script: {instanceID: 35166}
     - Class: 114
       Script: {instanceID: 35192}
@@ -218,6 +229,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 35278}
     - Class: 114
       Script: {instanceID: 36024}
+    - Class: 114
+      Script: {instanceID: 74828}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -456,7 +469,7 @@ ScriptsOnlyBuild:
     className: StateGraphAsset
   - hash:
       serializedVersion: 2
-      Hash: 95268d82656292dc89601e085b16bf45
+      Hash: c093b07d0a273a014257ef861e799dfe
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: MovementPlayer
@@ -804,7 +817,7 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerStayMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 66aa039122eaff7c1431635f8838375d
+      Hash: c4f05fe1df6b66d31dd8a57de61f9e58
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: MainMenuScript
@@ -1756,8 +1769,32 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 5eee1f0e53861510a4862c8ec36d5f55
+    assemblyName: Unity.Services.Relay
+    namespaceName: Unity.Services.Relay.Scheduler
+    className: TaskSchedulerWebGL
+  - hash:
+      serializedVersion: 2
+      Hash: a600e45f4803338e1f942aee7817894a
+    assemblyName: Unity.Services.Relay
+    namespaceName: Unity.Services.Relay.Scheduler
+    className: TaskSchedulerThreaded
+  - hash:
+      serializedVersion: 2
+      Hash: 9907870747c8ed918394b823c45e5ca7
+    assemblyName: Unity.Services.Authentication.PlayerAccounts
+    namespaceName: Unity.Services.Authentication.PlayerAccounts
+    className: UnityPlayerAccountSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 3c2f37ae8a07b089d939e6e2b2412dcc
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: RelayConnector
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread.exe
+  playerPath: E:/Threads/TheThread.exe

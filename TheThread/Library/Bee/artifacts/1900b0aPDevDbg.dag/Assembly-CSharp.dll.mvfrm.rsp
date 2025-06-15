@@ -7,6 +7,13 @@ Library\Bee\artifacts\mvdfrm\Unity.Mathematics.ref.dll_D68AAF47D00A7B0D.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Netcode.Components.ref.dll_0F6824CD9BD63789.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Netcode.Runtime.ref.dll_BBA641322197F2FB.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Networking.Transport.ref.dll_4B19B6E16C64B27E.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Services.Authentication.PlayerAccounts.ref.dll_BB79306EA1EB601C.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Services.Authentication.ref.dll_6FE6D1BA167AD8DF.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Services.Core.Analytics.ref.dll_B33FBA8D01A941BE.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Services.Core.Environments.ref.dll_0A42FDD3340E721E.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Services.Core.ref.dll_3F6B09C6C7F946B6.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Services.QoS.ref.dll_DED40532C5208154.mvfrm
+Library\Bee\artifacts\mvdfrm\Unity.Services.Relay.ref.dll_9B7AA625C18061E0.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.TextMeshPro.ref.dll_723EFD6A007FE69A.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.Timeline.ref.dll_6B625E4645B19820.mvfrm
 Library\Bee\artifacts\mvdfrm\Unity.VisualScripting.Core.ref.dll_32A52FE43A939245.mvfrm

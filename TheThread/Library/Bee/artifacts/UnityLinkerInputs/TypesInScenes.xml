@@ -22,6 +22,9 @@
 		<type fullname="Unity.Netcode.NetworkPrefabsList" preserve="nothing"/>
 		<type fullname="Unity.Netcode.Transports.UTP.UnityTransport" preserve="nothing"/>
 	</assembly>
+	<assembly fullname="Unity.Services.Authentication.PlayerAccounts">
+		<type fullname="Unity.Services.Authentication.PlayerAccounts.UnityPlayerAccountSettings" preserve="nothing"/>
+	</assembly>
 	<assembly fullname="Unity.TextMeshPro">
 		<type fullname="TMPro.TextMeshProUGUI" preserve="nothing"/>
 		<type fullname="TMPro.TMP_FontAsset" preserve="nothing"/>
@@ -86,6 +89,7 @@
 		<type fullname="UnityEngine.UI.GraphicRaycaster" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Image" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.LayoutElement" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.RawImage" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.RectMask2D" preserve="nothing"/>
 	</assembly>
 </linker>
