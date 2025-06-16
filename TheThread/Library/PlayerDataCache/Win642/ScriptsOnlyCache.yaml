@@ -11,6 +11,7 @@ ScriptsOnlyBuild:
     - MoveCameraScript
     - MovementPlayer
     - PlayerCam
+    - ReScaleGuns
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
@@ -114,9 +115,6 @@ ScriptsOnlyBuild:
     methodName: BackButton
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuScript
-    methodName: StartHostWithRelay
-  - assembly: Assembly-CSharp
-    fullTypeName: MainMenuScript
     methodName: BackButton
   - assembly: Assembly-CSharp
     fullTypeName: KeyRebindUI
@@ -174,63 +172,65 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 29028}
+      Script: {instanceID: 29056}
     - Class: 114
-      Script: {instanceID: 29254}
+      Script: {instanceID: 29282}
     - Class: 114
-      Script: {instanceID: 29382}
+      Script: {instanceID: 29410}
     - Class: 114
-      Script: {instanceID: 29628}
+      Script: {instanceID: 29656}
     - Class: 114
-      Script: {instanceID: 29976}
+      Script: {instanceID: 30004}
     - Class: 114
-      Script: {instanceID: 30144}
+      Script: {instanceID: 30172}
     - Class: 114
-      Script: {instanceID: 30556}
+      Script: {instanceID: 30584}
     - Class: 114
-      Script: {instanceID: 30672}
+      Script: {instanceID: 30700}
     - Class: 114
-      Script: {instanceID: 30710}
+      Script: {instanceID: 30738}
     - Class: 114
-      Script: {instanceID: 30900}
+      Script: {instanceID: 30928}
     - Class: 114
-      Script: {instanceID: 31180}
+      Script: {instanceID: 31208}
     - Class: 114
-      Script: {instanceID: 32228}
+      Script: {instanceID: 32256}
     - Class: 114
-      Script: {instanceID: 33078}
+      Script: {instanceID: 33106}
     - Class: 114
-      Script: {instanceID: 33404}
+      Script: {instanceID: 33432}
     - Class: 114
-      Script: {instanceID: 33512}
+      Script: {instanceID: 33540}
     - Class: 114
-      Script: {instanceID: 33524}
+      Script: {instanceID: 33552}
     - Class: 114
-      Script: {instanceID: 34012}
+      Script: {instanceID: 34040}
     - Class: 114
-      Script: {instanceID: 34872}
+      Script: {instanceID: 34900}
     - Class: 114
-      Script: {instanceID: 34934}
+      Script: {instanceID: 34962}
     - Class: 114
-      Script: {instanceID: 35374}
+      Script: {instanceID: 35402}
     - Class: 114
-      Script: {instanceID: 35576}
+      Script: {instanceID: 35604}
     - Class: 114
-      Script: {instanceID: 36820}
+      Script: {instanceID: 36848}
     - Class: 114
-      Script: {instanceID: 36898}
+      Script: {instanceID: 36926}
     - Class: 114
-      Script: {instanceID: 36916}
+      Script: {instanceID: 36944}
     - Class: 114
-      Script: {instanceID: 38158}
+      Script: {instanceID: 38186}
     - Class: 114
-      Script: {instanceID: 38338}
+      Script: {instanceID: 38366}
     - Class: 114
-      Script: {instanceID: 38600}
+      Script: {instanceID: 38628}
     - Class: 114
-      Script: {instanceID: 38714}
+      Script: {instanceID: 38742}
     - Class: 114
-      Script: {instanceID: 38956}
+      Script: {instanceID: 38984}
+    - Class: 114
+      Script: {instanceID: 48318}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -258,8 +258,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 4
       Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
     - Class: 23
@@ -272,13 +270,9 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
-      Script: {instanceID: 0}
-    - Class: 81
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -287,42 +281,24 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 29028}
+      Script: {instanceID: 29056}
     - Class: 114
-      Script: {instanceID: 29382}
+      Script: {instanceID: 30172}
     - Class: 114
-      Script: {instanceID: 30144}
+      Script: {instanceID: 30584}
     - Class: 114
-      Script: {instanceID: 30556}
+      Script: {instanceID: 30738}
     - Class: 114
-      Script: {instanceID: 30710}
+      Script: {instanceID: 34900}
     - Class: 114
-      Script: {instanceID: 31180}
+      Script: {instanceID: 34962}
     - Class: 114
-      Script: {instanceID: 33078}
+      Script: {instanceID: 36938}
     - Class: 114
-      Script: {instanceID: 34872}
+      Script: {instanceID: 38366}
     - Class: 114
-      Script: {instanceID: 34934}
-    - Class: 114
-      Script: {instanceID: 35374}
-    - Class: 114
-      Script: {instanceID: 36820}
-    - Class: 114
-      Script: {instanceID: 36898}
-    - Class: 114
-      Script: {instanceID: 36910}
-    - Class: 114
-      Script: {instanceID: 36916}
-    - Class: 114
-      Script: {instanceID: 38338}
-    - Class: 114
-      Script: {instanceID: 38714}
-    - Class: 114
-      Script: {instanceID: 38956}
+      Script: {instanceID: 38984}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 120
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
@@ -1793,6 +1769,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 01c75dacc45c22c75a1e8ba10395862a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ReScaleGuns
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\GameStart.cs" />
     <Compile Include="Assets\Scripts\Testing\MoveCameraScript.cs" />
     <Compile Include="Assets\Scripts\Testing\Sliding.cs" />
+    <Compile Include="Assets\Scripts\ReScaleGuns.cs" />
     <Compile Include="Assets\Scripts\SettingsScript.cs" />
     <Compile Include="Assets\Scripts\HideGoggles.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />

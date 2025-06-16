@@ -608,6 +608,7 @@ GameObject:
   - component: {fileID: 4591052046193023222}
   - component: {fileID: 2889683951122388647}
   - component: {fileID: 4718792733445396940}
+  - component: {fileID: 9167575967675476076}
   m_Layer: 0
   m_Name: gun
   m_TagString: Untagged
@@ -625,7 +626,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.06916933, y: -0.08280482, z: 0.0057612807, w: 0.99414575}
   m_LocalPosition: {x: 0.5, y: 0, z: 0}
-  m_LocalScale: {x: 0.17813, y: 0.19509168, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1349782457495155484}
@@ -831,6 +832,18 @@ MonoBehaviour:
   cam: {fileID: 5496837182989557625}
   player: {fileID: 0}
   reeling: 2
+--- !u!114 &9167575967675476076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5259214853540012047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f910925a41cc1649a61b051bd55fb99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6409860441966585315
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,6 +856,7 @@ GameObject:
   - component: {fileID: 1075203148377612178}
   - component: {fileID: 4055476386574297943}
   - component: {fileID: 4150201999385670484}
+  - component: {fileID: 2599705458783449208}
   m_Layer: 0
   m_Name: gun (1)
   m_TagString: Untagged
@@ -860,7 +874,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.06917183, y: 0.08280879, z: -0.005759023, w: 0.9941453}
   m_LocalPosition: {x: -0.5, y: 0, z: 0}
-  m_LocalScale: {x: 0.17813, y: 0.19509168, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4485936954959202004}
@@ -938,3 +952,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2599705458783449208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6409860441966585315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f910925a41cc1649a61b051bd55fb99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

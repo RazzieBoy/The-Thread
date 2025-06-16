@@ -157,6 +157,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "ReScaleGuns",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "ResourceManager",
             "fullManagedTypeName": "",
@@ -340,8 +347,7 @@
             "fullManagedTypeName": "UnityEngine.AudioBehaviour",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/Scenes/MainMenu.unity",
-                "Assets/Scenes/SampleScene.unity"
+                "Assets/Scenes/MainMenu.unity"
             ]
         },
         {
@@ -350,8 +356,7 @@
             "fullManagedTypeName": "UnityEngine.AudioListener",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/Scenes/MainMenu.unity",
-                "Assets/Scenes/SampleScene.unity"
+                "Assets/Scenes/MainMenu.unity"
             ]
         },
         {
@@ -380,8 +385,7 @@
             "fullManagedTypeName": "UnityEngine.Camera",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/MainMenu.unity",
-                "Assets/Scenes/SampleScene.unity"
+                "Assets/Scenes/MainMenu.unity"
             ]
         },
         {
@@ -525,8 +529,7 @@
             "fullManagedTypeName": "UnityEngine.LineRenderer",
             "moduleName": "Core",
             "usedInScenes": [
-                "Assets/Scenes/MainMenu.unity",
-                "Assets/Scenes/SampleScene.unity"
+                "Assets/Scenes/MainMenu.unity"
             ]
         },
         {
@@ -658,8 +661,7 @@
             "fullManagedTypeName": "UnityEngine.Rigidbody",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/MainMenu.unity",
-                "Assets/Scenes/SampleScene.unity"
+                "Assets/Scenes/MainMenu.unity"
             ]
         },
         {
