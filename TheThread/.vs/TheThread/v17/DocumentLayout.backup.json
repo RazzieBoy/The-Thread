@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|d:\\users\\270235677\\onedrive - up education\\302project\\the-thread\\thethread\\assets\\scripts\\customnetworkmanagerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\customnetworkmanagerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\assets\\scripts\\mainmenuscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mainmenuscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\assets\\scripts\\constantnetworkmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\constantnetworkmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\assets\\scripts\\gamestart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamestart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\assets\\scripts\\networkmanagerstartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\networkmanagerstartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\assets\\scripts\\testing\\movementplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\testing\\movementplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|d:\\users\\270235677\\onedrive - up education\\302project\\the-thread\\thethread\\assets\\scripts\\mainmenuscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mainmenuscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\assets\\scripts\\rescaleguns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\rescaleguns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\assets\\scripts\\keyrebindui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,22 +47,6 @@
       "RelativeMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\testing\\movecamerascript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\assets\\scripts\\networkmanagerstartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\networkmanagerstartup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\assets\\scripts\\gamestart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamestart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\assets\\scripts\\constantnetworkmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\constantnetworkmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\assets\\scripts\\customnetworkmanagerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\customnetworkmanagerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\assets\\scripts\\hidegoggles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{157158C1-9B70-7173-7AAE-849BA2447A0D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\hidegoggles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -54,25 +58,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "MovementPlayer.cs",
               "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\Testing\\MovementPlayer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Testing\\MovementPlayer.cs",
               "ToolTip": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\Testing\\MovementPlayer.cs",
               "RelativeToolTip": "Assets\\Scripts\\Testing\\MovementPlayer.cs",
-              "ViewState": "AgIAAOUAAAAAAAAAAIA1wPgAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAOAAAAAAAAAAAAAAAPgAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T23:11:16.154Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CustomNetworkManagerScript.cs",
+              "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\CustomNetworkManagerScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CustomNetworkManagerScript.cs",
+              "ToolTip": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\CustomNetworkManagerScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CustomNetworkManagerScript.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAswHcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T23:00:29.507Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "MainMenuScript.cs",
+              "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\MainMenuScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenuScript.cs",
+              "ToolTip": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\MainMenuScript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MainMenuScript.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAADwv4EAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T23:18:23.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ReScaleGuns.cs",
+              "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\ReScaleGuns.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ReScaleGuns.cs",
+              "ToolTip": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\ReScaleGuns.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ReScaleGuns.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T21:26:53.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "RelayConnector.cs",
               "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\RelayConnector.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RelayConnector.cs",
@@ -84,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "KeyRebindUI.cs",
               "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\KeyRebindUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\KeyRebindUI.cs",
@@ -96,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "HideGoggles.cs",
               "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\HideGoggles.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HideGoggles.cs",
@@ -108,56 +149,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CustomNetworkManagerScript.cs",
-              "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\CustomNetworkManagerScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CustomNetworkManagerScript.cs",
-              "ToolTip": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\CustomNetworkManagerScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CustomNetworkManagerScript.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAIwEcAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T23:00:29.507Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainMenuScript.cs",
-              "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\MainMenuScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenuScript.cs",
-              "ToolTip": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\MainMenuScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MainMenuScript.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAwwGAAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T23:18:23.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "ConstantNetworkManager.cs",
               "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\ConstantNetworkManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ConstantNetworkManager.cs",
               "ToolTip": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\ConstantNetworkManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\ConstantNetworkManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-05T21:46:25.211Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "GameStart.cs",
               "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\GameStart.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameStart.cs",
               "ToolTip": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\GameStart.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameStart.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T22:38:24.88Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "NetworkManagerStartup.cs",
               "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\NetworkManagerStartup.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NetworkManagerStartup.cs",
@@ -169,7 +185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "PlayerCam.cs",
               "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\Testing\\PlayerCam.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Testing\\PlayerCam.cs",
@@ -181,7 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "MoveCameraScript.cs",
               "DocumentMoniker": "D:\\Users\\270235677\\OneDrive - UP Education\\302Project\\The-Thread\\TheThread\\Assets\\Scripts\\Testing\\MoveCameraScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Testing\\MoveCameraScript.cs",

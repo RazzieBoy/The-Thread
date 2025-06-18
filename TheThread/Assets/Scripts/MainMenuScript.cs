@@ -6,17 +6,17 @@ using TMPro;
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
 using System.Net;
-using System.Linq;
 
 public class MainMenuScript : MonoBehaviour {
     public GameObject mainMenu;
     public GameObject gameMode;
     public GameObject settingsMenu;
     public GameObject KeyMenu;
-    public GameObject mulitplayerMenu;
+    public GameObject multiplayerMenu;
 
     public TMP_InputField joinCodeInput;
     public TMP_Text joinCodeDisplay;
+    public TMP_Text errorText; //New: For displaying errors to the user
     private bool isInitializing;
 
     private Stack<GameObject> menuStorage;
@@ -27,8 +27,9 @@ public class MainMenuScript : MonoBehaviour {
         gameMode.SetActive(false);
         settingsMenu.SetActive(false);
         KeyMenu.SetActive(false);
-        mulitplayerMenu.SetActive(false);
+        multiplayerMenu.SetActive(false);
         joinCodeDisplay.text = GetLocalIPAddress();
+        errorText.text = "";
         isInitializing = false;
     }
 
@@ -52,7 +53,7 @@ public class MainMenuScript : MonoBehaviour {
 
     public void MultiPlayerButton() {
         menuStorage.Push(gameMode);
-        mulitplayerMenu.SetActive(true);
+        multiplayerMenu.SetActive(true);
         gameMode.SetActive(false);
         joinCodeDisplay.text = GetLocalIPAddress();
     }
@@ -66,7 +67,7 @@ public class MainMenuScript : MonoBehaviour {
         settingsMenu.SetActive(false);
         gameMode.SetActive(false);
         KeyMenu.SetActive(false);
-        mulitplayerMenu.SetActive(false);
+        multiplayerMenu.SetActive(false);
 
         if (menuStorage.Count > 0) {
             GameObject lastMenu = menuStorage.Pop();
@@ -82,48 +83,79 @@ public class MainMenuScript : MonoBehaviour {
     }
 
     public void LoadSceneByName() {
+        if (isInitializing) {
+            errorText.text = "Host already initializing!";
+            Debug.LogWarning("Host already initializing, ignoring request.");
+            return;
+        }
+
         var networkManager = NetworkManager.Singleton;
+        if (networkManager == null) {
+            errorText.text = "NetworkManager is missing in the scene!";
+            Debug.LogError("NetworkManager.Singleton is null!");
+            return;
+        }
+
         var transport = networkManager.GetComponent<UnityTransport>();
         if (transport == null) {
+            errorText.text = "Network configuration error!";
             Debug.LogError("UnityTransport component not found on NetworkManager");
             return;
         }
 
         transport.ConnectionData.Address = "0.0.0.0";
         transport.ConnectionData.Port = 7777;
+        Debug.Log($"Starting host on {transport.ConnectionData.Address}:{transport.ConnectionData.Port}");
 
+        isInitializing = true;
+        errorText.text = "Starting host...";
         bool success = networkManager.StartHost();
         Debug.Log($"StartHost success: {success}");
         if (success) {
-            joinCodeDisplay.text = GetLocalIPAddress(); // Show host's IP for clients to copy
+            joinCodeDisplay.text = GetLocalIPAddress();
             SceneManager.LoadScene("SampleScene");
         }
         else {
+            isInitializing = false;
+            errorText.text = "Failed to start host!";
             Debug.LogError("Failed to start host.");
         }
     }
 
-
     public void JoinGame() {
+        if (joinCodeInput == null) {
+            errorText.text = "Join code input field is not assigned!";
+            Debug.LogError("joinCodeInput is not assigned in the Inspector!");
+            return;
+        }
+
         var networkManager = NetworkManager.Singleton;
+        if (networkManager == null) {
+            errorText.text = "NetworkManager is missing in the scene!";
+            Debug.LogError("NetworkManager.Singleton is null!");
+            return;
+        }
+
         var transport = networkManager.GetComponent<UnityTransport>();
         if (transport == null) {
+            errorText.text = "Network configuration error: UnityTransport not found!";
             Debug.LogError("UnityTransport component not found on NetworkManager!");
             return;
         }
 
-        // Get IP from input field
         string ipAddress = joinCodeInput.text.Trim();
         if (string.IsNullOrEmpty(ipAddress)) {
+            errorText.text = "Please enter a valid IP address!";
             Debug.LogError("IP address is empty! Please enter the host's IP address.");
             return;
         }
 
         transport.ConnectionData.Address = ipAddress;
-        transport.ConnectionData.Port = 7777; // Must match host's port
+        transport.ConnectionData.Port = 7777;
 
         bool success = networkManager.StartClient();
         if (!success) {
+            errorText.text = $"Failed to connect to {ipAddress}. Check IP or network.";
             Debug.LogError($"Failed to start client. Check IP address ({ipAddress}) or network configuration.");
         }
     }
