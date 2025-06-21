@@ -4,7 +4,6 @@ ScriptsOnlyBuild:
     - ConstantNetworkManager
     - CustomNetworkManagerScript
     - DisplaySpeed
-    - GameStart
     - Grappling
     - KeyRebindUI
     - MainMenuScript
@@ -293,10 +292,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 30820}
     - Class: 114
       Script: {instanceID: 35006}
-    - Class: 114
-      Script: {instanceID: 35070}
-    - Class: 114
-      Script: {instanceID: 37062}
     - Class: 114
       Script: {instanceID: 38504}
     - Class: 114
@@ -1782,4 +1777,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: E:/Threads/TheThread.exe
+  playerPath: D:/Users/270235677/OneDrive - UP Education/Desktop/Threads_Testers_Build/TheThread.exe

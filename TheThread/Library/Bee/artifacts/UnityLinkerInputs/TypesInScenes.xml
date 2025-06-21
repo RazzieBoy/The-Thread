@@ -3,7 +3,6 @@
 		<type fullname="ConstantNetworkManager" preserve="nothing"/>
 		<type fullname="CustomNetworkManagerScript" preserve="nothing"/>
 		<type fullname="DisplaySpeed" preserve="nothing"/>
-		<type fullname="GameStart" preserve="nothing"/>
 		<type fullname="Grappling" preserve="nothing"/>
 		<type fullname="KeyRebindUI" preserve="nothing"/>
 		<type fullname="MainMenuScript" preserve="nothing"/>

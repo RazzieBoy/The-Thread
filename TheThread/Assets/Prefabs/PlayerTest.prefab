@@ -325,7 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2368217534
+  GlobalObjectIdHash: 2465870795
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -353,7 +353,7 @@ MonoBehaviour:
   groundDrag: 4
   jumpForce: 12
   jumpCooldown: 0.25
-  airMulitplier: 0.4
+  airMulitplier: 0.5
   canJump: 1
   crouchSpeed: 3.5
   crouchYScale: 0.5

@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
 using System.Net;
+using TMPro;
 
 public class MainMenuScript : MonoBehaviour {
     public GameObject mainMenu;
@@ -105,7 +105,10 @@ public class MainMenuScript : MonoBehaviour {
 
         transport.ConnectionData.Address = "0.0.0.0";
         transport.ConnectionData.Port = 7777;
-        Debug.Log($"Starting host on {transport.ConnectionData.Address}:{transport.ConnectionData.Port}");
+        //
+        transport.ConnectionData.ServerListenAddress = "0.0.0.0";
+        Debug.Log($"Starting host on {transport.ConnectionData.Address}:{transport.ConnectionData.Port}, Listen: {transport.ConnectionData.ServerListenAddress}");
+        //
 
         isInitializing = true;
         errorText.text = "Starting host...";
@@ -136,6 +139,14 @@ public class MainMenuScript : MonoBehaviour {
             return;
         }
 
+        //
+        if (networkManager.IsClient || networkManager.IsHost | networkManager.IsServer) {
+            errorText.text = "A network session is already running! Please disconnect first.";
+            Debug.LogError("Cannot start client: A network session is already active.");
+            return;
+        }
+        //
+
         var transport = networkManager.GetComponent<UnityTransport>();
         if (transport == null) {
             errorText.text = "Network configuration error: UnityTransport not found!";
@@ -152,6 +163,9 @@ public class MainMenuScript : MonoBehaviour {
 
         transport.ConnectionData.Address = ipAddress;
         transport.ConnectionData.Port = 7777;
+        //
+        Debug.Log($"Attempting to connect to {ipAddress}:{transport.ConnectionData.Port}");
+        //
 
         bool success = networkManager.StartClient();
         if (!success) {
