@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerObjectTag
   - CagePart
+  - FinishLine
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Ground
   - SkyBox
   - whatIsGround
-  - 
+  - Finish
   - 
   - 
   - 

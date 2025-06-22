@@ -53,8 +53,15 @@ public class TImer : NetworkBehaviour {
     }
 
     void Update() {
+        // On clients, if PlayerFinish.Local is null or finished, don't update timer display
+        if (!IsServer) {
+            if (PlayerFinish.Local == null || PlayerFinish.Local.HasFinished()) {
+                return;
+            }
+        }
+
+        // Server-only logic
         if (IsServer) {
-            // Host presses F to start countdown if looking at cage
             if (!countdownStarted && Input.GetKeyDown(KeyCode.F)) {
                 if (IsLookingAtCage()) {
                     StartCountdown();
@@ -68,7 +75,6 @@ public class TImer : NetworkBehaviour {
                 if (!cageRemovedByServer && timeLeft <= 0f) {
                     RemoveCageForEveryone();
 
-                    // Start survival timer
                     survivalStartTime.Value = serverTime;
                     survivalTimerRunning.Value = true;
                     Debug.Log("Server: Survival timer started at " + survivalStartTime.Value);
@@ -76,13 +82,14 @@ public class TImer : NetworkBehaviour {
             }
         }
 
-        // This block runs for everyone (server + clients)
+        // Show countdown timer if active and cage not removed
         if (countdownStarted && timerText != null && !cageRemovedByServer) {
             float serverTime = (float)NetworkManager.Singleton.ServerTime.Time;
             float timeLeft = Mathf.Max(0f, countdownDuration - (serverTime - syncedStartTime.Value));
             timerText.text = "Countdown: " + timeLeft.ToString("F2");
         }
 
+        // Show survival timer if running
         if (survivalTimerRunning.Value && timerText != null) {
             float serverTime = (float)NetworkManager.Singleton.ServerTime.Time;
             float survivalTime = serverTime - survivalStartTime.Value;
@@ -116,7 +123,7 @@ public class TImer : NetworkBehaviour {
                 Destroy(part);
         }
     }
-
+    
     private bool IsLookingAtCage() {
         Camera cam = Camera.main;
         if (cam == null) {
@@ -142,5 +149,12 @@ public class TImer : NetworkBehaviour {
         }
 
         return false;
+    }
+
+    public float GetSurvivalTime() {
+        if (!survivalTimerRunning.Value)
+            return 0f;
+
+        return (float)NetworkManager.Singleton.ServerTime.Time - survivalStartTime.Value;
     }
 }

@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\UserMovement.cs" />
     <Compile Include="Assets\Scripts\CustomNetworkManagerScript.cs" />
     <Compile Include="Assets\Scripts\Testing\PlayerCam.cs" />
+    <Compile Include="Assets\Scripts\FinishLineWall.cs" />
     <Compile Include="Assets\Scripts\ConstantNetworkManager.cs" />
     <Compile Include="Assets\Scripts\MainMenuScript.cs" />
     <Compile Include="Assets\Scripts\WallVerticalMovevement.cs" />
@@ -83,7 +84,9 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Grappling.cs" />
     <Compile Include="Assets\Scripts\NetworkManagerStartup.cs" />
+    <Compile Include="Assets\Scripts\PlayerFinishEntry.cs" />
     <Compile Include="Assets\Scripts\TImer.cs" />
+    <Compile Include="Assets\Scripts\PlayerFinish.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
