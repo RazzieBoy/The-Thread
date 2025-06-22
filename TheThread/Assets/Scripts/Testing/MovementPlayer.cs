@@ -44,7 +44,7 @@ public class MovementPlayer : NetworkBehaviour {
     public float playerHeight;
     public LayerMask whatIsGround;
     public LayerMask whatIsSkybox;
-    bool grounded;
+    public bool grounded;
 
     //Variables storing info for when a player is on a slope
     [Header("SlopeInfo")]
@@ -299,19 +299,18 @@ public class MovementPlayer : NetworkBehaviour {
     }
 
     private void SpeedControl() {
+        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+
         if (OnSlope()) {
             if (rb.velocity.magnitude > moveSpeed) {
                 rb.velocity = rb.velocity.normalized * moveSpeed;
             }
         }
-        else {
-            Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-            //if (flatVel.magnitude > moveSpeed)
-            //{
-            //    Vector3 limitedVel = flatVel.normalized * moveSpeed;
-            //    rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
-            //}
+        else if (!grounded && flatVel.magnitude > 100) {
+            Vector3 limitedVel = flatVel.normalized * 100f;
+            rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
         }
+
     }
 
     private void Jump() {

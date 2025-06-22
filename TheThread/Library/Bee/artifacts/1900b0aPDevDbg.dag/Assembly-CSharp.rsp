@@ -365,7 +365,9 @@
 "Assets/Scripts/Testing/MovementPlayer.cs"
 "Assets/Scripts/Testing/PlayerCam.cs"
 "Assets/Scripts/Testing/Sliding.cs"
+"Assets/Scripts/TImer.cs"
 "Assets/Scripts/UserMovement.cs"
+"Assets/Scripts/WallVerticalMovevement.cs"
 -langversion:9.0
 
 /deterministic

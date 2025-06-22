@@ -11,6 +11,8 @@ ScriptsOnlyBuild:
     - MovementPlayer
     - PlayerCam
     - ReScaleGuns
+    - TImer
+    - WallVerticalMovevement
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
@@ -233,6 +235,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 38880}
     - Class: 114
       Script: {instanceID: 39124}
+    - Class: 114
+      Script: {instanceID: 72820}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -293,9 +297,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 35006}
     - Class: 114
+      Script: {instanceID: 35070}
+    - Class: 114
       Script: {instanceID: 38504}
     - Class: 114
       Script: {instanceID: 39124}
+    - Class: 114
+      Script: {instanceID: 65146}
+    - Class: 114
+      Script: {instanceID: 72820}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -389,7 +399,7 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: c093b07d0a273a014257ef861e799dfe
+      Hash: b704c88cce493fae571452a15900effa
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: MovementPlayer
@@ -1773,6 +1783,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 8cbaac2a7070d09eeaf44a078c97b90d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: WallVerticalMovevement
+  - hash:
+      serializedVersion: 2
+      Hash: 1895ddea62621da29065ab50be9a5e5a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TImer
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

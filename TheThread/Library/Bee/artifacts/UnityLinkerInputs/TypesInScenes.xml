@@ -10,6 +10,8 @@
 		<type fullname="MovementPlayer" preserve="nothing"/>
 		<type fullname="PlayerCam" preserve="nothing"/>
 		<type fullname="ReScaleGuns" preserve="nothing"/>
+		<type fullname="TImer" preserve="nothing"/>
+		<type fullname="WallVerticalMovevement" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.InputSystem">
 		<type fullname="UnityEngine.InputSystem.InputSettings" preserve="nothing"/>
