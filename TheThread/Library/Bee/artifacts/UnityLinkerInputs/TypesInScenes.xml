@@ -3,12 +3,14 @@
 		<type fullname="ConstantNetworkManager" preserve="nothing"/>
 		<type fullname="CustomNetworkManagerScript" preserve="nothing"/>
 		<type fullname="DisplaySpeed" preserve="nothing"/>
+		<type fullname="FinishLineWall" preserve="nothing"/>
 		<type fullname="Grappling" preserve="nothing"/>
 		<type fullname="KeyRebindUI" preserve="nothing"/>
 		<type fullname="MainMenuScript" preserve="nothing"/>
 		<type fullname="MoveCameraScript" preserve="nothing"/>
 		<type fullname="MovementPlayer" preserve="nothing"/>
 		<type fullname="PlayerCam" preserve="nothing"/>
+		<type fullname="PlayerFinish" preserve="nothing"/>
 		<type fullname="ReScaleGuns" preserve="nothing"/>
 		<type fullname="TImer" preserve="nothing"/>
 		<type fullname="WallVerticalMovevement" preserve="nothing"/>
