@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 569626491394989560}
   m_Layer: 0
   m_Name: CameraPos
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 7329924216016783562}
   m_Layer: 0
   m_Name: PlayerTest
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2368217534
+  GlobalObjectIdHash: 2465870795
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -399,6 +399,7 @@ MonoBehaviour:
   timerText: {fileID: 0}
   cageNetworkObject: {fileID: 0}
   cageParts: []
+  finishTriggerTag: FinishLine
 --- !u!114 &7329924216016783562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,7 +455,7 @@ GameObject:
   - component: {fileID: 5812929678019052686}
   m_Layer: 0
   m_Name: Orientation
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
