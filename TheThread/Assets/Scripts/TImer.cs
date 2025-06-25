@@ -11,17 +11,17 @@ public class TImer : NetworkBehaviour {
     [Tooltip("Assign all 5 cage parts here")]
     public GameObject[] cageParts;
 
-    private NetworkVariable<float> syncedStartTime = new NetworkVariable<float>( 0f, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+    [Tooltip("Tag of the trigger to stop the survival timer")]
+    [SerializeField] private string finishTriggerTag = "FinishLine"; // Tag for the trigger object
 
+    private NetworkVariable<float> syncedStartTime = new NetworkVariable<float>(0f, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
     private const float countdownDuration = 10f;
     private bool cageRemovedByServer = false;
     private bool countdownStarted => syncedStartTime.Value > 0f;
 
-    private NetworkVariable<float> survivalStartTime = new NetworkVariable<float>( 0f, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server
-    );
-
-    private NetworkVariable<bool> survivalTimerRunning = new NetworkVariable<bool>( false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server
-    );
+    private NetworkVariable<float> survivalStartTime = new NetworkVariable<float>(0f, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+    private NetworkVariable<bool> survivalTimerRunning = new NetworkVariable<bool>(false, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
+    private NetworkVariable<float> finalSurvivalTime = new NetworkVariable<float>(0f, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Server);
 
     public override void OnNetworkSpawn() {
         Debug.Log("OnNetworkSpawn: Camera.main is assigned: " + (Camera.main != null));
@@ -37,7 +37,7 @@ public class TImer : NetworkBehaviour {
             cageParts = foundParts;
         }
 
-        Debug.Log("OnNetworkSpawn: cageParts assigned? " + (cageParts != null && cageParts.Length == 4));
+        Debug.Log("OnNetworkSpawn: cageParts assigned? " + (cageParts != null && cageParts.Length == 5));
 
         if (timerText == null) {
             var go = GameObject.Find("TimerText");
@@ -74,7 +74,6 @@ public class TImer : NetworkBehaviour {
 
                 if (!cageRemovedByServer && timeLeft <= 0f) {
                     RemoveCageForEveryone();
-
                     survivalStartTime.Value = serverTime;
                     survivalTimerRunning.Value = true;
                     Debug.Log("Server: Survival timer started at " + survivalStartTime.Value);
@@ -88,12 +87,33 @@ public class TImer : NetworkBehaviour {
             float timeLeft = Mathf.Max(0f, countdownDuration - (serverTime - syncedStartTime.Value));
             timerText.text = "Countdown: " + timeLeft.ToString("F2");
         }
-
         // Show survival timer if running
-        if (survivalTimerRunning.Value && timerText != null) {
+        else if (survivalTimerRunning.Value && timerText != null) {
             float serverTime = (float)NetworkManager.Singleton.ServerTime.Time;
             float survivalTime = serverTime - survivalStartTime.Value;
             timerText.text = "Survival: " + survivalTime.ToString("F2");
+        }
+        // Show final survival time if timer stopped
+        else if (!survivalTimerRunning.Value && finalSurvivalTime.Value > 0f && timerText != null) {
+            timerText.text = "Final Survival Time: " + finalSurvivalTime.Value.ToString("F2");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (IsServer && other.CompareTag(finishTriggerTag)) {
+            Debug.Log("Trigger entered by: " + other.gameObject.name + " with tag: " + other.tag);
+
+            // Check if the player's root or child has the Player tag
+            Transform playerRoot = other.transform.root;
+            if (playerRoot.CompareTag("Player") || other.CompareTag("Player")) {
+                Debug.Log("Player hit finish trigger. Stopping survival timer.");
+                if (survivalTimerRunning.Value) {
+                    float serverTime = (float)NetworkManager.Singleton.ServerTime.Time;
+                    finalSurvivalTime.Value = serverTime - survivalStartTime.Value;
+                    survivalTimerRunning.Value = false;
+                    Debug.Log("Server: Survival timer stopped. Final time: " + finalSurvivalTime.Value);
+                }
+            }
         }
     }
 
@@ -104,15 +124,11 @@ public class TImer : NetworkBehaviour {
 
     private void RemoveCageForEveryone() {
         cageRemovedByServer = true;
-
-        // Destroy cage parts on server
         Debug.Log("Server: Destroying cage parts.");
         foreach (GameObject part in cageParts) {
             if (part != null)
                 Destroy(part);
         }
-
-        // Tell all clients to destroy cage parts too
         DestroyCageClientRpc();
     }
 
@@ -123,7 +139,7 @@ public class TImer : NetworkBehaviour {
                 Destroy(part);
         }
     }
-    
+
     private bool IsLookingAtCage() {
         Camera cam = Camera.main;
         if (cam == null) {
@@ -136,25 +152,25 @@ public class TImer : NetworkBehaviour {
 
         if (Physics.Raycast(ray, out RaycastHit hit, 10f)) {
             Debug.Log("Raycast hit: " + hit.collider.gameObject.name);
-
             if (hit.collider.CompareTag("CagePart")) {
                 Debug.Log("Looking at cage part (via tag): " + hit.collider.name);
                 return true;
             }
-
             Debug.Log("Hit something, but not a cage part.");
         }
         else {
             Debug.Log("Raycast hit nothing.");
         }
-
         return false;
     }
 
     public float GetSurvivalTime() {
-        if (!survivalTimerRunning.Value)
+        if (!survivalTimerRunning.Value && finalSurvivalTime.Value > 0f) {
+            return finalSurvivalTime.Value;
+        }
+        if (!survivalTimerRunning.Value) {
             return 0f;
-
+        }
         return (float)NetworkManager.Singleton.ServerTime.Time - survivalStartTime.Value;
     }
 }
