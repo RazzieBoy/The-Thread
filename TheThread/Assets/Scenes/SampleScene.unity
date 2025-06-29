@@ -2835,7 +2835,7 @@ GameObject:
   - component: {fileID: 338417926}
   - component: {fileID: 338417925}
   - component: {fileID: 338417924}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Moving Wall (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4750,7 +4750,7 @@ GameObject:
   - component: {fileID: 706251384}
   - component: {fileID: 706251383}
   - component: {fileID: 706251382}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Moving Wall (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7153,7 +7153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1119270994}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingObstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7412,7 +7412,7 @@ GameObject:
   - component: {fileID: 1183484064}
   - component: {fileID: 1183484063}
   - component: {fileID: 1183484062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Moving Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9393,7 +9393,7 @@ GameObject:
   - component: {fileID: 1633665312}
   - component: {fileID: 1633665311}
   - component: {fileID: 1633665310}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Moving Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9517,7 +9517,7 @@ GameObject:
   - component: {fileID: 1685522920}
   - component: {fileID: 1685522919}
   - component: {fileID: 1685522918}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Moving Wall (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10937,7 +10937,7 @@ GameObject:
   - component: {fileID: 1925086690}
   - component: {fileID: 1925086689}
   - component: {fileID: 1925086688}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Moving Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11384,7 +11384,7 @@ GameObject:
   - component: {fileID: 1999034650}
   - component: {fileID: 1999034649}
   - component: {fileID: 1999034648}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Moving Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12713,7 +12713,7 @@ GameObject:
   - component: {fileID: 2142262102}
   - component: {fileID: 2142262101}
   - component: {fileID: 2142262100}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Moving Wall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
